@@ -1,0 +1,72 @@
+✅ Opción 1 — Activar modo oscuro GTK (recomendado)
+
+Ejecuta en la terminal:
+
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+
+Eso le dice a las apps GTK:
+👉 “usa tema oscuro si puedes”.
+
+Funciona con:
+
+Nemo
+
+Gedit
+
+Thunar
+
+Evince
+
+Muchas GTK en general
+
+✅ Opción 2 — Forzar tema oscuro específico (si lo anterior no basta)
+
+Mira primero qué temas tienes:
+
+ls /usr/share/themes
+
+
+Por ejemplo: Adwaita-dark, Mint-Y-Dark, etc.
+
+Luego:
+
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+
+
+(Cambia Adwaita-dark por el que tengas)
+
+✅ Opción 3 — Para que quede permanente en Sway
+
+Si quieres que siempre esté activo al iniciar sesión:
+
+Edita:
+
+nano ~/.config/sway/config
+
+
+Y al final pon:
+
+exec_always gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+
+(opcional también el gtk-theme)
+
+⚠️ Nota para Fedora + Sway (tu caso ahora)
+
+Como estás en Fedora con Sway, asegúrate primero de tener esto:
+
+sudo dnf install gsettings-desktop-schemas
+
+
+Si no está, gsettings no funciona bien.
+
+Si después de eso Nemo sigue claro, dime:
+
+gsettings get org.gnome.desktop.interface gtk-theme
+
+
+y
+
+gsettings get org.gnome.desktop.interface color-scheme
+
