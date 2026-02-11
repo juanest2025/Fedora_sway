@@ -1,0 +1,350 @@
+====================================================
+GUÍA COMPLETA DE INSTALACIÓN Y SETUP DE SWAY (WAYLAND)
+====================================================
+
+Sistema objetivo:
+- Fedora cinnamon(principal)
+- Window Manager: SWAY
+- Enfoque: minimal, estable, estético y usable (daily driver)
+
+----------------------------------------------------
+1. PAQUETES A INSTALAR
+----------------------------------------------------
+
+CORE:
+- sway
+- waybar
+- kitty
+- wofi
+- wlogout
+- swaylock
+- swayidle
+
+UTILIDADES:
+- brightnessctl        (control de brillo)
+- pactl / pipewire     (audio)
+- grim                 (screenshots)
+- slurp                (selección con mouse)
+- wl-clipboard         (wl-copy / wl-paste)
+- gammastep            (filtro luz azul)
+- nm-connection-editor (wifi manager)
+- playerctl            (multimedia)
+- upower               (batería / estado de carga)
+- blueman              (bluetooth)
+
+INSTALACIÓN ( Fedora ):
+sudo dnf install -y \
+sway waybar kitty wofi wlogout swaylock swayidle \
+brightnessctl grim slurp wl-clipboard gammastep \
+NetworkManager-tui nm-connection-editor \
+playerctl upower blueman
+----------------------------------------------------
+2. ESTRUCTURA DE CONFIGURACIÓN
+----------------------------------------------------
+
+~/.config/
+├── sway/
+│   ├── config
+│   └── scripts/
+│       └── waybar.sh
+├── waybar/
+│   ├── config
+│   └── style.css
+├── wofi/
+│   ├── config
+│   └── style.css
+├── kitty/
+│   └── kitty.conf
+
+----------------------------------------------------
+3. SCRIPT PARA EVITAR WAYBAR DUPLICADO
+----------------------------------------------------
+
+Archivo:
+~/.config/sway/scripts/waybar.sh
+
+Contenido:
+#!/bin/bash
+killall waybar 2>/dev/null
+waybar &
+
+Permisos:
+chmod +x ~/.config/sway/scripts/waybar.sh
+
+En sway/config:
+exec_always ~/.config/sway/scripts/waybar.sh
+
+----------------------------------------------------
+4. ATAJOS PRINCIPALES EN SWAY
+----------------------------------------------------
+
+Terminal:
+Mod + Enter
+
+Cerrar ventana:
+Mod + Q
+
+Launcher (wofi):
+Alt + Space
+
+Bloquear pantalla:
+Ctrl + Shift + L
+
+Menú de apagado (wlogout):
+Ctrl + Shift + E
+Botón en Waybar (⏻)
+
+Volumen:
+Ctrl + Shift + Right  (+5%)
+Ctrl + Shift + Left   (-5%)
+
+Brillo:
+Ctrl + Shift + Up
+Ctrl + Shift + Down
+
+----------------------------------------------------
+5. SCREENSHOTS (WAYLAND + SWAY)
+----------------------------------------------------
+
+Pantalla completa:
+Print
+→ ~/Pictures/screenshot.png
+
+Selección con mouse:
+Shift + Print
+
+Selección al portapapeles:
+Ctrl + Shift + Print
+
+Comandos usados:
+- grim
+- slurp
+- wl-copy
+
+----------------------------------------------------
+6. WAYBAR (CONFIG FINAL)
+----------------------------------------------------
+
+Características:
+- Barra transparente
+- Secciones separadas (izq / centro / der)
+- Estética sobria (sin colores chillones)
+- Botón de wlogout
+- Volumen y brillo legibles
+- Red como botón (abre wifi manager)
+- Hora en formato 12h
+- Batería con icono de carga
+
+CONFIG WAYBAR (~/.config/waybar/config):
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "spacing": 6,
+
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["sway/window"],
+  "modules-right": [
+    "custom/wlogout",
+    "pulseaudio",
+    "backlight",
+    "network",
+    "battery",
+    "clock",
+    "tray"
+  ],
+
+  "custom/wlogout": {
+    "format": "⏻",
+    "tooltip": "Logout / Power menu",
+    "on-click": "wlogout",
+    "interval": 0
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"]
+  },
+
+  "network": {
+    "format-wifi": "󰤨",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤭",
+    "on-click": "nm-connection-editor"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁼", "󰁾", "󰂀"]
+  },
+
+  "clock": {
+    "format": "{:%I:%M %p}"
+  },
+
+  "tray": {
+    "spacing": 8
+  }
+}
+
+----------------------------------------------------
+7. SWAYLOCK
+----------------------------------------------------
+
+Comando:
+swaylock \
+  --clock \
+  --indicator \
+  --indicator-radius 100 \
+  --indicator-thickness 7
+
+Atajo:
+Ctrl + Shift + L
+
+----------------------------------------------------
+8. WLOGOUT
+----------------------------------------------------
+
+Menú gráfico:
+- Apagar
+- Reiniciar
+- Suspender
+- Logout
+
+Acceso:
+- Botón ⏻ en Waybar
+- Ctrl + Shift + E
+
+----------------------------------------------------
+9. WOFI (LAUNCHER MINIMAL)
+----------------------------------------------------
+
+Instalación:
+sudo dnf install wofi
+
+Config (~/.config/wofi/config):
+show=drun
+width=450
+height=280
+prompt=Buscar
+insensitive=true
+no-actions=true
+
+Estilo:
+- Fondo oscuro
+- Bordes redondeados
+- Selección limpia
+- Minimal
+
+----------------------------------------------------
+10. WEBAPPS (WHATSAPP WEB)
+----------------------------------------------------
+
+No usar clientes flatpak ❌
+Usar webapp con navegador ✅
+
+Ejemplo (Brave / Chromium):
+brave --app=https://web.whatsapp.com
+
+Atajo en sway/config:
+bindsym Mod+Shift+w exec brave --app=https://web.whatsapp.com
+
+----------------------------------------------------
+11. BATERÍA
+----------------------------------------------------
+
+Paquete:
+upower
+
+Waybar muestra:
+- Porcentaje
+- Icono
+- Estado de carga (󰂄 cuando está cargando)
+
+----------------------------------------------------
+12. EXTRAS RECOMENDADOS
+----------------------------------------------------
+
+- Notificaciones: mako
+- Gestor archivos: ranger (con VLC) ------> renombrar archivos en con cw y le das el nombre y le dices ok y ya.
+- Montaje USB: udiskie
+- Clipboard manager: cliphist
+- Bluetooth: blueman-applet
+
+----------------------------------------------------
+13. FILOSOFÍA DEL SETUP
+----------------------------------------------------
+
+✔ Minimal
+✔ Estable
+✔ Todo con teclado
+✔ Estético sin exagerar
+✔ Ideal para estudio y programación
+
+---------------------------------------------------
+14. APPS EXTRA Q NO ESTAN EL EL REPO DE APT
+---------------------------------------------------
+- instala HomeBrew y descomentalo en el zsh
+- instala neovim (astrovim) y zellij desde HomeBrew
+
+---------------------------------------------------
+15. ARREGLA REPRODUCCION VIDEO DE XWAYLAND
+---------------------------------------------------
+- ejecuta el script q crea los binarios para vlc y
+celluloide para abrirlos desde la terminal
+
+---------------------------------------------------
+16. USO DE URAR PAR DESCOMPRIMIR ARCHIVOS.RAR
+---------------------------------------------------
+se instala:
+sudo dnf install rar -y
+sudo dnf install unrar -y 
+
+-el modo de uso es:
+rar a archivos.rar *
+unrar x archivo.rar *
+
+---------------------------------------------------
+17. REPRODUCTOR DE MUSICA EN TEMRINAL CMUS
+---------------------------------------------------
+se instala:
+sudo dnf install cmus -y
+
+y se agrega la lista:
+- :add ~/Music
+
+para actualizar la lista de reproduccion si agragas nuevas canciones, lo que hacer es
+:clean
+: add ~/Music
+
+y asi se usa:
+- + sube el volumen
+- - baja el volumen
+- numeros 1 y 2 muestrasn la lista de canciones de diferente manera
+- C es para pasar ls canciones
+- V es para cancelar la reproduccion de la cancion
+- X reinicia la cancion
+- B es para la siguiente cancion
+- Z es para la cancion anterior 
+- / es para filtrar y buscar la cancion 
+- ENTER  es para reproduccir la cancion actual
+
+====================================================
+FIN DE LA GUÍA (v2)
+====================================================
+

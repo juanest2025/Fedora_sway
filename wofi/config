@@ -1,0 +1,13 @@
+show=drun
+prompt=>
+width=500
+height=300
+lines=6
+columns=1
+location=center
+allow_images=true
+image_size=32
+gtk_dark=true
+insensitive=true
+term=kitty
+

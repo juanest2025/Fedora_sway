@@ -1,0 +1,119 @@
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* === BARRA TRANSPARENTE === */
+window#waybar {
+    background: transparent;
+    color: #cdd6f4;
+    border-radius: 0;
+    margin: 6px 10px;
+}
+
+/* === SECCIONES (CÁPSULAS) === */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(30, 30, 46, 0.6);
+    border-radius: 12px;
+    padding: 4px 8px;
+    margin: 4px;
+}
+
+/* === WORKSPACES === */
+#workspaces button {
+    padding: 0 6px;
+    margin: 0 2px;
+    border-radius: 8px;
+    color: #cdd6f4;
+    background: transparent;
+}
+
+#workspaces button.focused {
+    background: rgba(137, 180, 250, 0.35);
+}
+
+#workspaces button.urgent {
+    background: rgba(243, 139, 168, 0.6);
+}
+
+/* === WINDOW TITLE === */
+#window {
+    color: #a6adc8;
+}
+
+/* === MODULOS BASE === */
+#pulseaudio,
+#backlight,
+#network,
+#battery,
+#clock,
+#tray {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+/* === AUDIO === */
+#pulseaudio {
+    background: rgba(137, 180, 250, 0.15);
+    color: #89b4fa;
+}
+
+#pulseaudio.muted {
+    background: rgba(243, 139, 168, 0.15);
+    color: #f38ba8;
+}
+
+/* === BRILLO === */
+#backlight {
+    background: rgba(249, 226, 175, 0.15);
+    color: #f9e2af;
+}
+
+/* === RED === */
+#network {
+    background: rgba(166, 227, 161, 0.15);
+    color: #a6e3a1;
+}
+
+/* === BATERÍA === */
+#battery {
+    background: rgba(166, 227, 161, 0.15);
+    color: #a6e3a1;
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: #f38ba8;
+}
+
+/* === CLOCK === */
+#clock {
+    background: rgba(137, 180, 250, 0.15);
+    color: #89b4fa;
+}
+
+/* === TRAY === */
+#tray {
+    background: rgba(180, 190, 254, 0.15);
+}
+
+/* === WLOGOUT BUTTON === */
+#custom-wlogout {
+    background: rgba(243, 139, 168, 0.15);
+    color: #f38ba8;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+#custom-wlogout:hover {
+    background: rgba(243, 139, 168, 0.3);
+}
+
