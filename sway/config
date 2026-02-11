@@ -59,6 +59,7 @@ exec_always nm-applet --indicator
 exec_always mako
 exec_always wl-paste --watch cliphist store
 exec_always /usr/lib/polkit-kde-authentication-agent-1
+exec_always gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 # 🎬 VLC forzado a X11 (CLAVE)
 set $vlc env GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb vlc
