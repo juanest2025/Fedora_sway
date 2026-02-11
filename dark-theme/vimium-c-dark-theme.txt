@@ -1,3 +1,5 @@
+la opcin mas facil es desintalar nemo...y instalarlo de nuevo...y esto desinstala cinnamon y hay q volverlo a instalar
+
 ✅ Opción 1 — Activar modo oscuro GTK (recomendado)
 
 Ejecuta en la terminal:
