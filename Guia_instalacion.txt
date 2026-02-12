@@ -282,6 +282,10 @@ Waybar muestra:
 
 - Notificaciones: mako
 - Gestor archivos: ranger (con VLC) ------> renombrar archivos en con cw y le das el nombre y le dices ok y ya.
+en ranger la tecla:
+  a es para renombrar
+  s es para shell vim 
+  d es de delete
 - Montaje USB: udiskie
 - Clipboard manager: cliphist
 - Bluetooth: blueman-applet
@@ -329,7 +333,7 @@ y se agrega la lista:
 - :add ~/Music
 
 para actualizar la lista de reproduccion si agragas nuevas canciones, lo que hacer es
-:clean
+:clear
 : add ~/Music
 
 y asi se usa:
