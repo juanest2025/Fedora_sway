@@ -59,7 +59,7 @@ exec_always nm-applet --indicator
 exec_always mako
 exec_always wl-paste --watch cliphist store
 exec_always /usr/lib/polkit-kde-authentication-agent-1
-exec_always gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+#exec_always gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 # 🎬 VLC forzado a X11 (CLAVE)
 set $vlc env GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb vlc
@@ -76,6 +76,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 bindsym $mod+b exec brave-browser
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
 bindsym alt+Shift+o exec flatpak run md.obsidian.Obsidian 
+bindsym alt+Shift+m exec ~/apagar.sh 
 #bindsym $mod+z exec flatpak run us.zoom.Zoom
 bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
 bindsym $mod+e exec nemo 
@@ -143,6 +144,8 @@ bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
 
+bindsym $mod+i workspace i 
+
 ### WORKSPACES CON EL HOMEROW CON ALTGR MOD5
 bindsym Mod5+a workspace number 1
 bindsym Mod5+s workspace number 2
@@ -153,6 +156,13 @@ bindsym Mod5+h workspace number 6
 bindsym Mod5+j workspace number 7
 bindsym Mod5+k workspace number 8
 bindsym Mod5+l workspace number 9
+bindsym Mod5+i workspace i 
+bindsym Mod5+o workspace o
+bindsym Mod5+z workspace z
+bindsym Mod5+w workspace w
+bindsym Mod5+e workspace e
+bindsym Mod5+r workspace r
+#bindsym Mod5+ntilde workspace ñ
 
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
