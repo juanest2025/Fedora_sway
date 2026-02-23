@@ -286,7 +286,7 @@ en ranger la tecla:
   a es para renombrar
   s es para shell vim 
   d es de delete
-- Montaje USB: udiskie
+- Montaje USB: udiskie esto q es?
 - Clipboard manager: cliphist
 - Bluetooth: blueman-applet
 

@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh
 # ─────────────────────────
 alias spacework="cd /mnt/c/Users/juanes"
 alias spacedesk="cd /mnt/c/Users/juanes/Desktop"
-
+alias carptelegram="nemo $HOME/.var/app/org.telegram.desktop/data/TelegramDesktop/tdata"
 alias apagar="bash ~/apagar.sh"
 alias editar="vim ~/.zshrc"
 alias actualizar="bash /home/juanes/comands/update.sh"
@@ -50,7 +50,6 @@ alias r="ranger"
 alias z="zellij"
 alias p="python3"
 alias juan="bash /home/juanes/comands/informatica.sh"
-alias edit="vim \$(fzf)"
 alias open="xdg-open"
 alias ob="cd $HOME/Documents/Second_Brain && nvim " 
 alias notas="bash $HOME/.config/obsidian-script/notas.sh"
@@ -60,9 +59,30 @@ alias fzf="$HOME/.config/fzf/script.sh"
 alias upzellij="bash ~/.config/zellij/update.zellij.sh"
 # Editor
 alias vim="nvim"
+#alias video="vlc "$(find . -type f \( -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.avi" \) | fzf)"
 
 # ─────────────────────────
 # fzf
 # ─────────────────────────
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#cdf() {
+#  cd "$(find . -type d | fzf)"
+#}
+
+openf() {
+  xdg-open "$(find . -type f | fzf)"
+}
+
+vid() {
+  vlc "$(find . -type f \( -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.avi" \) | fzf)"
+}
+
+vif() {
+  vim "$(find . -type f | fzf)"
+}
+
+# openf   # cualquier archivo
+# vid     # videos
+# vif     # texto con vim
 

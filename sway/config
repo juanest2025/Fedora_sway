@@ -42,7 +42,7 @@ default_border none
 default_floating_border none
 
 # wallpaper
-output * bg /home/juanes/wallpaper/one.jpg fill
+output * bg /home/juanes/wallpaper/eight.jpg fill
 
 ### >>> AGREGADO <<< AUTOSTART ESENCIAL
 # 🔧 FIX CRÍTICO PARA VLC / AUDIO / WAYLAND
@@ -95,12 +95,6 @@ bindsym alt+Shift+l exec ~/.config/sway/scripts/mejorar.wifi.sh
 
 # INTERRUPTOR DE WIFI 2 conectar al la red de mi casa directamente 
 bindsym alt+Shift+k exec ~/.config/sway/scripts/wifi.sh
-
-
-
-# ▶️ Lanzar VLC correctamente
-bindsym $mod+v exec $vlc
-
 
 ### Focus
 bindsym $mod+$left focus left
@@ -217,17 +211,16 @@ bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
 
 ### LUZ NOCTURNA
 exec_always gammastep -O 3500
-
+#exec_always = sh -c "sleep 5 && WAYLAND_DISPLAY=$WAYLAND_DISPLAY /usr/bin/gammastep -O 3500"
 ### LOCK / LOGOUT
 bindsym Ctrl+Shift+l exec swaylock
 bindsym Ctrl+Shift+e exec wlogout
 
 ### SCREENSHOTS
-#bindsym Print exec grim ~/Pictures/screenshot.png
-bindsym Print exec flameshot gui
-bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot.png
-bindsym Ctrl+Print exec grim - | wl-copy
-bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
+# Pantalla completa
+bindsym Print exec ~/.config/sway/scripts/screenshot.sh full
+# ✂️ Selección
+bindsym Shift+Print exec ~/.config/sway/scripts/screenshot.sh area
 
 ### NOTIFICACIONES
 exec_always mako
