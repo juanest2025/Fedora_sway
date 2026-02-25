@@ -107,6 +107,9 @@ Ctrl + Shift + Down
 ----------------------------------------------------
 
 Pantalla completa:
+instala esto:
+sudo dnf install grim slurp wl-clipboard
+
 Print
 → ~/Pictures/screenshot.png
 

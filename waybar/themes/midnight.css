@@ -1,0 +1,121 @@
+/* ===============================
+   WAYBAR — MIDNIGHT DARK THEME
+   =============================== */
+
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* Barra base */
+window#waybar {
+    background: transparent;
+    color: #e5e9f0;
+    margin: 6px 10px;
+}
+
+/* Cápsulas */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(10, 10, 15, 0.85);
+    border-radius: 12px;
+    padding: 4px 10px;
+    margin: 4px;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 6px;
+    margin: 0 2px;
+    border-radius: 8px;
+    color: #cdd6f4;
+    background: transparent;
+}
+
+#workspaces button.focused {
+    background: rgba(90,140,255,0.35);
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background: rgba(255,80,120,0.5);
+}
+
+/* Título ventana */
+#window {
+    color: #9aa2b1;
+}
+
+/* Módulos base */
+#pulseaudio,
+#backlight,
+#network,
+#battery,
+#clock,
+#tray,
+#custom-wlogout {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+/* Audio */
+#pulseaudio {
+    background: rgba(90,140,255,0.15);
+    color: #5a8cff;
+}
+
+#pulseaudio.muted {
+    background: rgba(255,80,120,0.15);
+    color: #ff5078;
+}
+
+/* Brillo */
+#backlight {
+    background: rgba(255,200,100,0.12);
+    color: #ffc864;
+}
+
+/* Red */
+#network {
+    background: rgba(80,200,140,0.12);
+    color: #50c88c;
+}
+
+/* Batería */
+#battery {
+    background: rgba(80,200,140,0.12);
+    color: #50c88c;
+}
+
+#battery.warning {
+    color: #ffc864;
+}
+
+#battery.critical {
+    color: #ff5078;
+}
+
+/* Reloj */
+#clock {
+    background: rgba(120,150,255,0.12);
+    color: #7896ff;
+}
+
+/* Tray */
+#tray {
+    background: rgba(255,255,255,0.05);
+}
+
+/* Logout */
+#custom-wlogout {
+    background: rgba(255,80,120,0.12);
+    color: #ff5078;
+}
+
+#custom-wlogout:hover {
+    background: rgba(255,80,120,0.25);
+} 

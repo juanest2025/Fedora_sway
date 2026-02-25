@@ -87,6 +87,9 @@ bindsym Mod1+space exec wofi --show drun
 #bindsym $mod+o exec flatpak run md.obsidian.Obsidian 
 bindsym $mod+t exec flatpak run org.telegram.desktop
 
+# THEMES WAYBAR
+bindsym  alt+Shift+t exec ~/.config/waybar/switch-theme.sh
+
 # INTERRUPTOR DE WAYBAR
 bindsym alt+Shift+j exec ~/.config/sway/scripts/toggle.sh
 

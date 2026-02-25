@@ -1,0 +1,139 @@
+/* =============================
+   GLOBAL
+============================= */
+
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* =============================
+   WINDOW
+============================= */
+
+window#waybar {
+    background: transparent;
+}
+
+/* =============================
+   MAIN PILL
+============================= */
+
+.modules-center {
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+
+    padding: 4px 8px;
+    margin: 4px;
+
+    color: #ffffff;
+}
+
+/* =============================
+   MODULES BASE
+============================= */
+
+#workspaces,
+#window,
+#pulseaudio,
+#backlight,
+#network,
+#battery,
+#clock,
+#tray,
+#custom-wlogout {
+
+    padding: 2px 10px;
+    margin: 0 4px;
+
+    border-radius: 999px;
+
+    background: transparent;
+
+    color: #f2f2f2;
+    font-weight: 500;
+}
+
+
+/* =============================
+   WORKSPACES
+============================= */
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 0 2px;
+
+    background: transparent;
+    color: #bbb;
+
+    border-radius: 6px;
+}
+
+#workspaces button.focused {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+#workspaces button.urgent {
+    background: rgba(255,255,255,0.35);
+}
+
+
+/* =============================
+   WINDOW TITLE
+============================= */
+
+#window {
+    color: #aaa;
+    font-style: italic;
+}
+
+
+/* =============================
+   HOVER EFFECT
+============================= */
+
+#pulseaudio:hover,
+#backlight:hover,
+#network:hover,
+#battery:hover,
+#clock:hover,
+#custom-wlogout:hover {
+
+    background: rgba(255,255,255,0.15);
+}
+
+
+/* =============================
+   BATTERY STATES
+============================= */
+
+#battery.warning {
+    color: #ddd;
+}
+
+#battery.critical {
+    color: #fff;
+    background: rgba(255,255,255,0.25);
+}
+
+
+/* =============================
+   MUTED
+============================= */
+
+#pulseaudio.muted {
+    opacity: 0.6;
+}
+
+
+/* =============================
+   TRAY
+============================= */
+
+#tray {
+    padding: 0 6px;
+}
