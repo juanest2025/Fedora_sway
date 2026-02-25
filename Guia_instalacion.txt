@@ -351,6 +351,21 @@ y asi se usa:
 - / es para filtrar y buscar la cancion 
 - ENTER  es para reproduccir la cancion actual
 
+---------------------------------------------------
+18. abir las imagenes con el mate image viewer 
+---------------------------------------------------
+corre este comando en la terminal:
+
+xdg-mime default eom.desktop image/jpeg image/png image/jpg image/webp
+
+sino 
+
+xdg-mime default eom.desktop image/*
+
+
+
+
+
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================
