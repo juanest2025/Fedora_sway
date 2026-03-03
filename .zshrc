@@ -1,0 +1,89 @@
+# ─────────────────────────
+# Powerlevel10k instant prompt
+# (nada que imprima texto después de esto)
+# ─────────────────────────
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# ─────────────────────────
+# Oh My Zsh
+# ─────────────────────────
+export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/.local/bin:$PATH"
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+plugins=(git web-search)
+
+source $ZSH/oh-my-zsh.sh
+
+# Powerlevel10k config
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# ─────────────────────────
+# Aliases
+# ─────────────────────────
+alias spacework="cd /mnt/c/Users/juanes"
+alias spacedesk="cd /mnt/c/Users/juanes/Desktop"
+alias carptelegram="nemo $HOME/.var/app/org.telegram.desktop/data/TelegramDesktop/tdata"
+alias apagar="bash ~/apagar.sh"
+alias editar="vim ~/.zshrc"
+alias actualizar="bash /home/juanes/comands/update.sh"
+alias ssd="cd /mnt/d"
+alias anime="cd $HOME/Desktop/anime && ranger"
+alias udea="cd $HOME/Documents/UdeA/materias && ranger"
+alias restore="bash /home/juanes/comands/restore.sh"
+alias obsidian="bash /home/juanes/comands/backup_obsidian.sh"
+alias ver="vim /mnt/c/Users/juanes/ver.cmd"
+alias copia="bash /home/juanes/comands/debian-wsl-backup.sh"
+alias new="bash /home/juanes/comands/carpet.sh"
+alias zphisher="sudo bash /home/juanes/tools/zphisher/zphisher.sh"
+alias hack="cmatrix"
+alias cls="clear"
+alias x="cd"
+alias summary="bash /home/juanes/comands/summary.sh"
+alias tmux-atajos="cat /home/juanes/tmux/atajos.txt"
+alias tm="tmux"
+alias start="explorer.exe"
+alias ff="fastfetch"
+alias r="ranger"
+alias z="zellij"
+alias p="python3"
+alias juan="bash /home/juanes/comands/informatica.sh"
+alias open="xdg-open"
+alias ob="cd $HOME/Documents/Second_Brain && nvim " 
+alias task="nvim $HOME/Documents/Second_Brain/Tasks/Task.md"
+alias notas="bash $HOME/.config/obsidian-script/notas.sh"
+alias music="cmus"
+alias vlc="vlc"
+alias fzf="$HOME/.config/fzf/script.sh"
+alias upzellij="bash ~/.config/zellij/update.zellij.sh"
+# Editor
+alias vim="nvim"
+#alias video="vlc "$(find . -type f \( -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.avi" \) | fzf)"
+
+# ─────────────────────────
+# fzf
+# ─────────────────────────
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#cdf() {
+#  cd "$(find . -type d | fzf)"
+#}
+
+openf() {
+  xdg-open "$(find . -type f | fzf)"
+}
+
+vid() {
+  vlc "$(find . -type f \( -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.avi" \) | fzf)"
+}
+
+vif() {
+  vim "$(find . -type f | fzf)"
+}
+
+# openf   # cualquier archivo
+# vid     # videos
+# vif     # texto con vim
+

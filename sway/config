@@ -42,7 +42,7 @@ default_border none
 default_floating_border none
 
 # wallpaper
-output * bg /home/juanes/wallpaper/eight.jpg fill
+output * bg /home/juanes/wallpaper/Anime-Girl2.png  fill
 
 ### >>> AGREGADO <<< AUTOSTART ESENCIAL
 # 🔧 FIX CRÍTICO PARA VLC / AUDIO / WAYLAND
