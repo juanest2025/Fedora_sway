@@ -77,6 +77,7 @@ bindsym $mod+b exec brave-browser
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
 bindsym alt+Shift+o exec flatpak run md.obsidian.Obsidian 
 bindsym alt+Shift+m exec ~/apagar.sh 
+bindsym alt+Shift+n exec ~/reiniciar.sh
 #bindsym $mod+z exec flatpak run us.zoom.Zoom
 bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
 bindsym $mod+e exec nemo 
