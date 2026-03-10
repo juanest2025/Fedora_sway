@@ -42,7 +42,11 @@ default_border none
 default_floating_border none
 
 # wallpaper
-output * bg /home/juanes/wallpaper/Anime-Girl2.png  fill
+#output * bg /home/juanes/wallpaper/Anime-Girl2.png  fill
+# wallpaper selector
+bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
+# cargar wallpaper al iniciar
+#exec_always ~/.config/sway/scripts/wallpaper_chooser.sh
 
 ### >>> AGREGADO <<< AUTOSTART ESENCIAL
 # 🔧 FIX CRÍTICO PARA VLC / AUDIO / WAYLAND
@@ -79,13 +83,12 @@ bindsym alt+Shift+o exec flatpak run md.obsidian.Obsidian
 bindsym alt+Shift+m exec ~/apagar.sh 
 bindsym alt+Shift+n exec ~/reiniciar.sh
 #bindsym $mod+z exec flatpak run us.zoom.Zoom
+bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f845239198f43c5400861d
 bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
 bindsym $mod+e exec nemo 
 bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive 
-#bindsym alt+Shift+n exec google-chrome-stable 
 bindsym $mod+c exec google-chrome-stable  
 bindsym Mod1+space exec wofi --show drun
-#bindsym $mod+o exec flatpak run md.obsidian.Obsidian 
 bindsym $mod+t exec flatpak run org.telegram.desktop
 
 # THEMES WAYBAR
