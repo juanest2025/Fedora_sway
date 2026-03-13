@@ -1,9 +1,4 @@
-# Default config for sway
-#
 # Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
-
 ### Variables
 set $mod Mod4
 set $left h
@@ -41,31 +36,32 @@ for_window [app_id=".*"] title_format ""
 default_border none
 default_floating_border none
 
+#pantalla de bloqueo
+exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
+
 # wallpaper
-#output * bg /home/juanes/wallpaper/Anime-Girl2.png  fill
+output * bg /home/juanes/wallpaper/Arch-chan_to.png fill
 # wallpaper selector
 bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
 # cargar wallpaper al iniciar
 #exec_always ~/.config/sway/scripts/wallpaper_chooser.sh
 
-### >>> AGREGADO <<< AUTOSTART ESENCIAL
-# 🔧 FIX CRÍTICO PARA VLC / AUDIO / WAYLAND
+# FIX CRÍTICO PARA VLC / AUDIO / WAYLAND
 exec_always dbus-update-activation-environment --systemd \
     WAYLAND_DISPLAY \
     XDG_RUNTIME_DIR \
     XDG_CURRENT_DESKTOP=sway
 
 
-# 🔊 Asegurar audio (PipeWire + Pulse)
+# Asegurar audio (PipeWire + Pulse)
 exec_always systemctl --user enable --now pipewire pipewire-pulse
-
 exec_always nm-applet --indicator
 exec_always mako
 exec_always wl-paste --watch cliphist store
 exec_always /usr/lib/polkit-kde-authentication-agent-1
 #exec_always gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
-# 🎬 VLC forzado a X11 (CLAVE)
+# VLC forzado a X11 (CLAVE)
 set $vlc env GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb vlc
 
 ### Key bindings
@@ -74,7 +70,6 @@ bindsym $mod+q kill
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-
 
 ## APLICACIONES
 bindsym $mod+b exec brave-browser
@@ -123,15 +118,12 @@ bindsym $mod+Right focus right
 #bindsym $mod+Shift+Up move up
 #bindsym $mod+Shift+Right move right
 
-# =============================
-# Resize con Super + Shift + Flechas
-# =============================
+### Resize con Super + Shift + Flechas
 
-bindsym $mod+Shift+Left  resize shrink width  20 px
-bindsym $mod+Shift+Right resize grow   width  20 px
+bindsym $mod+Shift+Right resize shrink width  20 px
+bindsym $mod+Shift+Left resize grow   width  20 px
 bindsym $mod+Shift+Up    resize shrink height 20 px
 bindsym $mod+Shift+Down  resize grow   height 20 px
-
 
 ### Workspaces
 bindsym $mod+1 workspace number 1
@@ -144,8 +136,6 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
-
-bindsym $mod+i workspace i 
 
 ### WORKSPACES CON EL HOMEROW CON ALTGR MOD5
 bindsym Mod5+a workspace number 1
@@ -163,7 +153,6 @@ bindsym Mod5+z workspace z
 bindsym Mod5+w workspace w
 bindsym Mod5+e workspace e
 bindsym Mod5+r workspace r
-#bindsym Mod5+ntilde workspace ñ
 
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
