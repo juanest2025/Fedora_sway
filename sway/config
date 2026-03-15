@@ -59,7 +59,6 @@ exec_always dbus-update-activation-environment --systemd \
 # Asegurar audio (PipeWire + Pulse)
 exec_always systemctl --user enable --now pipewire pipewire-pulse
 exec_always nm-applet --indicator
-exec_always mako
 exec_always wl-paste --watch cliphist store
 exec_always /usr/lib/polkit-kde-authentication-agent-1
 #exec_always gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
@@ -114,8 +113,13 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+## move windows 
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
 ### Move
-#bindsym $mod+Shift+$left move left
 #bindsym $mod+Shift+$down move down
 #bindsym $mod+Shift+$up move up
 #bindsym $mod+Shift+$right move right
