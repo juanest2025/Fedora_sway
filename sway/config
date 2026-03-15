@@ -89,6 +89,9 @@ bindsym $mod+c exec google-chrome-stable
 bindsym Mod1+space exec wofi --show drun
 bindsym $mod+t exec flatpak run org.telegram.desktop
 
+# historial 
+bindsym $mod+v exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
+
 # THEMES WAYBAR
 bindsym  alt+Shift+t exec ~/.config/waybar/switch-theme.sh
 
