@@ -10,6 +10,9 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
+## atajo para config sway 
+bindsym Mod1+Shift+u exec kitty -e nvim ~/.config/sway/config
+
 ### Output configuration
 default_border pixel 2
 default_floating_border pixel 2
@@ -37,7 +40,7 @@ default_border none
 default_floating_border none
 
 #pantalla de bloqueo
-exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
+#exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
 output * bg /home/juanes/wallpaper/Arch-chan_to.png fill
