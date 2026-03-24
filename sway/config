@@ -10,7 +10,7 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
-## atajo para config sway 
+## SHORCUT EDIT SWAY DOTFILE 
 bindsym Mod1+Shift+u exec kitty -e nvim ~/.config/sway/config
 
 ### Output configuration
@@ -44,8 +44,10 @@ default_floating_border none
 
 # wallpaper
 output * bg /home/juanes/wallpaper/Arch-chan_to.png fill
+
 # wallpaper selector
 bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
+
 # cargar wallpaper al iniciar
 #exec_always ~/.config/sway/scripts/wallpaper_chooser.sh
 
@@ -75,21 +77,22 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 
 ## APLICACIONES
 bindsym $mod+b exec brave-browser
-bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
 bindsym alt+Shift+o exec flatpak run md.obsidian.Obsidian 
-bindsym alt+Shift+m exec ~/apagar.sh 
-bindsym alt+Shift+n exec ~/reiniciar.sh
-#bindsym $mod+z exec flatpak run us.zoom.Zoom
-bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f845239198f43c5400861d
-bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
 bindsym $mod+e exec nemo 
-bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive 
 bindsym $mod+c exec google-chrome-stable  
 bindsym Mod1+space exec wofi --show drun
 bindsym $mod+t exec flatpak run org.telegram.desktop
+bindsym alt+Shift+f exec flatpak run app.zen_browser.zen 
 
-# historial 
-bindsym $mod+v exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
+## SITES
+bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f845239198f43c5400861d
+bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
+bindsym alt+Shift+i exec  brave-browser --app=https://chatgpt.com/
+bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive 
+
+## SCRIPTS SHOTCUTS
+bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
+bindsym alt+Shift+m exec ~/apagar.sh 
 
 # THEMES WAYBAR
 bindsym  alt+Shift+t exec ~/.config/waybar/switch-theme.sh
