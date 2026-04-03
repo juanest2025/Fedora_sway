@@ -89,6 +89,7 @@ bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f8452391
 bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
 bindsym alt+Shift+i exec  brave-browser --app=https://chatgpt.com/
 bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive 
+bindsym $mod+i exec brave-browser --app=https://www.instagram.com/
 
 ## SCRIPTS SHOTCUTS
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
