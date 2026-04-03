@@ -43,7 +43,7 @@ default_floating_border none
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/Arch-chan_to.png fill
+output * bg /home/juanes/wallpaper/tuelve.jpeg fill
 
 # wallpaper selector
 bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
@@ -160,12 +160,15 @@ bindsym Mod5+h workspace number 6
 bindsym Mod5+j workspace number 7
 bindsym Mod5+k workspace number 8
 bindsym Mod5+l workspace number 9
-bindsym Mod5+i workspace i 
-bindsym Mod5+o workspace o
-bindsym Mod5+z workspace z
+
+bindsym Mod5+q workspace q
 bindsym Mod5+w workspace w
 bindsym Mod5+e workspace e
 bindsym Mod5+r workspace r
+
+bindsym Mod5+i workspace i 
+bindsym Mod5+o workspace o
+bindsym Mod5+z workspace z
 
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
