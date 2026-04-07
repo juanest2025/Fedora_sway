@@ -163,7 +163,7 @@ bindsym Mod5+j workspace number 7
 bindsym Mod5+k workspace number 8
 bindsym Mod5+l workspace number 9
 
-bindsym Mod5+q workspace q
+#bindsym Mod5+q workspace q
 bindsym Mod5+w workspace w
 bindsym Mod5+e workspace e
 bindsym Mod5+r workspace r
