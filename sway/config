@@ -83,6 +83,7 @@ bindsym $mod+c exec google-chrome-stable
 bindsym Mod1+space exec wofi --show drun
 bindsym $mod+t exec flatpak run org.telegram.desktop
 bindsym alt+Shift+f exec flatpak run app.zen_browser.zen 
+bindsym alt+u exec gnome-calendar
 
 ## SITES
 bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f845239198f43c5400861d
