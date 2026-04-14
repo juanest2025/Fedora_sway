@@ -319,6 +319,12 @@ celluloide para abrirlos desde la terminal
 ---------------------------------------------------
 16. USO DE URAR PAR DESCOMPRIMIR ARCHIVOS.RAR
 ---------------------------------------------------
+- De manera grafica se instala lo siguiente:
+sudo dnf install file-roller
+
+y sus commplementos;
+sudo dnf install unzip p7zip p7zip-plugins unrar
+
 se instala:
 sudo dnf install rar -y
 sudo dnf install unrar -y 
