@@ -368,11 +368,25 @@ xdg-mime default eom.desktop image/jpeg image/png image/jpg image/webp
 sino 
 
 xdg-mime default eom.desktop image/*
+----------------------------------------------------
+19. HABILITAR EN WAYLAND EL COMPARTIR PANTALLA
+------------------------------------------------------
+-instala 
+sudo dnf install pipewire wireplumber xdg-desktop-portal-wlr
 
+-asegurate de que este activado
+systemctl --user enable --now pipewire wireplumber
 
+-cierra la sesion
 
+-luego en el navegador:
 
+about:config
 
+-y busca:
+media.peerconnection.enabled
+media.navigator.enabled
+widget.use-xdg-desktop-portal = true
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================
