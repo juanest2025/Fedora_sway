@@ -379,14 +379,9 @@ systemctl --user enable --now pipewire wireplumber
 
 -cierra la sesion
 
--luego en el navegador:
+-luego en el navegador brave:
+brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 
-about:config
-
--y busca:
-media.peerconnection.enabled
-media.navigator.enabled
-widget.use-xdg-desktop-portal = true
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================
