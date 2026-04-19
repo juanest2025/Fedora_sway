@@ -285,6 +285,7 @@ Waybar muestra:
 ----------------------------------------------------
 
 - Notificaciones: mako
+este tiene una cofig en las dotfiles, copiala al .config
 - Gestor archivos: ranger (con VLC) ------> renombrar archivos en con cw y le das el nombre y le dices ok y ya.
 en ranger la tecla:
   a es para renombrar
@@ -381,7 +382,13 @@ systemctl --user enable --now pipewire wireplumber
 
 -luego en el navegador brave:
 brave --enable-features=UseOzonePlatform --ozone-platform=wayland
+---------------------------------------------------
+20. NOTIFICACONES PARA EL SONIDO Y EL VOLUMEN
+-------------------------------------------------------
+para esto usamos wob:
 
+-instala
+sudo dnf install wob
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================

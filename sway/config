@@ -6,8 +6,6 @@ set $down j
 set $up k
 set $right l
 set $term kitty 
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
-
 include /etc/sway/config-vars.d/*
 
 ## SHORCUT EDIT SWAY DOTFILE 
@@ -29,21 +27,14 @@ client.focused_inactive #2a2a2a #1e1e2e #888888 #2a2a2a
 client.unfocused        #1a1a1a #1e1e2e #666666 #1a1a1a
 client.urgent           #ff5555 #1e1e2e #ffffff #ff5555
 
-default_border pixel 2
-default_floating_border pixel 2
-
 for_window [title=".*"] border pixel 2
-for_window [title=".*"] title_format ""
 for_window [app_id=".*"] title_format ""
-
-default_border none
-default_floating_border none
 
 #pantalla de bloqueo
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/tuelve.jpeg fill
+output * bg /home/juanes/wallpaper/Arch-chan_to.png fill
 
 # wallpaper selector
 bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
@@ -57,12 +48,12 @@ exec_always dbus-update-activation-environment --systemd \
     XDG_RUNTIME_DIR \
     XDG_CURRENT_DESKTOP=sway
 
-
 # Asegurar audio (PipeWire + Pulse)
 exec_always systemctl --user enable --now pipewire pipewire-pulse
 exec_always nm-applet --indicator
 exec_always wl-paste --watch cliphist store
 exec_always /usr/lib/polkit-kde-authentication-agent-1
+exec_always wob
 #exec_always gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 # VLC forzado a X11 (CLAVE)
@@ -91,6 +82,7 @@ bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
 bindsym alt+Shift+i exec  brave-browser --app=https://chatgpt.com/
 bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive 
 bindsym $mod+i exec brave-browser --app=https://www.instagram.com/
+bindsym $mod+p exec brave-browser --app=https://powerpoint.cloud.microsoft/en-us/?wdOrigin=MAIL.SHELL
 
 ## SCRIPTS SHOTCUTS
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
@@ -162,14 +154,14 @@ bindsym Mod5+h workspace number 6
 bindsym Mod5+j workspace number 7
 bindsym Mod5+k workspace number 8
 bindsym Mod5+l workspace number 9
+bindsym Mod5+i workspace number 10
 
-#bindsym Mod5+q workspace q
 bindsym Mod5+w workspace w
 bindsym Mod5+e workspace e
 bindsym Mod5+r workspace r
 
-bindsym Mod5+i workspace i 
-bindsym Mod5+o workspace o
+#bindsym Mod5+i workspace i 
+#bindsym Mod5+o workspace o
 bindsym Mod5+z workspace z
 
 bindsym $mod+Shift+1 move container to workspace number 1
@@ -215,13 +207,22 @@ input * {
 }
 
 ### VOLUMEN
-bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+#bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+#bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ### BRILLO
-bindsym Ctrl+Shift+Up   exec brightnessctl set +2%
-bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
+#bindsym Ctrl+Shift+Up   exec brightnessctl set +2%
+#bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
+
+### VOLUMEN (con wob)
+bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%' | wob
+bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%' | wob
+bindsym Ctrl+Shift+m     exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+### BRILLO (con wob)
+bindsym Ctrl+Shift+Up exec brightnessctl set +2% && brightnessctl g | awk -v max=$(brightnessctl m) '{print int($1/max*100)}' | wob
+bindsym Ctrl+Shift+Down exec brightnessctl set 2%- && brightnessctl g | awk -v max=$(brightnessctl m) '{print int($1/max*100)}' | wob
 
 ### LUZ NOCTURNA
 exec_always gammastep -O 3500

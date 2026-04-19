@@ -64,3 +64,4 @@ sudo dnf install wget -y
 sudo dnf install curl -y 
 sudo dnf install git -y 
 sudo dnf install fd -y
+sudo dnf install wob -y 
