@@ -1,0 +1,202 @@
+/* =========================
+   🌙 DARK CREAM FUTURE
+   ========================= */
+
+/* 🎨 Palette */
+@define-color background #121212;
+@define-color background-soft #1e1e1e;
+@define-color foreground #e6e1d9;
+
+@define-color accent #d6b98c;        /* crema */
+@define-color accent-soft #2a2621;   /* crema oscuro suave */
+@define-color accent-strong #e6cfa7;
+
+@define-color red #d97c7c;
+@define-color green #8fbf8f;
+@define-color yellow #e6c98f;
+@define-color blue #8fa8c9;
+
+/* =========================
+   GLOBAL
+   ========================= */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 14px;
+    min-height: 0;
+}
+
+/* 🧱 Bar */
+window#waybar {
+    background-color: @background;
+    color: @foreground;
+    border-bottom: 1px solid @accent-soft;
+}
+
+/* =========================
+   🧩 WORKSPACES
+   ========================= */
+
+#workspaces {
+    margin: 0 6px;
+}
+
+#workspaces button {
+    color: @foreground;
+    padding: 4px 12px;
+    margin: 4px;
+    border-radius: 8px;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+#workspaces button:hover {
+    background: @background-soft;
+}
+
+/* ⭐ Activo (elegante oscuro) */
+#workspaces button.focused {
+    background: @accent-soft;
+    color: @accent-strong;
+    border-radius: 10px;
+    padding: 4px 14px;
+    font-weight: 600;
+}
+
+/* 🚨 Urgente */
+#workspaces button.urgent {
+    background: @red;
+    color: #fff;
+}
+
+/* =========================
+   📦 MODULES
+   ========================= */
+
+#mode,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#network,
+#pulseaudio,
+#wireplumber,
+#backlight,
+#disk,
+#power-profiles-daemon,
+#idle_inhibitor,
+#tray {
+    padding: 0 10px;
+    margin: 0 4px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+/* Hover suave */
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover {
+    background: @background-soft;
+}
+
+/* =========================
+   🎯 COLORES SUAVES
+   ========================= */
+
+#clock {
+    color: @accent;
+}
+
+#cpu {
+    color: @green;
+}
+
+#memory {
+    color: @blue;
+}
+
+#temperature {
+    color: @yellow;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+#battery {
+    color: @accent;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#network {
+    color: @blue;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#pulseaudio {
+    color: @accent;
+}
+
+#pulseaudio.muted {
+    color: @red;
+}
+
+#wireplumber {
+    color: @accent;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#disk {
+    color: @blue;
+}
+
+#power-profiles-daemon {
+    color: @accent;
+}
+
+#idle_inhibitor {
+    color: @foreground;
+}
+
+#idle_inhibitor.activated {
+    color: @accent-strong;
+}
+
+/* =========================
+   🧰 TRAY
+   ========================= */
+
+#tray {
+    padding: 0 10px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    color: @red;
+}
