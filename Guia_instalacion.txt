@@ -389,6 +389,12 @@ para esto usamos wob:
 
 -instala
 sudo dnf install wob
+--------------------------------------------------------
+21. REPRODUCTOR VIDEO NATIVO WAYLAND SHOWTIME
+--------------------------------------------------------
+-instalalo desde la terminal:
+sudo dnf install showtime
+este es un reproductor del gtk5 para wayland
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================
