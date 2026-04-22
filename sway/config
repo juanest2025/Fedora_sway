@@ -79,10 +79,12 @@ bindsym alt+u exec gnome-calendar
 ## SITES
 bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f845239198f43c5400861d
 bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
-bindsym alt+Shift+i exec  brave-browser --app=https://chatgpt.com/
 bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive 
 bindsym $mod+i exec brave-browser --app=https://www.instagram.com/
 bindsym $mod+p exec brave-browser --app=https://powerpoint.cloud.microsoft/en-us/?wdOrigin=MAIL.SHELL
+
+## UDEA CLASES 
+bindsym alt+Shift+i exec brave-browser --app=https://udea.zoom.us/j/92018362786
 
 ## SCRIPTS SHOTCUTS
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
@@ -207,22 +209,22 @@ input * {
 }
 
 ### VOLUMEN
-#bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-#bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-#bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ### BRILLO
-#bindsym Ctrl+Shift+Up   exec brightnessctl set +2%
-#bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
+bindsym Ctrl+Shift+Up   exec brightnessctl set +2%
+bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
 
 ### VOLUMEN (con wob)
-bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%' | wob
-bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%' | wob
-bindsym Ctrl+Shift+m     exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%' | wob
+#bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%' | wob
+#bindsym Ctrl+Shift+m     exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ### BRILLO (con wob)
-bindsym Ctrl+Shift+Up exec brightnessctl set +2% && brightnessctl g | awk -v max=$(brightnessctl m) '{print int($1/max*100)}' | wob
-bindsym Ctrl+Shift+Down exec brightnessctl set 2%- && brightnessctl g | awk -v max=$(brightnessctl m) '{print int($1/max*100)}' | wob
+#bindsym Ctrl+Shift+Up exec brightnessctl set +2% && brightnessctl g | awk -v max=$(brightnessctl m) '{print int($1/max*100)}' | wob
+#bindsym Ctrl+Shift+Down exec brightnessctl set 2%- && brightnessctl g | awk -v max=$(brightnessctl m) '{print int($1/max*100)}' | wob
 
 ### LUZ NOCTURNA
 exec_always gammastep -O 3500
