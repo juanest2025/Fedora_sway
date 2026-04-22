@@ -34,7 +34,8 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/Arch-chan_to.png fill
+#output * bg /home/juanes/wallpaper/Arch-chan_to.png fill
+exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
 bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
