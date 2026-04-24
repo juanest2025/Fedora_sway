@@ -40,7 +40,9 @@ window#waybar {
 #window,
 #pulseaudio,
 #backlight,
+#bluetooth,
 #network,
+#bluet
 #battery,
 #clock,
 #tray,
@@ -101,6 +103,7 @@ window#waybar {
 #network:hover,
 #battery:hover,
 #clock:hover,
+#bluetooth:hover,  
 #custom-wlogout:hover {
 
     background: rgba(255,255,255,0.15);

@@ -33,6 +33,7 @@ window#waybar {
 #pulseaudio,
 #backlight,
 #network,
+#bluetooth,
 #battery,
 #clock,
 #tray,
@@ -47,6 +48,7 @@ window#waybar {
 #pulseaudio { background: rgba(137,180,250,0.15); color:#89b4fa; }
 #backlight  { background: rgba(249,226,175,0.15); color:#f9e2af; }
 #network    { background: rgba(166,227,161,0.15); color:#a6e3a1; }
+#bluetooth  { background: rgba(137,180,250,0.15); color:#89b4fa; }
 #battery    { background: rgba(166,227,161,0.15); color:#a6e3a1; }
 #clock      { background: rgba(137,180,250,0.15); color:#89b4fa; }
 #tray       { background: rgba(180,190,254,0.15); }

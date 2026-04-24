@@ -395,6 +395,34 @@ sudo dnf install wob
 -instalalo desde la terminal:
 sudo dnf install showtime
 este es un reproductor del gtk5 para wayland
+--------------------------------------------------------
+22. CONFIGURAR EL BLUETOOTH
+--------------------------------------------------------
+-instala 
+sudo dnf install bluez bluez-tools blueman
+
+-bluez → el sistema Bluetooth
+-blueman → GUI útil (por si quieres algo gráfico rápido)
+-activar el servicio;
+sudo systemctl enable --now bluetooth
+systemctl status bluetooth
+-ahora lo pruebas:
+  -Entra al control:
+  bluetoothctl
+  -Dentro escribe:
+  power on
+  agent on
+  default-agent
+  scan on
+-forma simple para controlarlo, instala;
+sudo dnf install rfkill
+  -Probar:
+  rfkill list
+  -Encender Bluetooth:
+  rfkill unblock bluetooth
+  -Apagar:
+  -rfkill block bluetooth
+
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================

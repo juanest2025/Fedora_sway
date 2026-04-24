@@ -53,6 +53,7 @@ window#waybar {
 #pulseaudio,
 #backlight,
 #network,
+#bluetooth,
 #battery,
 #clock,
 #tray,
@@ -83,6 +84,12 @@ window#waybar {
 #network {
     background: rgba(80,200,140,0.12);
     color: #50c88c;
+}
+
+/* bluetooth */
+#bluetooth {
+    background: rgba(120,150,255,0.12);
+    color: #7896ff;
 }
 
 /* Batería */

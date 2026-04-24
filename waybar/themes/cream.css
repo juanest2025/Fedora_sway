@@ -83,6 +83,7 @@ window#waybar {
 #temperature,
 #battery,
 #network,
+#bluetooth,
 #pulseaudio,
 #wireplumber,
 #backlight,
@@ -101,6 +102,7 @@ window#waybar {
 #cpu:hover,
 #memory:hover,
 #network:hover,
+#bluetooth:hover,
 #pulseaudio:hover {
     background: @background-soft;
 }

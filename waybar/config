@@ -17,6 +17,7 @@
     "pulseaudio",
     "backlight",
     "network",
+    "bluetooth",
     "battery",
     "clock",
     "tray"
@@ -48,6 +49,12 @@
     "format-ethernet": "󰈀",
     "format-disconnected": "󰤭",
     "on-click": "nm-connection-editor"
+  },
+
+  "bluetooth": {
+    "exec": "rfkill list bluetooth | grep -q 'Soft blocked: no' && echo '' || echo ' '",
+    "interval": 2,
+    "on-click": "blueman-manager"
   },
 
   "battery": {
