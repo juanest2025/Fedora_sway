@@ -422,7 +422,21 @@ sudo dnf install rfkill
   rfkill unblock bluetooth
   -Apagar:
   -rfkill block bluetooth
-
+------------------------------------------------------------
+23. LOCALSEND
+-------------------------------------------------------------
+-instala este programa desde flatpak:
+flatpak install flathub org.localsend.localsend_app
+flatpak run org.localsend.localsend_app
+-y luego cuando lo vallas a usar debes de desactivar el firewalld para eso:
+sudo systemctl stop firewalld
+- luego de recibir el archivo debes de activarlo de nuevo:
+sudo systemctl start firewalld
+- te aseguras
+sudo systemclt enable firewalld
+- y ves el status
+sudo systemctl status firewalld
+ 
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================
