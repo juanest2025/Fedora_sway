@@ -11,7 +11,7 @@ include /etc/sway/config-vars.d/*
 ## SHORCUT EDIT SWAY DOTFILE 
 bindsym Mod1+Shift+u exec kitty -e nvim ~/.config/sway/config
 
-### Output configuration
+### Output configuration screen borders
 default_border pixel 2
 default_floating_border pixel 2
 smart_borders on
@@ -30,7 +30,7 @@ client.urgent           #ff5555 #1e1e2e #ffffff #ff5555
 for_window [title=".*"] border pixel 2
 for_window [app_id=".*"] title_format ""
 
-#pantalla de bloqueo
+# pantalla de bloqueo
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
@@ -83,15 +83,18 @@ bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
 bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive 
 bindsym $mod+i exec brave-browser --app=https://www.instagram.com/
 bindsym $mod+p exec brave-browser --app=https://powerpoint.cloud.microsoft/en-us/?wdOrigin=MAIL.SHELL
+bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
 
 ## UDEA CLASES 
 bindsym alt+Shift+i exec brave-browser --app=https://udea.zoom.us/j/92018362786
 
-## SCRIPTS SHOTCUTS
+## SCRIPTS SHORTCUTS
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
+
+# APAGAR PC
 bindsym alt+Shift+m exec ~/apagar.sh 
 
-# THEMES WAYBAR
+# SWITCH THEMES WAYBAR
 bindsym  alt+Shift+t exec ~/.config/waybar/switch-theme.sh
 
 # INTERRUPTOR DE WAYBAR
@@ -230,6 +233,7 @@ bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
 ### LUZ NOCTURNA
 exec_always gammastep -O 3500
 #exec_always = sh -c "sleep 5 && WAYLAND_DISPLAY=$WAYLAND_DISPLAY /usr/bin/gammastep -O 3500"
+
 ### LOCK / LOGOUT
 bindsym Ctrl+Shift+l exec swaylock
 bindsym Ctrl+Shift+e exec wlogout
