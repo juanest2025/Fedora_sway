@@ -388,7 +388,7 @@ brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 para esto usamos wob:
 
 -instala
-sudo dnf install wob aun 
+sudo dnf install wob  
 --------------------------------------------------------
 21. REPRODUCTOR VIDEO NATIVO WAYLAND SHOWTIME
 --------------------------------------------------------
