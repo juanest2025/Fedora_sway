@@ -436,7 +436,20 @@ sudo systemctl start firewalld
 sudo systemclt enable firewalld
 - y ves el status
 sudo systemctl status firewalld
- 
+
+------------------------------------------------------------
+24. ELIMINAR ARCHIVOS TEMPORALES EN FEDORA Y LINUX EN GENERAL
+------------------------------------------------------------
+sudo dnf clean all
+sudo dnf autoremove
+du -sh ~/.cache
+rm -rf ~/.cache/*
+-eliminar los viejos systemd
+journalctl --disk-usage
+sudo journalctl --vacuum-size=100M
+sudo journalctl --vacuum-time=7d
+rm -rf ~/.local/share/Trash/*
+sudo rm -rf /tmp/*
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================
