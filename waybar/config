@@ -1,4 +1,4 @@
- {
+{
   "layer": "top",
   "position": "top",
   "height": 34,
@@ -34,14 +34,17 @@
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 muted",
     "format-icons": {
-      "default": ["󰕿", "󰖀", "󰕾"]
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
     },
     "on-click": "pavucontrol"
   },
 
   "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"]
+    "format": "{icon} {percent}%"
   },
 
   "network": {
@@ -52,7 +55,7 @@
   },
 
   "bluetooth": {
-    "exec": "rfkill list bluetooth | grep -q 'Soft blocked: no' && echo '' || echo ' '",
+    "exec": "rfkill list bluetooth | grep -q 'Soft blocked: no' && echo '' || echo ''",
     "interval": 2,
     "on-click": "blueman-manager"
   },
@@ -62,9 +65,11 @@
       "warning": 30,
       "critical": 15
     },
+
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-plugged": "󰂄 {capacity}%",
+
     "format-icons": [
       "󰂎",
       "󰁺",
@@ -81,5 +86,4 @@
   "tray": {
     "spacing": 8
   }
-}
- 
+} 

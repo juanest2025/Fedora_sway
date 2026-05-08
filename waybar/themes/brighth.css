@@ -58,8 +58,15 @@ window#waybar {
     color: #f2f2f2;
     font-weight: 500;
 }
+#custom-cmus-prev,
+#custom-cmus-play,
+#custom-cmus-next {
+    background: rgba(249,226,175,0.15);
+    color: #f9e2af;
 
-
+    padding: 4px 10px;
+    font-weight: 500;
+}
 /* =============================
    WORKSPACES
 ============================= */

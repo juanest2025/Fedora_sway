@@ -2,7 +2,7 @@
 
 DIR="/home/juanes/wallpaper"
 
-WALL=$(ls "$DIR" | wofi --show dmenu --prompt "Wallpaper")
+WALL=$(ls "$DIR" | fuzzel --dmenu --prompt "Wallpaper> ")
 
 if [ -n "$WALL" ]; then
     pkill swaybg
