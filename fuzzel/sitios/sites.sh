@@ -1,0 +1,32 @@
+#!/bin/bash
+
+declare -A sites=(
+  ["Facebook"]="https://www.facebook.com"
+  ["Instagram"]="https://www.instagram.com/"
+  ["YouTube"]="https://www.youtube.com"
+  ["La.movie"]="https://la.movie/"
+  ["Tioplus.app"]="https://tioplus.app/"
+  ["Miraculos.to"]="https://miraculous.to/en/"
+  ["Claude AI"]="https://claude.ai/new"
+  ["ChatGPT"]="https://chatgpt.com/"
+  ["DeepSeek"]="https://chat.deepseek.com/"
+  ["Gemini"]="https://gemini.google.com/app"
+  ["AnimeFLV"]="https://www4.animeflv.net"
+  ["Tioanime"]="https://tioanime.com/"
+  ["anime-jl"]="https://www.anime-jl.net/"
+  ["AnimeAV1"]="https://animeav1.com/"
+  ["Animejara"]="https://animejara.com/"
+  ["latanime"]="https://latanime.org/"
+  ["Hentaila"]="https://hentaila.com/hub"
+  ["hentai-jl"]="https://hentaijl.com/"
+  ["Gmail"]="https://mail.google.com"
+  ["Drive"]="https://drive.google.com/drive/my-drive"
+  ["Zoom - Ingles IV"]="https://udea.zoom.us/j/92018362786"
+  ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"  
+)
+
+selection=$(printf "%s\n" "${!sites[@]}" | fuzzel --dmenu --prompt="Sitios: ")
+
+if [ -n "$selection" ]; then
+  xdg-open "${sites[$selection]}"
+fi
