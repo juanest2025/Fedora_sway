@@ -27,6 +27,7 @@ declare -A sites=(
   ["Calendar"]="https://calendar.google.com/calendar/u/0/r"
   ["Meet.google"]="https://meet.google.com/landing"
   ["Monkeytype"]="https://monkeytype.com/"
+  ["cinecalidad.mx"]="https://cine-calidad.mx/"
   ["Zoom - Ingles IV"]="https://udea.zoom.us/j/92018362786"
   ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"  
 )
