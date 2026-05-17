@@ -1,8 +1,8 @@
 #!/bin/bash
 
 declare -A sites=(
-  ["Whatsapp"]="https://web.whatsapp.com/"
   ["Facebook"]="https://www.facebook.com"
+  ["Whatsapp"]="https://web.whatsapp.com/"
   ["Instagram"]="https://www.instagram.com/"
   ["YouTube"]="https://www.youtube.com"
   ["Discoard"]="https://discord.com/channels/@me"
@@ -36,5 +36,5 @@ declare -A sites=(
 selection=$(printf "%s\n" "${!sites[@]}" | fuzzel --dmenu --prompt="Sitios: ")
 
 if [ -n "$selection" ]; then
-  xdg-open "${sites[$selection]}"
+  brave-browser --app="${sites[$selection]}"
 fi

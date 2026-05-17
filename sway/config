@@ -34,8 +34,8 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/Lowpoly_Street.png fill
-#exec_always ~/.config/sway/scripts/random_wallpaper.sh
+#output * bg /home/juanes/wallpaper/Lowpoly_Street.png fill
+exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
 bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
@@ -85,12 +85,16 @@ bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive
 bindsym $mod+i exec brave-browser --app=https://www.instagram.com/
 bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
 
+## lista sitios en pantalla completa
+bindsym alt+m exec ~/.config/fuzzel/sitios/webs.sh
+
 # office online
 bindsym $mod+p exec brave-browser --app=https://powerpoint.cloud.microsoft/en-us/?wdOrigin=MAIL.SHELL
 bindsym alt+Shift+w exec brave-browser --app=https://docs.new
 
 ## UDEA CLASES 
-bindsym alt+Shift+i exec brave-browser --app=https://udea.zoom.us/j/92018362786
+bindsym alt+Shift+r exec brave-browser --app=https://udea.zoom.us/j/92018362786
+bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
 
 ## SCRIPTS SHORTCUTS
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
