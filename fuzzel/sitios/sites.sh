@@ -22,6 +22,7 @@ declare -A sites=(
   ["latanime"]="https://latanime.org/"
   ["Hentaila"]="https://hentaila.com/hub"
   ["hentai-jl"]="https://hentaijl.com/"
+  ["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
   ["Google"]="https://www.google.com/"
   ["Gmail"]="https://mail.google.com"
   ["Drive"]="https://drive.google.com/drive/my-drive"

@@ -23,6 +23,7 @@ declare -A sites=(
   ["Hentaila"]="https://hentaila.com/hub"
   ["hentai-jl"]="https://hentaijl.com/"
   ["Google"]="https://www.google.com/"
+  ["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
   ["Gmail"]="https://mail.google.com"
   ["Drive"]="https://drive.google.com/drive/my-drive"
   ["Calendar"]="https://calendar.google.com/calendar/u/0/r"
