@@ -8,6 +8,7 @@ declare -A sites=(
   ["Discoard"]="https://discord.com/channels/@me"
   ["La.movie"]="https://la.movie/"
   ["Tioplus.app"]="https://tioplus.app/"
+  ["CuevaDeAna"]="https://cuevadeana.com/"
   ["Miraculos.to"]="https://miraculous.to/en/"
   ["Claude AI"]="https://claude.ai/new"
   ["ChatGPT"]="https://chatgpt.com/"
