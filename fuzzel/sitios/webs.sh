@@ -6,6 +6,7 @@ declare -A sites=(
   ["Instagram"]="https://www.instagram.com/"
   ["YouTube"]="https://www.youtube.com"
   ["Discoard"]="https://discord.com/channels/@me"
+  ["GitHub"]="https://github.com/juanest2025"
   ["La.movie"]="https://la.movie/"
   ["Tioplus.app"]="https://tioplus.app/"
   ["CuevaDeAna"]="https://cuevadeana.com/"
