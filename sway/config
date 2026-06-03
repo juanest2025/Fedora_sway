@@ -98,19 +98,14 @@ bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
 
 ## SCRIPTS SHORTCUTS
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
-
 # APAGAR PC
 bindsym alt+Shift+m exec ~/apagar.sh 
-
 # SWITCH THEMES WAYBAR
 bindsym  alt+Shift+t exec ~/.config/waybar/switch-theme.sh
-
 # INTERRUPTOR DE WAYBAR
 bindsym alt+Shift+j exec ~/.config/sway/scripts/toggle.sh
-
 # INTERRUPTOR DE WIFI 1 solor reiniciar
 bindsym alt+Shift+l exec ~/.config/sway/scripts/mejorar.wifi.sh
-
 # INTERRUPTOR DE WIFI 2 conectar al la red de mi casa directamente 
 bindsym alt+Shift+k exec ~/.config/sway/scripts/wifi.sh
 
@@ -173,9 +168,6 @@ bindsym Mod5+i workspace number 10
 bindsym Mod5+w workspace w
 bindsym Mod5+e workspace e
 bindsym Mod5+r workspace r
-
-#bindsym Mod5+i workspace i 
-#bindsym Mod5+o workspace o
 bindsym Mod5+z workspace z
 
 bindsym $mod+Shift+1 move container to workspace number 1
@@ -188,6 +180,11 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
+
+bindsym Mod5+Shift+w move container to workspace w 
+bindsym Mod5+Shift+e move container to workspace e 
+bindsym Mod5+Shift+r move container to workspace r 
+bindsym Mod5+Shift+z move container to workspace z 
 
 ### Layout
 bindsym Mod1+Shift+h splith
