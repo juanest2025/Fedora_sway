@@ -34,14 +34,26 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-#output * bg /home/juanes/wallpaper/Lowpoly_Street.png fill
-exec_always ~/.config/sway/scripts/random_wallpaper.sh
+output * bg /home/juanes/wallpaper/Lowpoly_Street.png fill
+#exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
 bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
 
 # cargar wallpaper al iniciar
 #exec_always ~/.config/sway/scripts/wallpaper_chooser.sh
+
+## Grabar toda la pantalla con audio
+bindsym $mod+Shift+r exec wf-recorder -a -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
+
+# Grabar una región seleccionada con audio
+bindsym $mod+Shift+g exec wf-recorder -a -g "$(slurp)" -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
+
+# Detener grabación
+bindsym $mod+Shift+x exec pkill wf-recorder
+
+## Gestor de pantallas
+bindsym $mod+p exec wdisplays
 
 # FIX CRÍTICO PARA VLC / AUDIO / WAYLAND
 exec_always dbus-update-activation-environment --systemd \
@@ -89,7 +101,7 @@ bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
 bindsym alt+m exec ~/.config/fuzzel/sitios/webs.sh
 
 # office online
-bindsym $mod+p exec brave-browser --app=https://powerpoint.cloud.microsoft/en-us/?wdOrigin=MAIL.SHELL
+#bindsym $mod+p exec brave-browser --app=https://powerpoint.cloud.microsoft/en-us/?wdOrigin=MAIL.SHELL
 bindsym alt+Shift+w exec brave-browser --app=https://docs.new
 
 ## UDEA CLASES 

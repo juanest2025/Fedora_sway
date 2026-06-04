@@ -436,7 +436,30 @@ sudo systemctl start firewalld
 sudo systemclt enable firewalld
 - y ves el status
 sudo systemctl status firewalld
+------------------------------------------------------------
+24. GRABAR LA PANTALLA DE LINUX EN SWAY 
+-------------------------------------------------------------
+se instala esto:
+sudo dnf install wf-recorder grim slurp wl-clipboard
 
+y luego:
+
+# Grabar toda la pantalla con audio
+bindsym $mod+Shift+r exec wf-recorder -a -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
+
+# Grabar una región seleccionada con audio
+bindsym $mod+Shift+g exec wf-recorder -a -g "$(slurp)" -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
+
+# Detener grabación
+bindsym $mod+Shift+x exec pkill wf-recorder
+=------------------------------------------------------------
+25.GESTOR DE PANTALLAS 
+------------------------------------------------------------- se instala esto: sudo dnf install wf-recorder grim slurp wl-clipboard y luego:
+se instala: 
+sudo dnf install wdisplays
+
+y luego el atajo:
+bindsym $mod+p exec wdisplays
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================
