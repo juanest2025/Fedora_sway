@@ -27,17 +27,22 @@ declare -A sites=(
   ["Google"]="https://www.google.com/"
   ["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
   ["Gmail"]="https://mail.google.com"
+  ["Correo UdeA"]="https://mail.google.com/mail/u/0/#inbox"
   ["Drive"]="https://drive.google.com/drive/my-drive"
   ["Calendar"]="https://calendar.google.com/calendar/u/0/r"
   ["Meet.google"]="https://meet.google.com/landing"
   ["Monkeytype"]="https://monkeytype.com/"
   ["cinecalidad.mx"]="https://cine-calidad.mx/"
   ["Zoom - Ingles IV"]="https://udea.zoom.us/j/92018362786"
-  ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"  
+  ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"
 )
 
-selection=$(printf "%s\n" "${!sites[@]}" | fuzzel --dmenu --prompt="Sitios: ")
+selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitios: ")
 
 if [ -n "$selection" ]; then
-  brave-browser --app="${sites[$selection]}"
+    if [ "$selection" = "Correo UdeA" ]; then
+        google-chrome --app="https://mail.google.com/mail/u/0/#inbox" &
+    else
+        brave-browser --app="${sites[$selection]}" &
+    fi
 fi
