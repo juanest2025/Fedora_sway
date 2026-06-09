@@ -36,6 +36,8 @@ declare -A sites=(
   ["cinecalidad.mx"]="https://cine-calidad.mx/"
   ["Zoom - Ingles IV"]="https://udea.zoom.us/j/92018362786"
   ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"
+  ["XVideos"]="https://www.xvideos.com/"
+  ["Pornhub"]="https://es.pornhub.com/"
 )
 
 selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitios: ")
@@ -44,6 +46,9 @@ if [ -n "$selection" ]; then
     case "$selection" in
         "Correo UdeA"|"Ude@")
             google-chrome-stable --app="${sites[$selection]}" &
+            ;;
+        "XVideos"|"Pornhub")
+            brave-browser --tor "${sites[$selection]}" &
             ;;
         *)
             brave-browser --app="${sites[$selection]}" &
