@@ -454,12 +454,40 @@ bindsym $mod+Shift+g exec wf-recorder -a -g "$(slurp)" -f ~/Videos/$(date +'%Y-%
 bindsym $mod+Shift+x exec pkill wf-recorder
 =------------------------------------------------------------
 25.GESTOR DE PANTALLAS 
-------------------------------------------------------------- se instala esto: sudo dnf install wf-recorder grim slurp wl-clipboard y luego:
+------------------------------------------------------------- 
+se instala esto: sudo dnf install wf-recorder grim slurp wl-clipboard 
+y luego:
 se instala: 
 sudo dnf install wdisplays
 
 y luego el atajo:
 bindsym $mod+p exec wdisplays
+==------------------------------------------------------------
+26. AHORRO DE BATERIA
+------------------------------------------------------------- 
+instala: 
+sudo dnf install power-profiles-daemon
+
+-despues;
+powerprofilesctl list
+
+-esto es lo que vas a ver:
+"
+performance:
+    Driver: platform_profile
+balanced:
+    Driver: platform_profile
+power-saver:
+    Driver: platform_profile
+"
+- para ver el actual:
+powerprofilesctl get
+
+- despuea añade esto a la config de sway para los modos de energia:
+bindsym Mod1+F9  exec powerprofilesctl set power-saver
+bindsym Mod1+F10 exec powerprofilesctl set balanced
+bindsym Mod1+F11 exec powerprofilesctl set performance
+
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================

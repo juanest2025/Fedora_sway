@@ -28,6 +28,7 @@ declare -A sites=(
   ["Google"]="https://www.google.com/"
   ["Gmail"]="https://mail.google.com"
   ["Correo UdeA"]="https://mail.google.com/mail/u/0/#inbox"
+  ["Ude@"]="https://udearroba.udea.edu.co/internos/login/index.php"
   ["Drive"]="https://drive.google.com/drive/my-drive"
   ["Calendar"]="https://calendar.google.com/calendar/u/0/r"
   ["Meet.google"]="https://meet.google.com/landing"
@@ -40,8 +41,8 @@ declare -A sites=(
 selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitios: ")
 
 if [ -n "$selection" ]; then
-    if [ "$selection" = "Correo UdeA" ]; then
-        google-chrome-stable "https://mail.google.com/mail/u/0/#inbox" &
+    if [ "$selection" = "Correo UdeA" ] || [ "$selection" = "Ude@" ]; then
+        google-chrome-stable "${sites[$selection]}" &
     else
         xdg-open "${sites[$selection]}" &
     fi
