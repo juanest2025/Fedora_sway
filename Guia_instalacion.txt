@@ -489,6 +489,11 @@ bindsym Mod1+F10 exec powerprofilesctl set balanced
 bindsym Mod1+F11 exec powerprofilesctl set performance
 
 ====================================================
+27. CAMARA PARA GRABAR                                                    
+====================================================
+se instala la camara: 
+sudo dnf install cheese
+====================================================
 FIN DE LA GUÍA (v2)
 ====================================================
 
