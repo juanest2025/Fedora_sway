@@ -39,6 +39,10 @@ declare -A sites=(
   ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"
   ["XVideos"]="https://www.xvideos.com/"
   ["Pornhub"]="https://es.pornhub.com/"
+  ["Google Docs"]="https://docs.new"
+  ["Google slides"]="https://slides.new"
+  ["Word"]="https://word.cloud.microsoft/"
+  ["Power Point"]="https://powerpoint.cloud.microsoft/"
 )
 
 selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitios: ")
