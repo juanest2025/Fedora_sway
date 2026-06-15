@@ -35,6 +35,7 @@ declare -A sites=(
   ["Meet.google"]="https://meet.google.com/landing"
   ["Monkeytype"]="https://monkeytype.com/"
   ["cinecalidad.mx"]="https://cine-calidad.mx/"
+  ["Google Maps"]="https://maps.google.com/"
   ["Zoom - Ingles IV"]="https://udea.zoom.us/j/92018362786"
   ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"
   ["XVideos"]="https://www.xvideos.com/"
