@@ -94,7 +94,7 @@ bindsym Mod1+space exec fuzzel
 bindsym $mod+t exec flatpak run org.telegram.desktop
 bindsym alt+Shift+f exec flatpak run app.zen_browser.zen 
 bindsym alt+u exec gnome-calendar
-bindsym alt+i exec gnome-clocks
+bindsym alt+q exec gnome-clocks
 
 ## SITES
 bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f845239198f43c5400861d
