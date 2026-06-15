@@ -45,6 +45,8 @@ sudo dnf install zsh -y
 sudo dnf install cmus -y 
 #camara para grabar
 sudo dnf install cheese
+#reloj
+sudo dnf install gnome-clocks
 #otras utilidades
 sudo dnf install zip -y 
 sudo dnf install rar -y 

@@ -493,6 +493,11 @@ bindsym Mod1+F11 exec powerprofilesctl set performance
 ====================================================
 se instala la camara: 
 sudo dnf install cheese
+=====================================================
+28. RELOJ PARA FEDORA                                                   
+====================================================
+se instala la camara: 
+sudo dnf install gnome-clocks
 ====================================================
 FIN DE LA GUÍA (v2)
 ====================================================
