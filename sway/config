@@ -34,8 +34,8 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/Lowpoly_Street.png fill
-#exec_always ~/.config/sway/scripts/random_wallpaper.sh
+#output * bg /home/juanes/wallpaper/Lowpoly_Street.png fill
+exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
 bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
@@ -54,6 +54,11 @@ bindsym $mod+Shift+x exec pkill wf-recorder
 
 ## Gestor de pantallas
 bindsym $mod+p exec wdisplays
+
+## Modos de energia
+bindsym Mod1+F9  exec powerprofilesctl set power-saver
+bindsym Mod1+F10 exec powerprofilesctl set balanced
+bindsym Mod1+F11 exec powerprofilesctl set performance
 
 # FIX CRÍTICO PARA VLC / AUDIO / WAYLAND
 exec_always dbus-update-activation-environment --systemd \
@@ -89,6 +94,7 @@ bindsym Mod1+space exec fuzzel
 bindsym $mod+t exec flatpak run org.telegram.desktop
 bindsym alt+Shift+f exec flatpak run app.zen_browser.zen 
 bindsym alt+u exec gnome-calendar
+bindsym alt+i exec gnome-clocks
 
 ## SITES
 bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f845239198f43c5400861d
