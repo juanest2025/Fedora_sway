@@ -28,7 +28,6 @@ declare -A sites=(
   ["uncensoredhentai"]="https://uncensoredhentai.xxx/"  
   ["JKanimes"]="https://jkanime.net/"
   ["hentaiJK"]="https://hentaijk.com/"
-
   ["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
   ["Google"]="https://www.google.com/"
   ["Gmail"]="https://mail.google.com"
