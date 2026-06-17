@@ -498,7 +498,18 @@ sudo dnf install cheese
 ====================================================
 se instala la camara: 
 sudo dnf install gnome-clocks
+======================================================
+29. LIMPIEZA PC                                                   
 ====================================================
+
+1.  Limpiar caché de paquetes sudo dnf clean all
+
+2.  Eliminar paquetes que ya no se usan sudo dnf autoremove
+
+3.  Vaciar papelera rm -rf ~/.local/share/Trash/*
+
+4.  (Opcional) Limpiar caché de aplicaciones rm -rf ~/.cache/*
+===================================================
 FIN DE LA GUÍA (v2)
 ====================================================
 
