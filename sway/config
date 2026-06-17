@@ -103,16 +103,14 @@ bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive
 bindsym $mod+i exec brave-browser --app=https://www.instagram.com/
 bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
 
-## lista sitios en pantalla completa
+# Utilidades fuzzel
 bindsym alt+m exec ~/.config/fuzzel/sitios/webs.sh
+bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
 
-# office online
-#bindsym $mod+p exec brave-browser --app=https://powerpoint.cloud.microsoft/en-us/?wdOrigin=MAIL.SHELL
-bindsym alt+Shift+w exec brave-browser --app=https://docs.new
+# anime local
+bindsym alt+Shift+ntilde exec kitty -e bash -c 'cd "$HOME/Desktop/anime" && ranger'
 
 ## UDEA CLASES 
-bindsym alt+Shift+r exec brave-browser --app=https://udea.zoom.us/j/92018362786
-bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
 
 ## SCRIPTS SHORTCUTS
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
