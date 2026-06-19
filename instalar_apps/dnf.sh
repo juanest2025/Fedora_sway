@@ -48,6 +48,7 @@ sudo dnf install cheese
 #reloj
 sudo dnf install gnome-clocks
 #otras utilidades
+sudo dnf install btop -y 
 sudo dnf install zip -y 
 sudo dnf install rar -y 
 sudo dnf install unrar p7zip-full file-roller -y

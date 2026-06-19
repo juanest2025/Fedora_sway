@@ -34,8 +34,8 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-#output * bg /home/juanes/wallpaper/Lowpoly_Street.png fill
-exec_always ~/.config/sway/scripts/random_wallpaper.sh
+output * bg /home/juanes/wallpaper/deadpool-minimalista_5120x2880_xtrafondos.com.jpg fill
+#exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
 bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
@@ -54,6 +54,9 @@ bindsym $mod+Shift+x exec pkill wf-recorder
 
 ## Gestor de pantallas
 bindsym $mod+p exec wdisplays
+
+## Gestor de recursos
+bindsym Ctrl+Shift+Escape exec kitty -e btop
 
 ## Modos de energia
 bindsym Mod1+F9  exec powerprofilesctl set power-saver
