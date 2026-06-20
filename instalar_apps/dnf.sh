@@ -47,6 +47,8 @@ sudo dnf install cmus -y
 sudo dnf install cheese
 #reloj
 sudo dnf install gnome-clocks
+#ajedrez
+sudo dnf install gnome-chess
 #otras utilidades
 sudo dnf install btop -y 
 sudo dnf install zip -y 
