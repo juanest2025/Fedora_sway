@@ -91,3 +91,4 @@ vif() {
 
 # opencode
 export PATH=/home/juanes/.opencode/bin:$PATH
+alias brave-browser="brave-browser --no-proxy-server"
