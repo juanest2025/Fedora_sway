@@ -58,6 +58,9 @@ bindsym $mod+p exec wdisplays
 ## Gestor de recursos
 bindsym Ctrl+Shift+Escape exec kitty -e btop
 
+## editor fuzzel sites
+bindsym alt+p exec kitty -e nvim ~/.config/fuzzel/sitios
+
 ## Modos de energia
 bindsym Mod1+F9  exec powerprofilesctl set power-saver
 bindsym Mod1+F10 exec powerprofilesctl set balanced
