@@ -5,7 +5,6 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term kitty 
 include /etc/sway/config-vars.d/*
 
 ## SHORCUT EDIT SWAY DOTFILE 
@@ -84,13 +83,13 @@ exec_always wob
 set $vlc env GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb vlc
 
 ### Key bindings
-bindsym $mod+Return exec $term
 bindsym $mod+q kill
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 ## APLICACIONES
+bindsym $mod+Return exec kitty 
 bindsym $mod+b exec brave-browser
 bindsym alt+Shift+o exec flatpak run md.obsidian.Obsidian 
 bindsym $mod+e exec nemo 
