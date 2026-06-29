@@ -42,6 +42,7 @@ declare -A sites=(
   ["Google Maps"]="https://maps.google.com/"
   ["Zoom - Ingles IV"]="https://udea.zoom.us/j/92018362786"
   ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"
+  ["Love Next Door"]="https://doramasflix.in/doramas-online/love-next-door"
   ["XVideos"]="https://www.xvideos.com/"
   ["Pornhub"]="https://es.pornhub.com/"
   ["Google Docs"]="https://docs.new"
