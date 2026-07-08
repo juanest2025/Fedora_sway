@@ -49,6 +49,7 @@ declare -A sites=(
   ["Love Next Door 1"]="https://www.doramasyt.com/dorama/amor-en-la-puerta-de-al-lado-latino-sub-espanol"
   ["Love Next Door 2"]="https://doramasflix.in/doramas-online/love-next-door"
   ["King the land"]="https://www.doramasyt.com/dorama/king-the-land-latino-sub-espanol"
+  ["La reina de las lagrimas"]="https://www.doramasyt.com/dorama/la-reina-de-las-lagrimas-latino-sub-espanol"
   ["XVideos"]="https://www.xvideos.com/"
   ["Pornhub"]="https://es.pornhub.com/"
   ["Google Docs"]="https://docs.new"
