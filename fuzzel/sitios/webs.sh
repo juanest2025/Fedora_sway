@@ -33,6 +33,7 @@ declare -A sites=(
   ["hentaiJK"]="https://hentaijk.com/"
   ["Search Pirate"]="https://search.brave.com/"
   ["Google"]="https://www.google.com/"
+  ["Perplexity"]="https://www.perplexity.ai/"
   ["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
   ["Gmail"]="https://mail.google.com"
   ["Google Photos"]="http://photos.google.com/"

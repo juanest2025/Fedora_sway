@@ -34,6 +34,7 @@ declare -A sites=(
   ["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
   ["Search Pirate"]="https://search.brave.com/"
   ["Google"]="https://www.google.com/"
+  ["Perplexity"]="https://www.perplexity.ai/"
   ["Gmail"]="https://mail.google.com"
   ["Google Photos"]="http://photos.google.com/"
   ["Correo UdeA"]="https://mail.google.com/mail/u/0/#inbox"
