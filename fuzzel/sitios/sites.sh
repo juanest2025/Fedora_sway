@@ -11,6 +11,7 @@ declare -A sites=(
   ["La.movie"]="https://lamovie.org/"
   ["Tioplus.app"]="https://tioplus.app/"
   ["Cuevana"]="https://cuevana.ca/"
+  ["Cuevana main"]="https://cue-vana3.org/"
   ["Goojara"]="https://ww1.goojara.to/ejdWP7"
   ["kimcartoon"]="https://kimcartoon.si/CartoonList"
   ["kimcartoon 2"]="https://kimcartoon.com.co/"
