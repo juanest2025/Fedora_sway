@@ -49,6 +49,7 @@ declare -A sites=(
   ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"
   ["Love Next Door 1"]="https://www.doramasyt.com/dorama/amor-en-la-puerta-de-al-lado-latino-sub-espanol"
   ["Love Next Door 2"]="https://doramasflix.in/doramas-online/love-next-door"
+  ["It's ok not to be ok"]="https://www.doramasyt.com/dorama/its-okay-to-not-be-okay-sub-espanol"
   ["King the land"]="https://www.doramasyt.com/dorama/king-the-land-latino-sub-espanol"
   ["La reina de las lagrimas"]="https://www.doramasyt.com/dorama/la-reina-de-las-lagrimas-latino-sub-espanol"
   ["XVideos"]="https://www.xvideos.com/"
