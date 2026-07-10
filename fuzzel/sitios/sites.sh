@@ -52,6 +52,7 @@ declare -A sites=(
   ["It's ok not to be ok"]="https://www.doramasyt.com/dorama/its-okay-to-not-be-okay-sub-espanol"
   ["King the land"]="https://www.doramasyt.com/dorama/king-the-land-latino-sub-espanol"
   ["La reina de las lagrimas"]="https://www.doramasyt.com/dorama/la-reina-de-las-lagrimas-latino-sub-espanol"
+  ["Twenty-Five, Twenty-One"]="https://www.doramasyt.com/dorama/twenty-five-twenty-one-sub-espanol"
   ["XVideos"]="https://www.xvideos.com/"
   ["Pornhub"]="https://es.pornhub.com/"
   ["Google Docs"]="https://docs.new"
