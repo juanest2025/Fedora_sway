@@ -60,7 +60,7 @@ alias tsk="btop"
 alias fzf="$HOME/.config/fzf/script.sh"
 alias upzellij="bash ~/.config/zellij/update.zellij.sh"
 alias gi="git init"
-alias ga.="git add ."
+alias ga="git add ."
 alias gc="git commit -m "up" "
 alias gp="git push origin main"
 # Editor
