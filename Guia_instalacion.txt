@@ -32,8 +32,8 @@ UTILIDADES:
 - playerctl            (multimedia)
 - upower               (batería / estado de carga)
 - blueman              (bluetooth)
- añade los repos  rpm fusion en las repos oficiales para tener mas software
-INSTALACIÓN ( Fedora ):
+ añade los repos  rpm fusion en las repos 
+ INSTALACIÓN ( Fedora ):
 sudo dnf install -y \
 sway waybar kitty wofi wlogout swaylock swayidle \
 brightnessctl grim slurp wl-clipboard gammastep \
