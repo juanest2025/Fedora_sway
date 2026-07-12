@@ -67,6 +67,10 @@ declare -A sites=(
   ["Pornhub"]="https://es.pornhub.com/"
   ["Google Docs"]="https://docs.new"
   ["Google slides"]="https://slides.new"
+  ["Amor de mentira Fav"]="https://www.doramasyt.com/dorama/amor-de-mentira-latino-sub-espanol"
+  ["Monthly Magazine Home Fav"]="https://www.doramasyt.com/dorama/monthly-magazine-home-sub-espanol"
+  ["La Sonrisa Se Ha Ido De Tus Ojos Fav"]="https://www.doramasyt.com/dorama/la-sonrisa-se-ha-ido-de-tus-ojos-latino-sub-espanol"
+  ["Love Reset Fav"]="https://www.doramasyt.com/dorama/love-reset-sub-espanol"
   ["Word"]="https://word.cloud.microsoft/"
   ["Power Point"]="https://powerpoint.cloud.microsoft/"
 )
