@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 24,
+  "height": 34,
   "spacing": 6,
 
   "modules-left": [
@@ -69,13 +69,19 @@
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-plugged": "󰂄 {capacity}%",
-
-    "format-icons": [
+    
+   "format-icons": [
       "󰂎",
       "󰁺",
+      "󰁻",
       "󰁼",
+      "󰁽",
       "󰁾",
-      "󰂀"
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
     ]
   },
 
