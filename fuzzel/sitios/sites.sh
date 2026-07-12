@@ -71,6 +71,7 @@ declare -A sites=(
   ["Monthly Magazine Home Fav"]="https://www.doramasyt.com/dorama/monthly-magazine-home-sub-espanol"
   ["La Sonrisa Se Ha Ido De Tus Ojos Fav"]="https://www.doramasyt.com/dorama/la-sonrisa-se-ha-ido-de-tus-ojos-latino-sub-espanol"
   ["Love Reset Fav"]="https://www.doramasyt.com/dorama/love-reset-sub-espanol"
+  ["Teach you a lesson"]="https://doramasflix.in/doramas-online/teach-you-a-lesson"
   ["Word"]="https://word.cloud.microsoft/"
   ["Power Point"]="https://powerpoint.cloud.microsoft/"
 )
