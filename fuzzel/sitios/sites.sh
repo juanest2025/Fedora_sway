@@ -73,6 +73,7 @@ declare -A sites=(
   ["Love Reset Fav"]="https://www.doramasyt.com/dorama/love-reset-sub-espanol"
   ["Teach you a lesson"]="https://doramasflix.in/doramas-online/teach-you-a-lesson"
   ["Mi nemesis con aires de grandeza"]="https://www.doramasyt.com/dorama/mi-nemesis-con-aires-de-realeza-latino-sub-espanol"
+  ["Propuesta laboral fav romance"]="https://www.doramasyt.com/dorama/propuesta-laboral-a-business-proposal-latino-sub-espanol"
   ["Word"]="https://word.cloud.microsoft/"
   ["Power Point"]="https://powerpoint.cloud.microsoft/"
 )
