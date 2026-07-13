@@ -7,3 +7,5 @@ sudo bash chrome.sh
 sudo bash oh_my_zsh.sh
 sudo bash astrovim.sh
 sudo bash update.zoom.sh
+sudo bash opencode.sh
+sudo bash zellij.sh
