@@ -72,6 +72,7 @@ declare -A sites=(
   ["La Sonrisa Se Ha Ido De Tus Ojos Fav"]="https://www.doramasyt.com/dorama/la-sonrisa-se-ha-ido-de-tus-ojos-latino-sub-espanol"
   ["Love Reset Fav"]="https://www.doramasyt.com/dorama/love-reset-sub-espanol"
   ["Teach you a lesson"]="https://doramasflix.in/doramas-online/teach-you-a-lesson"
+  ["Mi nemesis con aires de grandeza"]="https://www.doramasyt.com/dorama/mi-nemesis-con-aires-de-realeza-latino-sub-espanol"
   ["Word"]="https://word.cloud.microsoft/"
   ["Power Point"]="https://powerpoint.cloud.microsoft/"
 )
