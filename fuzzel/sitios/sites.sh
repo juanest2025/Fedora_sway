@@ -76,13 +76,16 @@ declare -A sites=(
   ["Propuesta laboral fav romance"]="https://www.doramasyt.com/dorama/propuesta-laboral-a-business-proposal-latino-sub-espanol"
   ["Word"]="https://word.cloud.microsoft/"
   ["Power Point"]="https://powerpoint.cloud.microsoft/"
+  ["Base Datos Profesoes Materias"]="https://ayudame2.udea.edu.co/php_mares/do.php?app=pub_cuposprog"
+  ["Oferta academica"]="https://matricula.udea.edu.co/index.php"
+  ["Matricula"]="https://matricula.udea.edu.co/index.php"
 )
 
 selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitios: ")
 
 if [ -n "$selection" ]; then
     case "$selection" in
-        "Correo UdeA"|"Ude@")
+        "Correo UdeA"|"Ude@"|"Matricula")
             google-chrome-stable "${sites[$selection]}" &
             ;;
         "XVideos"|"Pornhub")
