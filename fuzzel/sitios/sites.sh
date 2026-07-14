@@ -75,6 +75,7 @@ declare -A sites=(
   ["Mi nemesis con aires de grandeza"]="https://www.doramasyt.com/dorama/mi-nemesis-con-aires-de-realeza-latino-sub-espanol"
   ["Propuesta laboral fav romance"]="https://www.doramasyt.com/dorama/propuesta-laboral-a-business-proposal-latino-sub-espanol"
   ["Word"]="https://word.cloud.microsoft/"
+  ["El mentalista"]="https://tioplus.app/serie/el-mentalista"
   ["Power Point"]="https://powerpoint.cloud.microsoft/"
   ["Base Datos Profesoes Materias"]="https://ayudame2.udea.edu.co/php_mares/do.php?app=pub_cuposprog"
   ["Oferta academica"]="https://matricula.udea.edu.co/index.php"
