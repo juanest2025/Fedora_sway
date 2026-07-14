@@ -51,7 +51,7 @@
     "format-wifi": "󰤨",
     "format-ethernet": "󰈀",
     "format-disconnected": "󰤭",
-    "on-click": "nm-connection-editor"
+    "on-click": "kitty -e nmtui"
   },
 
   "bluetooth": {
