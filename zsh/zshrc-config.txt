@@ -61,6 +61,7 @@ alias fzf="$HOME/.config/fzf/script.sh"
 alias upzellij="bash ~/.config/zellij/update.zellij.sh"
 alias gi="git init"
 alias ga="git add ."
+alias gs="git status"
 alias gc="git commit -m "up" "
 alias gp="git push origin main"
 # Editor
