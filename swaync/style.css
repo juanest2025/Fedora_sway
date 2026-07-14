@@ -1,0 +1,188 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+}
+
+/* ===========================
+   Centro de notificaciones
+=========================== */
+
+.control-center {
+    background: rgba(18, 18, 20, 0.92);
+    color: #ECEFF4;
+
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    padding: 12px;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.control-center-list-placeholder {
+    color: #777777;
+}
+
+/* ===========================
+   Notificaciones
+=========================== */
+
+.notification {
+    background: rgba(35, 35, 40, 0.92);
+
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.05);
+
+    margin: 6px;
+    padding: 8px;
+}
+
+.notification-content {
+    padding: 2px;
+}
+
+.notification-default-action {
+    border-radius: 10px;
+    transition: background 180ms ease;
+}
+
+.notification-default-action:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* ===========================
+   Texto
+=========================== */
+
+.summary {
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.body {
+    font-size: 12px;
+    color: #C8C8C8;
+}
+
+.time {
+    font-size: 10px;
+    color: #8B8B8B;
+}
+
+/* ===========================
+   Botón cerrar
+=========================== */
+
+.close-button {
+    background: transparent;
+    color: #8B8B8B;
+    border-radius: 999px;
+}
+
+.close-button:hover {
+    background: rgba(255,255,255,0.08);
+    color: white;
+}
+
+/* ===========================
+   Widgets
+=========================== */
+
+.widget-title {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.widget-title button {
+    background: rgba(255,255,255,0.05);
+
+    color: white;
+
+    border-radius: 8px;
+
+    padding: 5px 10px;
+
+    transition: all 180ms ease;
+}
+
+.widget-title button:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.widget-dnd {
+    background: rgba(255,255,255,0.04);
+
+    border-radius: 10px;
+
+    padding: 6px;
+
+    margin-bottom: 10px;
+}
+
+.widget-dnd switch {
+    background: #3A3A3A;
+    border-radius: 999px;
+}
+
+.widget-dnd switch slider {
+    background: #D6D6D6;
+    border-radius: 999px;
+}
+
+.widget-dnd switch:checked {
+    background: #5E81AC;
+}
+
+/* ===========================
+   Agrupación
+=========================== */
+
+.notification-row {
+    margin-bottom: 4px;
+}
+
+.notification-group {
+    background: transparent;
+}
+
+.notification-group-header {
+    color: #8D99AE;
+    font-size: 11px;
+}
+
+/* ===========================
+   Barras de progreso
+=========================== */
+
+progress,
+progress trough,
+progress progress {
+    border-radius: 999px;
+    min-height: 5px;
+}
+
+progress trough {
+    background: rgba(255,255,255,0.08);
+}
+
+progress progress {
+    background: #5E81AC;
+}
+
+/* ===========================
+   Botones
+=========================== */
+
+button {
+    transition: all 180ms ease;
+}
+
+button:hover {
+    box-shadow: none;
+}
