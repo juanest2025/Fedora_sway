@@ -276,7 +276,7 @@ bindsym Shift+Print exec ~/.config/sway/scripts/screenshot.sh area
 ### NOTIFICACIONES
 #exec_always mako
 exec_always swaync
-bindsym alt+n exec swaync-client -t
+bindsym alt+ntilde exec swaync-client -t
 
 ### TRACKPAD (touchpad laptop)
 input type:touchpad {
