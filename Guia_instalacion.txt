@@ -520,6 +520,16 @@ te vas al ~/dotfiles
 y le das en terminal:
 -stow . 
 y asi crea un link para las dotfiles desde el ~/dotfiles a .config
+========================================================
+31. HACER LAS REPOS Y DNF MAS RAPIDO 
+====================================================
+Abre la terminal.Edita el archivo principal de configuración de dnf:
+-sudo nvim /etc/dnf/dnf.conf
+Usa el código con precaución.Agrega las siguientes dos líneas al final del archivo para permitir descargas simultáneas y seleccionar el espejo más veloz:
+-textmax_parallel_downloads=10
+-fastestmirror=true
+Usa el código con precaución.Guarda los cambios presionando Ctrl + O, confirma con Enter, y sal con Ctrl + X.Limpia la caché y actualiza tu sistema para aplicar los cambios:bashsudo dnf clean all
+- sudo dnf makecache
 ===================================================
 FIN DE LA GUÍA (v2)
 ====================================================
