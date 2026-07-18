@@ -73,6 +73,7 @@ declare -A sites=(
   ["Love Reset Fav"]="https://www.doramasyt.com/dorama/love-reset-sub-espanol"
   ["Teach you a lesson"]="https://doramasflix.in/doramas-online/teach-you-a-lesson"
   ["Beso dinamita"]="https://www.doramasyt.com/dorama/beso-dinamita-latino-sub-espanol"
+  ["Belleza verdadera"]="https://www.doramasyt.com/dorama/true-beauty-sub-espanol"
   ["El amor es como un chachacha"]="https://www.doramasyt.com/dorama/el-amor-es-como-el-chachacha-sub-espanol"
   ["Whats wrong with sercretary kim"]="https://www.doramasyt.com/dorama/whats-wrong-with-secretary-kim-sub-espanol"
   ["Mi nemesis con aires de grandeza"]="https://www.doramasyt.com/dorama/mi-nemesis-con-aires-de-realeza-latino-sub-espanol"
