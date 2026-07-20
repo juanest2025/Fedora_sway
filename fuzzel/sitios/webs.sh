@@ -66,6 +66,7 @@ declare -A sites=(
   ["Pornhub"]="https://es.pornhub.com/"
   ["Google Docs"]="https://docs.new"
   ["Google slides"]="https://slides.new"
+  ["Love scenery"]="https://www.doramasyt.com/dorama/love-scenery-sub-espanol"
   ["Los 4 fantasticos 2025"]="https://lamovie.org/peliculas/los-4-fantasticos-primeros-pasos-2025/"
   ["Decor life"]="https://www.youtube.com/playables/UgkxW0zdrtok4czk5IE1sj4MTiaFk45aHfwF"
   ["Simulacion de evolucion"]="https://www.youtube.com/playables/UgkxxJFnJx0jogPkEtc1bICU4EL2rbUW8kE5"
