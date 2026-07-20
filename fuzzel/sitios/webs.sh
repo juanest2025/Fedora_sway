@@ -40,6 +40,7 @@ declare -A sites=(
   ["Google Photos"]="http://photos.google.com/"
   ["Correo UdeA"]="https://mail.google.com/mail/u/0/#inbox"
   ["Ude@"]="https://udearroba.udea.edu.co/internos/login/index.php"
+  ["UdeA Drive"]="https://drive.google.com/drive/my-drive"
   ["Drive"]="https://drive.google.com/drive/my-drive"
   ["Calendar"]="https://calendar.google.com/calendar/u/0/r"
   ["Meet.google"]="https://meet.google.com/landing"
@@ -83,6 +84,7 @@ declare -A sites=(
   ["Whats wrong with sercretary kim"]="https://www.doramasyt.com/dorama/whats-wrong-with-secretary-kim-sub-espanol"
   ["Mi nemesis con aires de grandeza"]="https://www.doramasyt.com/dorama/mi-nemesis-con-aires-de-realeza-latino-sub-espanol"
   ["Propuesta laboral fav romance"]="https://www.doramasyt.com/dorama/propuesta-laboral-a-business-proposal-latino-sub-espanol"
+  ["House of the dragon"]="https://lamovie.org/series/house-of-the-dragon-2022/"
   ["Word"]="https://word.cloud.microsoft/"
   ["El mentalista"]="https://tioplus.app/serie/el-mentalista"
   ["Power Point"]="https://powerpoint.cloud.microsoft/"
@@ -95,7 +97,7 @@ selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitio
 
 if [ -n "$selection" ]; then
     case "$selection" in
-        "Correo UdeA"|"Ude@"|"Matricula")
+        "Correo UdeA"|"Ude@"|"Matricula"|"UdeA Drive")
             google-chrome-stable --app="${sites[$selection]}" &
             ;;
         "XVideos"|"Pornhub")
