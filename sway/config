@@ -57,6 +57,9 @@ bindsym $mod+p exec wdisplays
 ## Gestor de recursos
 bindsym Ctrl+Shift+Escape exec kitty -e btop
 
+## Lanzador de musica 
+bindsym alt+v exec kitty -e cmus 
+
 ## editor fuzzel sites
 bindsym Ctrl+Shift+p exec kitty -e nvim ~/.config/fuzzel/sitios
 
@@ -264,7 +267,9 @@ exec_always gammastep -O 3500
 #exec_always = sh -c "sleep 5 && WAYLAND_DISPLAY=$WAYLAND_DISPLAY /usr/bin/gammastep -O 3500"
 
 ### LOCK / LOGOUT
-bindsym Ctrl+Shift+l exec swaylock -i ~/wallpaper/Anime-City-Night.png
+#bindsym Ctrl+Shift+l exec swaylock -i ~/wallpaper/Anime-City-Night.png
+bindsym Ctrl+Shift+l exec hyprlock 
+
 bindsym Ctrl+Shift+e exec wlogout
 
 ### SCREENSHOTS

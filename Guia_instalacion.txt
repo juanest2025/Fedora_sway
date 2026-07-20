@@ -207,15 +207,9 @@ CONFIG WAYBAR (~/.config/waybar/config):
 }
 
 ----------------------------------------------------
-7. SWAYLOCK
+7. hyprlock 
 ----------------------------------------------------
-
-Comando:
-swaylock \
-  --clock \
-  --indicator \
-  --indicator-radius 100 \
-  --indicator-thickness 7
+-sudo dnf install hyprlock
 
 Atajo:
 Ctrl + Shift + L

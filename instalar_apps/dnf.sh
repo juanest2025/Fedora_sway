@@ -67,6 +67,7 @@ sudo dnf install vim -y
 sudo dnf install vlc -y 
 sudo dnf install wlogout -y 
 sudo dnf install swaylock -y 
+sudo dnf install hyprlock -y
 sudo dnf install swayidle -y 
 sudo dnf install wget -y 
 sudo dnf install curl -y 
