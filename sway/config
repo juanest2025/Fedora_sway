@@ -165,6 +165,19 @@ bindsym Ctrl+alt+h resize grow   width  20 px
 bindsym Ctrl+alt+k resize shrink height 20 px
 bindsym Ctrl+alt+j resize grow   height 20 px
 
+# Entrar al modo de redimensionar
+bindsym Mod1+v mode "resize"
+
+# Modo de redimensionar
+mode "resize" {
+    bindsym h resize grow width 10 px
+    bindsym j resize shrink height 10 px
+    bindsym k resize grow height 10 px
+    bindsym l resize shrink width 10 px
+
+    bindsym Escape mode "default"
+}
+
 ### Workspaces
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -223,15 +236,15 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 ### Resize
-mode "resize" {
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
+#mode "resize" {
+#    bindsym $left resize shrink width 10px
+ #   bindsym $down resize grow height 10px
+  #  bindsym $up resize shrink height 10px
+  #  bindsym $right resize grow width 10px
+ #   bindsym Return mode "default"
+  #  bindsym Escape mode "default"
+#"}
+#bindsym $mod+r mode "resize"
 
 exec_always ~/.config/sway/scripts/waybar.sh
 include /etc/sway/config.d/*
