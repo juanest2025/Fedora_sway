@@ -67,3 +67,23 @@ window#waybar {
     background: rgba(166,227,161,0.25);
     color: #a6e3a1;
 }
+
+/* =========================
+ * Battery
+ * ========================= */
+
+#battery {
+    background: rgba(166,227,161,0.15);
+    color: #a6e3a1;
+}
+
+#battery.warning {
+    background: rgba(249,226,175,0.15);
+    color: #f9e2af;
+}
+
+#battery.critical {
+    background: rgba(243,139,168,0.15);
+    color: #f38ba8;
+}
+
