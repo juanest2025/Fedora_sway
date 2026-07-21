@@ -45,7 +45,13 @@
   },
 
   "backlight": {
-    "format": "{icon} {percent}%"
+	  "device": "intel_backlight",
+	  "format": "{percent}% {icon}",
+	  "format-icons": [
+	     "󰃞",
+       "󰃟",
+       "󰃠"
+	  ]
   },
 
   "network": {
