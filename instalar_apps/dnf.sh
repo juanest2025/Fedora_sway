@@ -75,3 +75,4 @@ sudo dnf install git -y
 sudo dnf install fd -y
 sudo dnf install wob -y 
 sudo dnf install swaync -y 
+sudo dnf install cava -y 
