@@ -58,7 +58,7 @@ bindsym $mod+p exec wdisplays
 bindsym Ctrl+Shift+Escape exec kitty -e btop
 
 ## Lanzador de musica 
-bindsym alt+v exec kitty -e cmus 
+bindsym alt+i exec kitty -e cmus 
 
 ## editor fuzzel sites
 bindsym Ctrl+Shift+p exec kitty -e nvim ~/.config/fuzzel/sitios
