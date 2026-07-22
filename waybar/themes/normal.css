@@ -87,3 +87,12 @@ window#waybar {
     color: #f38ba8;
 }
 
+/* Logout */
+#custom-wlogout {
+    background: rgba(255,80,120,0.12);
+    color: #ff5078;
+}
+
+#custom-wlogout:hover {
+    background: rgba(255,80,120,0.25);
+}
