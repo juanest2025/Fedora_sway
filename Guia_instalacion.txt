@@ -524,7 +524,12 @@ Usa el código con precaución.Agrega las siguientes dos líneas al final del ar
 -fastestmirror=true
 Usa el código con precaución.Guarda los cambios presionando Ctrl + O, confirma con Enter, y sal con Ctrl + X.Limpia la caché y actualiza tu sistema para aplicar los cambios:bashsudo dnf clean all
 - sudo dnf makecache
-===================================================
+========================================================
+32. reiniciar notificaiones del network manager 
+====================================================
+asi se reinicia:
+sudo systemctl restart NetworkManager
+==================================================
 FIN DE LA GUÍA (v2)
 ====================================================
 
