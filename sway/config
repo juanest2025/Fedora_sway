@@ -33,7 +33,7 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/Fantasy-Hongkong.png fill
+output * bg /home/juanes/wallpaper/Anime-Girl5.png fill
 #exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
@@ -84,6 +84,7 @@ exec_always wl-paste --watch cliphist store
 exec_always /usr/lib/polkit-kde-authentication-agent-1
 exec_always wob
 #exec_always gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+exec $HOME/.config/sway/scripts/battery-warning.sh
 
 # VLC forzado a X11 (CLAVE)
 set $vlc env GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb vlc
