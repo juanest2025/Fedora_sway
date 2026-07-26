@@ -41,6 +41,7 @@ declare -A sites=(
   ["Google Photos"]="http://photos.google.com/"
   ["Correo UdeA"]="https://mail.google.com/mail/u/0/#inbox"
   ["Ude@"]="https://udearroba.udea.edu.co/internos/login/index.php"
+  ["Ingeni@"]="https://virtualingenieriaudea.co/"
   ["UdeA Drive"]="https://drive.google.com/drive/my-drive"
   ["Drive"]="https://drive.google.com/drive/my-drive"
   ["Calendar"]="https://calendar.google.com/calendar/u/0/r"
@@ -89,7 +90,6 @@ declare -A sites=(
   ["House of the dragon"]="https://lamovie.org/series/house-of-the-dragon-2022/"
   ["Word"]="https://word.cloud.microsoft/"
   ["El mentalista"]="https://tioplus.app/serie/el-mentalista"
-  ["Avatar live action"]="https://ww1.goojara.to/twO2L1"
   ["Power Point"]="https://powerpoint.cloud.microsoft/"
   ["Base Datos Profesoes Materias"]="https://ayudame2.udea.edu.co/php_mares/do.php?app=pub_cuposprog"
   ["Oferta academica"]="https://matricula.udea.edu.co/index.php"
@@ -100,7 +100,7 @@ selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitio
 
 if [ -n "$selection" ]; then
     case "$selection" in
-        "Correo UdeA"|"Ude@"|"Matricula"|"UdeA Drive")
+        "Correo UdeA"|"Ude@"|"Matricula"|"UdeA Drive"|"Ingeni@")
             google-chrome-stable "${sites[$selection]}" &
             ;;
         "XVideos"|"Pornhub")
