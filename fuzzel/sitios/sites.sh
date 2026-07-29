@@ -66,6 +66,7 @@ declare -A sites=(
   ["El genio y los deseos"]="https://www.doramasyt.com/dorama/el-genio-y-los-deseos-genie-make-a-wish-latino-sub-espanol"
   ["La reina de la confianza"]="https://tioplus.app/serie/la-reina-de-la-confianza"
   ["Lovely runner"]="https://www.doramasyt.com/dorama/corredora-encantadora-latino-sub-espanol"
+  ["Ski into love"]="https://www.doramasyt.com/dorama/ski-into-love-sub-espanol"
   ["XVideos"]="https://www.xvideos.com/"
   ["Pornhub"]="https://es.pornhub.com/"
   ["Google Docs"]="https://docs.new"
