@@ -67,6 +67,7 @@ alias gp="git push origin main"
 alias salir="pkill -kill -u juanes"
 alias update="bash $HOME/.config/sway/scripts/update.sh"
 # Editor
+#
 alias vim="nvim"
 #alias video="vlc "$(find . -type f \( -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.avi" \) | fzf)"
 
