@@ -33,7 +33,7 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/Anime-Girl5.png fill
+output * bg /home/juanes/wallpaper/eight.jpg fill
 #exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
@@ -42,14 +42,14 @@ bindsym Mod1+Shift+p exec ~/.config/sway/scripts/wallpaper_chooser.sh
 # cargar wallpaper al iniciar
 #exec_always ~/.config/sway/scripts/wallpaper_chooser.sh
 
-## Grabar toda la pantalla con audio
-bindsym $mod+Shift+r exec wf-recorder -a -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
+# Grabar Pantalla completa
+bindsym Mod1+r exec wf-recorder -a -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
 
-# Grabar una región seleccionada con audio
-bindsym $mod+Shift+g exec wf-recorder -a -g "$(slurp)" -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
+# Graba región
+bindsym Mod1+Shift+r exec wf-recorder -a -g "$(slurp)" -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
 
-# Detener grabación
-bindsym $mod+Shift+x exec pkill wf-recorder
+# Detener grabacion 
+bindsym Mod1+Shift+x exec pkill wf-recorder
 
 ## Gestor de pantallas
 bindsym $mod+p exec wdisplays
