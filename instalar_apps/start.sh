@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo bash dnf.sh
-sudo bash /flatpak/flatpak.sh
+sudo bash /flatpak/reinstalar_apps_flatpak.sh
 sudo bash brave.sh
 sudo bash chrome.sh
 sudo bash oh_my_zsh.sh
