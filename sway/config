@@ -51,6 +51,7 @@ bindsym Mod1+Shift+r exec wf-recorder -a -g "$(slurp)" -f ~/Videos/$(date +'%Y-%
 # Detener grabacion 
 bindsym Mod1+Shift+x exec pkill wf-recorder
 
+
 ## Gestor de pantallas
 bindsym $mod+p exec wdisplays
 
@@ -104,7 +105,6 @@ bindsym $mod+c exec google-chrome-stable
 #bindsym Mod1+space exec wofi --show drun
 bindsym Mod1+space exec fuzzel 
 bindsym $mod+t exec flatpak run org.telegram.desktop
-bindsym alt+Shift+f exec flatpak run app.zen_browser.zen 
 bindsym alt+u exec gnome-calendar
 bindsym alt+q exec gnome-clocks
 
@@ -113,6 +113,7 @@ bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f8452391
 bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
 bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive 
 bindsym $mod+i exec brave-browser --app=https://www.instagram.com/
+bindsym alt+Shift+f exec brave-browser --app=https://www.facebook.com/
 bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
 
 # Utilidades fuzzel
