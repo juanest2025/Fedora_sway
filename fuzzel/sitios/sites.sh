@@ -100,6 +100,10 @@ declare -A sites=(
   ["Base Datos Profesoes Materias"]="https://ayudame2.udea.edu.co/php_mares/do.php?app=pub_cuposprog"
   ["Oferta academica"]="https://matricula.udea.edu.co/index.php"
   ["Matricula"]="https://matricula.udea.edu.co/index.php"
+  ["Zoom - Algebra lineal"]="https://udearroba.zoom.us/j/94451769492?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
+  ["Zoom - Calculo integral"]="https://udearroba.zoom.us/j/95441635988?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
+  ["Zoom - Fisica Mecanica"]="https://udearroba.zoom.us/j/99982358988?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
+  ["Zoom - Ingles V"]="https://udea.zoom.us/j/97057341996#success"
 )
 
 selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitios: ")

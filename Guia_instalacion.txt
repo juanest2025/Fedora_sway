@@ -229,25 +229,12 @@ Acceso:
 - Ctrl + Shift + E
 
 ----------------------------------------------------
-9. WOFI (LAUNCHER MINIMAL)
+9. FUZZEL (LAUNCHER MINIMAL)
 ----------------------------------------------------
 
 Instalación:
-sudo dnf install wofi
+sudo dnf install fuzzel 
 
-Config (~/.config/wofi/config):
-show=drun
-width=450
-height=280
-prompt=Buscar
-insensitive=true
-no-actions=true
-
-Estilo:
-- Fondo oscuro
-- Bordes redondeados
-- Selección limpia
-- Minimal
 
 ----------------------------------------------------
 10. WEBAPPS (WHATSAPP WEB)

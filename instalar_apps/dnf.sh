@@ -76,3 +76,6 @@ sudo dnf install fd -y
 sudo dnf install wob -y 
 sudo dnf install swaync -y 
 sudo dnf install cava -y 
+sudo dnf install fuzzel -y 
+sudo dnf install eom -y 
+sudo dnf install showtime- y 
