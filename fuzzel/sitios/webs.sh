@@ -110,7 +110,7 @@ selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitio
 
 if [ -n "$selection" ]; then
     case "$selection" in
-        "Correo UdeA"|"Ude@"|"Matricula"|"UdeA Drive"|"Ingeni@"|"Zoom - Algebra lineal"|"Zoom - Calculo integral"|"Zoom - Fisica Mecanica"|"Zoom - Ingles V")
+        "Correo UdeA"|"Ude@"|"Matricula"|"UdeA Drive"|"Ingeni@")
             google-chrome-stable --app="${sites[$selection]}" &
             ;;
         "XVideos"|"Pornhub")
