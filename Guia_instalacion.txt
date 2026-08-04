@@ -338,7 +338,7 @@ y asi se usa:
 - B es para la siguiente cancion
 - Z es para la cancion anterior 
 - / es para filtrar y buscar la cancion 
-- ENTER  es para reproduccir la cancion actual
+- ENTER  es para reproduccir la cancion actualll
 
 ---------------------------------------------------
 18. abir las imagenes con el mate image viewer 
