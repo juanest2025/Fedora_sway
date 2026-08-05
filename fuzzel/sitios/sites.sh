@@ -52,7 +52,6 @@ declare -A sites=(
   ["Monkeytype"]="https://monkeytype.com/"
   ["Google Maps"]="https://maps.google.com/"
   ["cinecalidad.mx"]="https://cine-calidad.mx/"
-  ["Zoom - Ingles IV"]="https://udea.zoom.us/j/92018362786"
   ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"
   ["Love Next Door 1"]="https://www.doramasyt.com/dorama/amor-en-la-puerta-de-al-lado-latino-sub-espanol"
   ["Love Next Door 2"]="https://doramasflix.in/doramas-online/love-next-door"
