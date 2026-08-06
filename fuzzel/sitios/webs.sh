@@ -65,6 +65,7 @@ declare -A sites=(
   ["Queen of Divorce"]="https://www.doramasyt.com/dorama/queen-of-divorce-sub-espanol"
   ["Nos vemos en la oficina"]="https://tioplus.app/serie/nos-vemos-en-la-oficina"
   ["Cashman"]="https://tioplus.app/serie/cashman"
+  ["Steven Universe"]="https://myflixerz.day/episodes/steven-universe-season-1-episode-1/"
   ["El genio y los deseos"]="https://www.doramasyt.com/dorama/el-genio-y-los-deseos-genie-make-a-wish-latino-sub-espanol"
   ["La reina de la confianza"]="https://tioplus.app/serie/la-reina-de-la-confianza"
   ["Lovely runner"]="https://www.doramasyt.com/dorama/corredora-encantadora-latino-sub-espanol"
