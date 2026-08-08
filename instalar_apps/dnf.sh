@@ -1,81 +1,74 @@
 #!/bin/bash
 
-sudo dnf update && sudo dnf upgrade -y
+# ============================================================
+# Script de instalación - Entorno Sway (Fedora / dnf)
+# Instala paquete por paquete: si uno falla, sigue con el resto
+# y al final muestra un resumen de lo que no se pudo instalar.
+# ============================================================
 
-# entorno de sway
-sudo dnf install -y \
-sway waybar kitty wofi wlogout swaylock swayidle
-sudo dnf install swaybg -y 
+FALLIDOS=()
 
+instalar() {
+    local pkg="$1"
+    echo "==> Instalando: $pkg"
+    if ! sudo dnf install -y "$pkg"; then
+        echo "!!! Falló: $pkg"
+        FALLIDOS+=("$pkg")
+    fi
+}
 
-# sistema de utilidades
-sudo dnf install -y \
-brightnessctl pipewire pipewire-pulse playerctl upower \
-network-manager-gnome nm-connection-editor blueman
+# --- Actualizar sistema ---
+sudo dnf update -y
+sudo dnf upgrade -y
 
-# herramientas wayland
-sudo dnf install -y \
-grim slurp wl-clipboard gammastep
+PAQUETES=(
+    # Entorno Sway (compositor, barra, lanzador, bloqueo)
+    sway waybar kitty wofi wlogout swaylock swayidle swaybg
+    fuzzel wob swaync hyprlock
 
-# notificaciones
-sudo dnf install -y \
-mako-notifier cliphist udiskie
+    # Utilidades del sistema (brillo, audio, red, energía)
+    brightnessctl pipewire pipewire-pulse playerctl upower
+    network-manager-gnome nm-connection-editor blueman
 
-# terminal
-sudo dnf install -y \
-ranger vim neovim fzf htop bat ripgrep
+    # Herramientas Wayland (capturas, portapapeles, temp. color)
+    grim slurp wl-clipboard gammastep
 
-# audio video
-sudo dnf install -y \
-pavucontrol vlc celluloid ffmpeg
+    # Notificaciones y montaje de discos
+    mako-notifier cliphist udiskie
 
-# bluetooth
-sudo dnf install -y blueman
+    # Terminal / línea de comandos
+    ranger vim neovim fzf htop bat ripgrep fd zsh btop wget curl git
 
-# bataria
-sudo dnf install -y \
-tlp powertop
+    # Audio y video
+    pavucontrol vlc celluloid ffmpeg cmus cava
 
-# compatibilidad X11
-sudo dnf install -y xwayland
+    # Batería / energía
+    tlp powertop
 
-# utilidades del sistemas
-sudo dnf install zsh -y 
-#para escuchar musica
-sudo dnf install cmus -y 
-#camara para grabar
-sudo dnf install cheese
-#reloj
-sudo dnf install gnome-clocks
-#ajedrez
-sudo dnf install gnome-chess
-#otras utilidades
-sudo dnf install btop -y 
-sudo dnf install zip -y 
-sudo dnf install rar -y 
-sudo dnf install unrar p7zip-full file-roller -y
-sudo dnf install nemo-fileroller
-sudo dnf install unrar -y
-sudo dnf install ranger -y 
-sudo dnf install kitty -y 
-sudo dnf install gammastep -y 
-sudo dnf install x11-utils -y 
-sudo dnf install sway -y 
-sudo dnf install wofi -y 
-sudo dnf install waybar -y 
-sudo dnf install vim -y 
-sudo dnf install vlc -y 
-sudo dnf install wlogout -y 
-sudo dnf install swaylock -y 
-sudo dnf install hyprlock -y
-sudo dnf install swayidle -y 
-sudo dnf install wget -y 
-sudo dnf install curl -y 
-sudo dnf install git -y 
-sudo dnf install fd -y
-sudo dnf install wob -y 
-sudo dnf install swaync -y 
-sudo dnf install cava -y 
-sudo dnf install fuzzel -y 
-sudo dnf install eom -y 
-sudo dnf install showtime- y 
+    # Compatibilidad X11
+    xwayland x11-utils
+
+    # Compresión y archivos
+    zip unrar p7zip-full file-roller nemo-fileroller
+
+    # Otras utilidades / apps
+    cheese gnome-clocks gnome-chess eom
+)
+
+for pkg in "${PAQUETES[@]}"; do
+    instalar "$pkg"
+done
+
+# --- Resumen final ---
+echo ""
+echo "============================================================"
+if [ ${#FALLIDOS[@]} -eq 0 ]; then
+    echo "Instalación finalizada sin errores."
+else
+    echo "Instalación finalizada con errores en los siguientes paquetes:"
+    for pkg in "${FALLIDOS[@]}"; do
+        echo "  - $pkg"
+    done
+    echo "Revisá el nombre del paquete o si necesita un repo extra (ej: RPM Fusion)."
+fi
+echo "============================================================"

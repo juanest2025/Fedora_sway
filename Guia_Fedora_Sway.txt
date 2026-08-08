@@ -1,0 +1,1733 @@
+====================================================
+GUÍA COMPLETA DE INSTALACIÓN Y SETUP DE SWAY (WAYLAND)
+====================================================
+
+Sistema objetivo:
+- Fedora Linux (base del sistema)
+- Entorno principal: Cinnamon
+- Window Manager: Sway
+- Enfoque: minimal, estable, estético y usable (daily driver)
+
+NOTA:
+Esta guía está pensada para una instalación Fedora + Sway y separa
+los componentes necesarios de las aplicaciones opcionales.
+
+====================================================
+1. PREPARACIÓN DEL SISTEMA
+====================================================
+
+Antes de instalar el resto del setup:
+
+sudo dnf upgrade --refresh -y
+
+Reinicia si Fedora actualizó componentes importantes del sistema:
+
+systemctl reboot
+
+----------------------------------------------------
+1.1 RPM FUSION
+----------------------------------------------------
+
+RPM Fusion es opcional y se recomienda instalarlo si vas a utilizar
+paquetes multimedia o software que no esté disponible en los
+repositorios oficiales de Fedora.
+
+Instalación:
+
+sudo dnf install -y \
+https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+====================================================
+2. PAQUETES BASE
+====================================================
+
+CORE:
+
+- sway
+- waybar
+- kitty
+- wlogout
+- swaylock
+- swayidle
+- swaybg
+- fuzzel
+
+UTILIDADES:
+
+- brightnessctl        (control de brillo)
+- pipewire              (audio)
+- pipewire-pulseaudio   (compatibilidad con PulseAudio)
+- wireplumber           (gestor de sesiones PipeWire)
+- pavucontrol            (control gráfico de audio)
+- grim                  (screenshots)
+- slurp                 (selección con mouse)
+- wl-clipboard          (wl-copy / wl-paste)
+- gammastep             (filtro de luz azul)
+- NetworkManager-tui    (nmtui)
+- nm-connection-editor  (gestor gráfico de red)
+- playerctl             (multimedia)
+- upower                (batería / estado de carga)
+
+INSTALACIÓN:
+
+sudo dnf install -y \
+sway waybar kitty wlogout swaylock swayidle swaybg fuzzel \
+brightnessctl \
+pipewire pipewire-pulseaudio wireplumber pavucontrol \
+grim slurp wl-clipboard gammastep \
+NetworkManager-tui nm-connection-editor \
+playerctl upower
+
+NOTA:
+Fuzzel es el launcher principal de esta guía.
+Wofi no se instala por defecto para evitar mantener dos launchers
+que cumplen la misma función.
+
+====================================================
+3. ESTRUCTURA DE CONFIGURACIÓN
+====================================================
+
+~/.config/
+├── sway/
+│   ├── config
+│   └── scripts/
+│       └── waybar.sh
+├── waybar/
+│   ├── config
+│   └── style.css
+├── fuzzel/
+│   ├── fuzzel.ini
+│   └── ...
+└── kitty/
+    └── kitty.conf
+
+Si utilizas configuraciones adicionales, agrégalas dentro de
+~/.config/ siguiendo la estructura de tus dotfiles.
+
+====================================================
+4. SCRIPT PARA EVITAR WAYBAR DUPLICADO
+====================================================
+
+Archivo:
+
+~/.config/sway/scripts/waybar.sh
+
+Contenido:
+
+#!/usr/bin/env bash
+
+killall waybar 2>/dev/null
+waybar &
+
+Permisos:
+
+chmod +x ~/.config/sway/scripts/waybar.sh
+
+En sway/config:
+
+exec_always ~/.config/sway/scripts/waybar.sh
+
+NOTA:
+Este script reinicia Waybar cada vez que Sway vuelve a cargar
+la configuración.
+
+====================================================
+5. ATAJOS PRINCIPALES EN SWAY
+====================================================
+
+Terminal:
+Mod + Enter
+
+Cerrar ventana:
+Mod + Q
+
+Launcher:
+Alt + Space
+
+Bloquear pantalla:
+Ctrl + Shift + L
+
+Menú de apagado (wlogout):
+Ctrl + Shift + E
+
+Botón de apagado:
+⏻ en Waybar
+
+Volumen:
+Ctrl + Shift + Right  (+5%)
+Ctrl + Shift + Left   (-5%)
+
+Brillo:
+Ctrl + Shift + Up
+Ctrl + Shift + Down
+
+====================================================
+6. SCREENSHOTS (WAYLAND + SWAY)
+====================================================
+
+Paquetes:
+
+sudo dnf install -y grim slurp wl-clipboard
+
+Asegúrate de que exista el directorio:
+
+mkdir -p ~/Pictures
+
+Ejemplos de atajos:
+
+Pantalla completa:
+Print
+
+Selección con mouse:
+Shift + Print
+
+Selección al portapapeles:
+Ctrl + Shift + Print
+
+Comandos utilizados:
+
+- grim
+- slurp
+- wl-copy
+
+Ejemplo para pantalla completa:
+
+grim ~/Pictures/screenshot.png
+
+Ejemplo para seleccionar una región:
+
+grim -g "$(slurp)" ~/Pictures/screenshot.png
+
+Ejemplo para copiar una captura al portapapeles:
+
+grim -g "$(slurp)" - | wl-copy
+
+====================================================
+7. WAYBAR
+====================================================
+
+Características:
+
+- Barra transparente
+- Secciones separadas (izquierda / centro / derecha)
+- Estética sobria
+- Botón de wlogout
+- Volumen y brillo legibles
+- Red como botón
+- Hora en formato 12h
+- Batería con icono de carga
+
+CONFIG WAYBAR:
+
+~/.config/waybar/config
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "spacing": 6,
+
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["sway/window"],
+  "modules-right": [
+    "custom/wlogout",
+    "pulseaudio",
+    "backlight",
+    "network",
+    "battery",
+    "clock",
+    "tray"
+  ],
+
+  "custom/wlogout": {
+    "format": "⏻",
+    "tooltip": "Logout / Power menu",
+    "on-click": "wlogout",
+    "interval": 0
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"]
+  },
+
+  "network": {
+    "format-wifi": "󰤨",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤭",
+    "on-click": "nm-connection-editor"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁼", "󰁾", "󰂀"]
+  },
+
+  "clock": {
+    "format": "{:%I:%M %p}"
+  },
+
+  "tray": {
+    "spacing": 8
+  }
+}
+
+====================================================
+8. BLOQUEO DE PANTALLA
+====================================================
+
+RECOMENDADO:
+
+Usar swaylock como locker principal:
+
+sudo dnf install -y swaylock
+
+Atajo:
+
+Ctrl + Shift + L
+
+En sway/config, por ejemplo:
+
+bindsym Ctrl+Shift+l exec swaylock
+
+----------------------------------------------------
+8.1 HYPRLOCK (OPCIONAL)
+----------------------------------------------------
+
+Hyprlock puede utilizarse como alternativa a swaylock, pero no es
+necesario para utilizar Sway.
+
+Si decides utilizarlo, instálalo desde el repositorio/COPR que
+corresponda a tu versión de Fedora y reemplaza el comando del
+atajo de bloqueo por:
+
+bindsym Ctrl+Shift+l exec hyprlock
+
+No es necesario instalar Hyprlock si swaylock ya cumple la función.
+
+====================================================
+9. WLOGOUT
+====================================================
+
+Menú gráfico:
+
+- Apagar
+- Reiniciar
+- Suspender
+- Logout
+
+Acceso:
+
+- Botón ⏻ en Waybar
+- Ctrl + Shift + E
+
+====================================================
+10. FUZZEL (LAUNCHER PRINCIPAL)
+====================================================
+
+Instalación:
+
+sudo dnf install -y fuzzel
+
+Atajo:
+
+Alt + Space
+
+Ejemplo en sway/config:
+
+bindsym Mod1+space exec fuzzel
+
+NOTA:
+Fuzzel reemplaza a Wofi como launcher principal para mantener
+el setup simple y sin duplicar herramientas.
+
+====================================================
+11. WEBAPPS (WHATSAPP WEB)
+====================================================
+
+Preferencia:
+
+No utilizar clientes innecesarios para WhatsApp Web.
+Utilizar una webapp mediante el navegador.
+
+Ejemplo:
+
+brave --app=https://web.whatsapp.com
+
+Atajo en sway/config:
+
+bindsym Mod+Shift+w exec brave --app=https://web.whatsapp.com
+
+====================================================
+12. BATERÍA
+====================================================
+
+Paquete:
+
+upower
+
+Waybar muestra:
+
+- Porcentaje
+- Icono
+- Estado de carga
+
+No es necesario ejecutar un servicio adicional para que Waybar
+muestre el estado de la batería.
+
+====================================================
+13. NOTIFICACIONES Y UTILIDADES EXTRA
+====================================================
+
+----------------------------------------------------
+13.1 MAKO
+----------------------------------------------------
+
+Notificaciones:
+
+sudo dnf install -y mako
+
+Si existe una configuración de Mako en tus dotfiles, cópiala o
+enlázala mediante Stow dentro de:
+
+~/.config/mako/
+
+----------------------------------------------------
+13.2 RANGER
+----------------------------------------------------
+
+Gestor de archivos en terminal:
+
+sudo dnf install -y ranger
+
+Atajos habituales de Ranger:
+
+a = renombrar
+s = shell
+d = eliminar
+
+Si utilizas una configuración personalizada de Ranger, mantenla
+dentro de tus dotfiles.
+
+----------------------------------------------------
+13.3 UDISKIE
+----------------------------------------------------
+
+Udiskie es un pequeño daemon que facilita el montaje y desmontaje
+de dispositivos extraíbles mediante UDisks.
+
+Es OPCIONAL.
+
+Si necesitas esta función:
+
+sudo dnf install -y udiskie
+
+----------------------------------------------------
+13.4 CLIPHIST
+----------------------------------------------------
+
+Clipboard manager para Wayland.
+
+Es OPCIONAL.
+
+Instálalo si quieres historial del portapapeles:
+
+sudo dnf install -y cliphist
+
+----------------------------------------------------
+13.5 BLUEMAN-APPLET
+----------------------------------------------------
+
+El applet forma parte de Blueman y puede utilizarse para gestionar
+Bluetooth desde la bandeja del sistema.
+
+====================================================
+14. FILOSOFÍA DEL SETUP
+====================================================
+
+✔ Minimal
+✔ Estable
+✔ Todo con teclado
+✔ Estético sin exagerar
+✔ Ideal para estudio y programación
+
+====================================================
+15. APLICACIONES EXTRAS
+====================================================
+
+Estas aplicaciones no forman parte del núcleo de Sway y se instalan
+solamente si las necesitas.
+
+----------------------------------------------------
+15.1 HOMEBREW
+----------------------------------------------------
+
+Homebrew puede utilizarse para aplicaciones que quieras mantener
+separadas del gestor de paquetes de Fedora.
+
+NOTA:
+No es obligatorio instalar Homebrew para utilizar Fedora + Sway.
+
+Si lo utilizas, mantén su inicialización en tu configuración de Zsh.
+
+----------------------------------------------------
+15.2 NEOVIM + ASTRONVIM
+----------------------------------------------------
+
+Neovim:
+
+sudo dnf install -y neovim
+
+AstroNvim no es otro editor: es una configuración/distribución
+de Neovim.
+
+La instalación de AstroNvim debe hacerse como configuración de
+Neovim, no como un paquete llamado "Neovim AstroNvim".
+
+----------------------------------------------------
+15.3 ZELLIJ
+----------------------------------------------------
+
+Zellij es un multiplexor de terminal.
+
+Instálalo mediante el método que hayas elegido para tus dotfiles
+(Fedora, Homebrew, etc.).
+
+====================================================
+16. REPRODUCCIÓN DE VIDEO EN XWAYLAND
+====================================================
+
+Si utilizas VLC o Celluloid y necesitas solucionar problemas de
+reproducción bajo XWayland:
+
+- Ejecuta el script de tus dotfiles que crea los binarios/
+  lanzadores personalizados para VLC y Celluloid.
+- Comprueba primero que los reproductores funcionan normalmente
+  desde Wayland antes de aplicar ajustes adicionales.
+
+NOTA:
+No se añade un comando genérico aquí porque esta sección depende
+del script concreto incluido en tus dotfiles.
+
+====================================================
+17. ARCHIVOS RAR Y OTROS FORMATOS
+====================================================
+
+----------------------------------------------------
+17.1 GESTOR GRÁFICO
+----------------------------------------------------
+
+Para gestionar archivos comprimidos gráficamente:
+
+sudo dnf install -y file-roller
+
+Herramientas adicionales:
+
+sudo dnf install -y unzip p7zip p7zip-plugins unrar
+
+Si necesitas crear archivos RAR:
+
+sudo dnf install -y rar
+
+----------------------------------------------------
+17.2 USO DESDE TERMINAL
+----------------------------------------------------
+
+Crear un archivo RAR:
+
+rar a archivos.rar *
+
+Extraer un archivo RAR:
+
+unrar x archivo.rar
+
+NOTA:
+No es necesario instalar unrar dos veces.
+
+====================================================
+18. REPRODUCTOR DE MÚSICA EN TERMINAL: CMUS
+====================================================
+
+Instalación:
+
+sudo dnf install -y cmus
+
+Agregar la biblioteca:
+
+:add ~/Music
+
+Para actualizar la biblioteca después de agregar canciones:
+
+:clear
+:add ~/Music
+
+Atajos útiles:
+
++        = subir volumen
+-        = bajar volumen
+1 / 2    = cambiar vista
+c        = pasar la canción
+v        = detener reproducción
+x        = reiniciar canción
+b        = siguiente canción
+z        = canción anterior
+/        = buscar/filtrar
+Enter    = reproducir la canción seleccionada
+
+====================================================
+19. ABRIR IMÁGENES CON EOM
+====================================================
+
+Instalar Eye of MATE:
+
+sudo dnf install -y eom
+
+Establecerlo como visor predeterminado:
+
+xdg-mime default eom.desktop image/jpeg
+xdg-mime default eom.desktop image/png
+xdg-mime default eom.desktop image/webp
+
+Si quieres establecerlo para todos los tipos MIME de imágenes y
+tu sistema acepta la asociación:
+
+xdg-mime default eom.desktop image/*
+
+====================================================
+20. COMPARTIR PANTALLA EN WAYLAND
+====================================================
+
+Para Sway se necesita un portal de escritorio compatible con
+Wayland y PipeWire.
+
+Instala:
+
+sudo dnf install -y pipewire wireplumber xdg-desktop-portal-wlr
+
+Comprueba el estado del audio/portal:
+
+systemctl --user status pipewire
+systemctl --user status wireplumber
+
+No es necesario habilitar manualmente los servicios si Fedora ya
+los está gestionando mediante el sistema de usuario.
+
+Después de instalar o cambiar componentes del portal:
+
+- Cierra sesión.
+- Vuelve a entrar en Sway.
+- Comprueba que el navegador detecta correctamente la captura de
+  pantalla.
+
+----------------------------------------------------
+20.1 BRAVE
+----------------------------------------------------
+
+Si Brave no utiliza Wayland correctamente, puedes probar:
+
+brave --enable-features=UseOzonePlatform --ozone-platform=wayland
+
+Este comando es una alternativa de diagnóstico/arranque y no
+debe considerarse obligatorio si Brave ya funciona correctamente
+en Wayland.
+
+====================================================
+21. NOTIFICACIONES EN PANTALLA PARA VOLUMEN/BRILLO: WOB
+====================================================
+
+Wob puede mostrar indicadores en pantalla (OSD) para volumen,
+brillo y otros valores.
+
+Instalación:
+
+sudo dnf install -y wob
+
+La configuración de Wob depende del script que utilices para
+enviarle los valores.
+
+====================================================
+22. REPRODUCTOR DE VIDEO NATIVO: SHOWTIME
+====================================================
+
+Instalación:
+
+sudo dnf install -y showtime
+
+Showtime es un reproductor multimedia moderno basado en GTK,
+adecuado para un escritorio Wayland.
+
+====================================================
+23. CONFIGURAR BLUETOOTH
+====================================================
+
+Instalación:
+
+sudo dnf install -y bluez bluez-tools blueman
+
+BlueZ:
+- Sistema Bluetooth de Linux.
+
+Blueman:
+- Interfaz gráfica para gestionar Bluetooth.
+
+Activar el servicio:
+
+sudo systemctl enable --now bluetooth
+
+Comprobar:
+
+systemctl status bluetooth
+
+----------------------------------------------------
+23.1 BLUETOOTHCTL
+----------------------------------------------------
+
+Entrar al control:
+
+bluetoothctl
+
+Dentro:
+
+power on
+agent on
+default-agent
+scan on
+
+Después puedes utilizar:
+
+pair <MAC>
+trust <MAC>
+connect <MAC>
+
+----------------------------------------------------
+23.2 RFKILL
+----------------------------------------------------
+
+rfkill es OPCIONAL y sirve para diagnosticar bloqueos de hardware
+o software.
+
+Instalar:
+
+sudo dnf install -y rfkill
+
+Comprobar:
+
+rfkill list
+
+Desbloquear Bluetooth:
+
+rfkill unblock bluetooth
+
+Bloquear Bluetooth:
+
+rfkill block bluetooth
+
+====================================================
+24. LOCALSEND
+====================================================
+
+Instalar desde Flathub:
+
+flatpak install flathub org.localsend.localsend_app
+
+Ejecutar:
+
+flatpak run org.localsend.localsend_app
+
+IMPORTANTE:
+NO desactives Firewalld para utilizar LocalSend.
+
+LocalSend utiliza el puerto 53317 para la comunicación. Si
+Firewalld bloquea la conexión, permite únicamente el tráfico
+necesario:
+
+sudo firewall-cmd --permanent --add-port=53317/tcp
+sudo firewall-cmd --permanent --add-port=53317/udp
+sudo firewall-cmd --reload
+
+Comprobar Firewalld:
+
+sudo systemctl status firewalld
+
+Si Firewalld estaba deshabilitado, vuelve a activarlo:
+
+sudo systemctl enable --now firewalld
+
+====================================================
+25. GRABAR LA PANTALLA EN SWAY
+====================================================
+
+Instalar:
+
+sudo dnf install -y wf-recorder grim slurp wl-clipboard
+
+Crear el directorio de vídeos:
+
+mkdir -p ~/Videos
+
+En sway/config:
+
+# Grabar toda la pantalla con audio
+bindsym $mod+Shift+r exec wf-recorder -a -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
+
+# Grabar una región seleccionada con audio
+bindsym $mod+Shift+g exec wf-recorder -a -g "$(slurp)" -f ~/Videos/$(date +'%Y-%m-%d_%H-%M-%S').mkv
+
+# Detener grabación
+bindsym $mod+Shift+x exec pkill wf-recorder
+
+====================================================
+26. GESTOR DE PANTALLAS
+====================================================
+
+Instalar:
+
+sudo dnf install -y wdisplays
+
+Atajo:
+
+bindsym $mod+p exec wdisplays
+
+Wdisplays permite configurar monitores y salidas desde una
+interfaz gráfica compatible con Wayland.
+
+====================================================
+27. AHORRO DE BATERÍA / PERFILES DE ENERGÍA
+====================================================
+
+IMPORTANTE:
+No instalar power-profiles-daemon a ciegas.
+
+Fedora puede utilizar distintos backends para la interfaz
+powerprofilesctl, y en algunas instalaciones puede estar presente
+tuned-ppd.
+
+Primero comprueba qué tienes disponible:
+
+powerprofilesctl list
+
+Para ver el perfil actual:
+
+powerprofilesctl get
+
+Si powerprofilesctl funciona correctamente, utiliza los perfiles
+que aparezcan en la lista.
+
+Ejemplo de atajos en sway/config:
+
+bindsym Mod1+F9  exec powerprofilesctl set power-saver
+bindsym Mod1+F10 exec powerprofilesctl set balanced
+bindsym Mod1+F11 exec powerprofilesctl set performance
+
+NOTA:
+No instales power-profiles-daemon si DNF indica que entra en
+conflicto con tuned-ppd. En ese caso, conserva el backend que
+Fedora ya está utilizando.
+
+====================================================
+28. CÁMARA PARA GRABAR
+====================================================
+
+Cheese:
+
+sudo dnf install -y cheese
+
+Abrir:
+
+cheese
+
+====================================================
+29. RELOJ
+====================================================
+
+GNOME Clocks:
+
+sudo dnf install -y gnome-clocks
+
+Abrir:
+
+gnome-clocks
+
+====================================================
+30. LIMPIEZA Y MANTENIMIENTO
+====================================================
+
+----------------------------------------------------
+30.1 ELIMINAR PAQUETES QUE YA NO SE USAN
+----------------------------------------------------
+
+sudo dnf autoremove
+
+----------------------------------------------------
+30.2 LIMPIAR CACHÉ DE DNF
+----------------------------------------------------
+
+No es necesario hacerlo periódicamente.
+
+Úsalo principalmente para solucionar problemas con la caché de
+paquetes:
+
+sudo dnf clean all
+
+----------------------------------------------------
+30.3 PAPELERA
+----------------------------------------------------
+
+Vaciar la papelera:
+
+rm -rf ~/.local/share/Trash/*
+
+----------------------------------------------------
+30.4 CACHÉ DE APLICACIONES
+----------------------------------------------------
+
+NO se recomienda borrar ~/.cache/* de forma rutinaria.
+
+Si una aplicación específica tiene una caché dañada, elimina
+únicamente la caché de esa aplicación.
+
+====================================================
+31. STOW PARA ADMINISTRAR DOTFILES
+====================================================
+
+Instalar:
+
+sudo dnf install -y stow
+
+Crear:
+
+mkdir -p ~/dotfiles
+
+IMPORTANTE:
+La estructura de ~/dotfiles debe coincidir con la estructura que
+quieres enlazar mediante GNU Stow.
+
+Ejemplo:
+
+~/dotfiles/
+└── .config/
+    ├── sway/
+    ├── waybar/
+    ├── fuzzel/
+    └── kitty/
+
+Entrar:
+
+cd ~/dotfiles
+
+Crear los enlaces:
+
+stow .
+
+Si tu estructura utiliza paquetes separados, por ejemplo:
+
+~/dotfiles/
+├── sway/
+├── waybar/
+├── kitty/
+└── fuzzel/
+
+entonces el comando puede variar según cómo quieras que Stow
+cree los enlaces.
+
+Antes de ejecutar stow sobre una configuración existente,
+asegúrate de no tener archivos reales que entren en conflicto con
+los enlaces.
+
+====================================================
+32. HACER DNF MÁS EFICIENTE
+====================================================
+
+Editar:
+
+sudo nvim /etc/dnf/dnf.conf
+
+En Neovim:
+
+- Presiona Esc
+- Escribe :wq
+- Presiona Enter
+
+Añade:
+
+max_parallel_downloads=5
+fastestmirror=True
+
+NOTA:
+No utilices "textmax_parallel_downloads"; el nombre correcto es
+"max_parallel_downloads".
+
+Tampoco es necesario ejecutar dnf clean all cada vez que cambies
+esta configuración.
+
+Puedes reconstruir la caché si quieres:
+
+sudo dnf makecache
+
+Y después actualizar:
+
+sudo dnf upgrade --refresh
+
+====================================================
+33. REINICIAR NETWORKMANAGER
+====================================================
+
+Si NetworkManager presenta problemas:
+
+sudo systemctl restart NetworkManager
+
+Comprobar:
+
+systemctl status NetworkManager
+
+====================================================
+34. COMPROBACIONES FINALES
+====================================================
+
+Después de terminar la instalación, comprueba:
+
+Sway:
+sway --version
+
+Waybar:
+waybar --version
+
+Fuzzel:
+fuzzel --version
+
+PipeWire:
+systemctl --user status pipewire
+
+WirePlumber:
+systemctl --user status wireplumber
+
+Bluetooth:
+systemctl status bluetooth
+
+NetworkManager:
+systemctl status NetworkManager
+
+Firewalld:
+sudo systemctl status firewalld
+
+Perfiles de energía:
+powerprofilesctl list
+
+====================================================
+35. SOLUCIÓN RÁPIDA DE PROBLEMAS
+====================================================
+
+----------------------------------------------------
+35.1 AUDIO
+----------------------------------------------------
+
+Comprobar PipeWire:
+
+systemctl --user status pipewire
+
+Comprobar WirePlumber:
+
+systemctl --user status wireplumber
+
+Abrir control de audio:
+
+pavucontrol
+
+----------------------------------------------------
+35.2 BLUETOOTH
+----------------------------------------------------
+
+Comprobar:
+
+systemctl status bluetooth
+
+Después:
+
+bluetoothctl
+
+Y dentro:
+
+power on
+
+Si está bloqueado:
+
+rfkill list
+rfkill unblock bluetooth
+
+----------------------------------------------------
+35.3 RED
+----------------------------------------------------
+
+Reiniciar:
+
+sudo systemctl restart NetworkManager
+
+Abrir interfaz de terminal:
+
+nmtui
+
+----------------------------------------------------
+35.4 LOCALSEND
+----------------------------------------------------
+
+Comprobar que Firewalld esté activo:
+
+sudo systemctl status firewalld
+
+Comprobar puertos:
+
+sudo firewall-cmd --list-ports
+
+Debe aparecer el tráfico permitido para LocalSend si configuraste
+la regla manualmente.
+
+----------------------------------------------------
+35.5 WAYBAR DUPLICADO
+----------------------------------------------------
+
+Ejecutar:
+
+killall waybar
+
+Y después:
+
+waybar &
+
+Si vuelve a duplicarse, revisa:
+
+~/.config/sway/scripts/waybar.sh
+
+y la línea:
+
+exec_always ~/.config/sway/scripts/waybar.sh
+
+====================================================
+36. APLICACIONES OPCIONALES
+====================================================
+
+Estas aplicaciones no son necesarias para el funcionamiento de
+Sway:
+
+- Cheese
+- GNOME Clocks
+- CMUS
+- EOM
+- Showtime
+- Ranger
+- Udiskie
+- Cliphist
+- Wob
+- LocalSend
+- Wdisplays
+- Blueman
+- Homebrew
+- AstroNvim
+- Zellij
+
+Instala únicamente las que realmente utilices.
+====================================================
+BRILLO DE PANTALLA
+====================================================
+
+Instalar:
+
+sudo dnf install -y brightnessctl
+
+Comprobar que el dispositivo de brillo sea detectado:
+
+brightnessctl devices
+
+Ver el brillo actual:
+
+brightnessctl get
+
+Ver el brillo máximo:
+
+brightnessctl max
+
+Ver el porcentaje actual:
+
+brightnessctl -m
+
+----------------------------------------------------
+ATAJOS EN SWAY
+----------------------------------------------------
+
+Subir brillo:
+
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+Bajar brillo:
+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+----------------------------------------------------
+ATAJOS ALTERNATIVOS
+----------------------------------------------------
+
+Si tu teclado no tiene teclas de brillo:
+
+bindsym Ctrl+Shift+Up exec brightnessctl set 5%+
+bindsym Ctrl+Shift+Down exec brightnessctl set 5%-
+
+----------------------------------------------------
+COMPROBAR
+----------------------------------------------------
+
+Subir:
+
+brightnessctl set 5%+
+
+Bajar:
+
+brightnessctl set 5%-
+
+Establecer un valor concreto:
+
+brightnessctl set 50%
+
+====================================================
+BRILLO DE PANTALLA
+====================================================
+
+Instalar:
+
+sudo dnf install -y brightnessctl
+
+Comprobar los dispositivos de brillo detectados:
+
+brightnessctl devices
+
+Ver el brillo actual:
+
+brightnessctl get
+
+Ver el brillo máximo:
+
+brightnessctl max
+
+Mostrar el brillo en porcentaje:
+
+brightnessctl -m
+
+----------------------------------------------------
+ATAJOS DE BRILLO
+----------------------------------------------------
+
+En sway/config:
+
+# Subir brillo
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+# Bajar brillo
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+Si el teclado no tiene teclas dedicadas para el brillo:
+
+# Subir brillo
+bindsym Ctrl+Shift+Up exec brightnessctl set 5%+
+
+# Bajar brillo
+bindsym Ctrl+Shift+Down exec brightnessctl set 5%-
+
+También puedes probar manualmente:
+
+brightnessctl set 5%+
+
+brightnessctl set 5%-
+
+Establecer un porcentaje concreto:
+
+brightnessctl set 50%
+
+----------------------------------------------------
+SI BRIGHTNESSCTL NO DETECTA EL BRILLO
+----------------------------------------------------
+
+Comprobar:
+
+ls /sys/class/backlight/
+
+Si aparece un dispositivo, comprobar nuevamente:
+
+brightnessctl devices
+
+Si no aparece ningún dispositivo, el problema puede estar
+relacionado con el controlador de gráficos/kernel y no con
+brightnessctl.
+
+====================================================
+FIN BRILLO
+====================================================
+
+
+====================================================
+CONTROL DE VOLUMEN
+====================================================
+
+El sistema utiliza PipeWire y WirePlumber.
+
+Instalar:
+
+sudo dnf install -y pipewire pipewire-pulseaudio wireplumber pavucontrol
+
+----------------------------------------------------
+ATAJOS DE VOLUMEN
+----------------------------------------------------
+
+En sway/config:
+
+# Subir volumen
+bindsym Ctrl+Shift+Right exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+
+# Bajar volumen
+bindsym Ctrl+Shift+Left exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+
+# Silenciar / activar sonido
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+Si el teclado dispone de teclas multimedia:
+
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+----------------------------------------------------
+COMPROBAR AUDIO
+----------------------------------------------------
+
+Ver dispositivos:
+
+wpctl status
+
+Ver volumen:
+
+wpctl get-volume @DEFAULT_AUDIO_SINK@
+
+Abrir mezclador gráfico:
+
+pavucontrol
+
+Comprobar PipeWire:
+
+systemctl --user status pipewire
+
+Comprobar WirePlumber:
+
+systemctl --user status wireplumber
+
+====================================================
+FIN CONTROL DE VOLUMEN
+====================================================
+
+
+====================================================
+ATAJOS DE SCREENSHOTS
+====================================================
+
+Los screenshots utilizan:
+
+- grim
+- slurp
+- wl-clipboard
+
+Instalar:
+
+sudo dnf install -y grim slurp wl-clipboard
+
+Crear directorio:
+
+mkdir -p ~/Pictures
+
+----------------------------------------------------
+ATAJOS
+----------------------------------------------------
+
+Pantalla completa:
+
+Print
+
+Selección de región:
+
+Shift + Print
+
+Selección y copiar al portapapeles:
+
+Ctrl + Shift + Print
+
+----------------------------------------------------
+CONFIGURACIÓN EN SWAY
+----------------------------------------------------
+
+# Pantalla completa
+bindsym Print exec grim ~/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png
+
+# Seleccionar región
+bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png
+
+# Seleccionar región y copiar al portapapeles
+bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
+
+====================================================
+FIN SCREENSHOTS
+====================================================
+
+
+====================================================
+REPRODUCTOR DE MÚSICA EN TERMINAL: CMUS
+====================================================
+
+Instalar:
+
+sudo dnf install -y cmus
+
+Abrir:
+
+cmus
+
+----------------------------------------------------
+AGREGAR BIBLIOTECA
+----------------------------------------------------
+
+Dentro de CMUS:
+
+:add ~/Music
+
+Si posteriormente agregas nuevas canciones:
+
+:add ~/Music
+
+----------------------------------------------------
+ATAJOS
+----------------------------------------------------
+
++        = subir volumen
+-        = bajar volumen
+
+1        = vista principal
+2        = vista alternativa
+
+c        = siguiente canción
+v        = detener reproducción
+x        = reiniciar canción
+
+b        = siguiente canción
+z        = canción anterior
+
+/        = buscar
+
+Enter    = reproducir la canción seleccionada
+
+----------------------------------------------------
+NOTA
+----------------------------------------------------
+
+La carpeta de música utilizada por este setup es:
+
+~/Music
+
+====================================================
+FIN CMUS
+====================================================
+
+
+====================================================
+RANGER
+====================================================
+
+Gestor de archivos para terminal.
+
+Instalar:
+
+sudo dnf install -y ranger
+
+Abrir:
+
+ranger
+
+Atajos utilizados:
+
+a = renombrar archivo
+
+s = ejecutar shell
+
+d = eliminar
+
+Si existe una configuración personalizada en los dotfiles,
+mantenerla dentro de:
+
+~/dotfiles/
+
+====================================================
+UDISKIE
+====================================================
+
+Udiskie permite gestionar automáticamente dispositivos
+extraíbles mediante UDisks.
+
+Es OPCIONAL.
+
+Instalar:
+
+sudo dnf install -y udiskie
+
+Ejecutar:
+
+udiskie &
+
+Si quieres iniciarlo automáticamente con Sway:
+
+exec_always udiskie &
+
+====================================================
+CLIPHIST
+====================================================
+
+Cliphist permite mantener un historial del portapapeles
+en Wayland.
+
+Es OPCIONAL.
+
+Instalar:
+
+sudo dnf install -y cliphist
+
+La configuración y los atajos deben mantenerse en los
+dotfiles si ya existe una configuración personalizada.
+
+====================================================
+FIN UTILIDADES
+====================================================
+
+
+====================================================
+WOB — OSD PARA VOLUMEN Y BRILLO
+====================================================
+
+Wob muestra indicadores en pantalla para valores como:
+
+- Volumen
+- Brillo
+- Otros valores numéricos
+
+Instalar:
+
+sudo dnf install -y wob
+
+----------------------------------------------------
+USO
+----------------------------------------------------
+
+Wob normalmente recibe los valores desde scripts.
+
+Los scripts de volumen y brillo pueden enviar el porcentaje
+actual a Wob después de ejecutar el cambio.
+
+Ejemplo conceptual:
+
+brightnessctl set 5%+
+brightnessctl -m
+
+Para volumen:
+
+wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+wpctl get-volume @DEFAULT_AUDIO_SINK@
+
+----------------------------------------------------
+NOTA
+----------------------------------------------------
+
+Si tus dotfiles ya contienen scripts para Wob, utilizar esos
+scripts en lugar de crear otros diferentes.
+
+La configuración de Wob debe mantenerse en:
+
+~/.config/wob/
+
+====================================================
+FIN WOB
+====================================================
+
+
+====================================================
+VLC Y CELLULOID
+====================================================
+
+Si utilizas VLC o Celluloid desde Sway/Wayland, mantener
+los scripts personalizados incluidos en los dotfiles.
+
+Estos scripts pueden crear lanzadores/binarios personalizados
+para iniciar los reproductores desde la terminal.
+
+----------------------------------------------------
+IMPORTANTE
+----------------------------------------------------
+
+No reemplazar los scripts existentes de los dotfiles por
+comandos genéricos si ya existe una configuración funcional.
+
+Primero comprobar:
+
+~/dotfiles/
+
+y localizar los scripts relacionados con:
+
+- vlc
+- celluloid
+- xwayland
+- video
+
+Si utilizas XWayland para algún reproductor, documentar
+el script utilizado y no duplicar la configuración.
+
+====================================================
+FIN VLC / CELLULOID
+====================================================
+
+
+====================================================
+PERFILES DE ENERGÍA
+====================================================
+
+NO instalar power-profiles-daemon a ciegas.
+
+Primero comprobar qué proveedor de perfiles está utilizando
+Fedora:
+
+powerprofilesctl list
+
+Consultar el perfil actual:
+
+powerprofilesctl get
+
+Los perfiles disponibles pueden incluir:
+
+performance
+balanced
+power-saver
+
+El controlador puede aparecer como:
+
+Driver: platform_profile
+
+----------------------------------------------------
+ATAJOS
+----------------------------------------------------
+
+En sway/config:
+
+bindsym Mod1+F9 exec powerprofilesctl set power-saver
+
+bindsym Mod1+F10 exec powerprofilesctl set balanced
+
+bindsym Mod1+F11 exec powerprofilesctl set performance
+
+----------------------------------------------------
+IMPORTANTE
+----------------------------------------------------
+
+Si DNF informa de un conflicto entre power-profiles-daemon
+y tuned-ppd, NO fuerces la instalación.
+
+Mantén el backend que Fedora ya está utilizando.
+
+====================================================
+FIN POWER PROFILES
+====================================================
+
+
+====================================================
+STOW PARA ADMINISTRAR DOTFILES
+====================================================
+
+Instalar:
+
+sudo dnf install -y stow
+
+Crear el directorio:
+
+mkdir -p ~/dotfiles
+
+----------------------------------------------------
+ESTRUCTURA
+----------------------------------------------------
+
+Las configuraciones que quieras administrar mediante Stow deben
+estar dentro de:
+
+~/dotfiles/
+
+Por ejemplo:
+
+~/dotfiles/
+├── .config/
+│   ├── sway/
+│   ├── waybar/
+│   ├── fuzzel/
+│   └── kitty/
+└── ...
+
+----------------------------------------------------
+MOVER CONFIGURACIONES
+----------------------------------------------------
+
+Si estás migrando una configuración existente, primero mueve
+las configuraciones que quieras administrar desde ~/.config
+hacia ~/dotfiles respetando la estructura correspondiente.
+
+IMPORTANTE:
+
+No sobrescribas archivos existentes sin comprobar primero
+qué contiene cada uno.
+
+----------------------------------------------------
+ACTIVAR DOTFILES
+----------------------------------------------------
+
+Entrar:
+
+cd ~/dotfiles
+
+Ejecutar:
+
+stow .
+
+Stow creará los enlaces simbólicos correspondientes.
+
+Comprobar:
+
+ls -la ~/.config/
+
+====================================================
+37. FILOSOFÍA FINAL DEL SETUP
+====================================================
+
+✔ Minimal
+✔ Estable
+✔ Todo con teclado
+✔ Estético sin exagerar
+✔ Bajo consumo de recursos
+✔ Adecuado para estudio y programación
+✔ Fácil de reinstalar
+✔ Fácil de mantener mediante dotfiles
+
+====================================================
+FIN DE LA GUÍA (v3)
+====================================================
