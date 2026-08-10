@@ -124,6 +124,9 @@ bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
 # anime local
 bindsym alt+Shift+ntilde exec kitty -e bash -c 'cd "$HOME/Desktop/anime" && ranger'
 
+# UdeA local
+bindsym alt+o exec kitty -e bash -c 'cd "$HOME/Documents/UdeA/materias" && ranger'
+
 ## UDEA CLASES 
 
 ## SCRIPTS SHORTCUTS
