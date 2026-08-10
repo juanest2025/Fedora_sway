@@ -74,6 +74,7 @@ declare -A sites=(
   ["Love Reset fav"]="https://www.doramasyt.com/dorama/love-reset-sub-espanol"
   ["XVideos"]="https://www.xvideos.com/"
   ["Pornhub"]="https://es.pornhub.com/"
+  ["My adventures with superman S3"]="https://myflixerz.day/series/my-adventures-with-superman-eurbg/"
   ["Google Docs"]="https://docs.new"
   ["Google slides"]="https://slides.new"
   ["Love scenery"]="https://www.doramasyt.com/dorama/love-scenery-sub-espanol"
