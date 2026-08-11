@@ -120,6 +120,7 @@ bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
 # Utilidades fuzzel
 bindsym alt+m exec ~/.config/fuzzel/sitios/webs.sh
 bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
+bindsym Ctrl+Shift+k exec ~/.config/fuzzel/sitios/udea.sh
 
 # anime local
 bindsym alt+Shift+ntilde exec kitty -e bash -c 'cd "$HOME/Desktop/anime" && ranger'
