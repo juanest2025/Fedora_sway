@@ -51,6 +51,7 @@ declare -A sites=(
   ["Meet.google"]="https://meet.google.com/landing"
   ["Monkeytype"]="https://monkeytype.com/"
   ["cinecalidad.mx"]="https://cine-calidad.mx/"
+  ["History of Engineering"]="https://docs.google.com/document/d/1w2sU__RWZxfhUSgmX_0MkIvpuQ_umPmc1IF8DyURcHo/edit?tab=t.0"
   ["Google Maps"]="https://maps.google.com/"
   ["Love Next Door 1"]="https://www.doramasyt.com/dorama/amor-en-la-puerta-de-al-lado-latino-sub-espanol"
   ["Love Next Door 2"]="https://doramasflix.in/doramas-online/love-next-door"
