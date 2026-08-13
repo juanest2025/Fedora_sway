@@ -118,15 +118,13 @@ bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
 bindsym alt+m exec ~/.config/fuzzel/sitios/webs.sh
 bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
 bindsym Ctrl+Shift+k exec ~/.config/fuzzel/sitios/udea.sh
-bindsym Ctrl+Shift+ntilde exec ~/.config/fuzzel/sitios/anime.sh
+bindsym alt+Shift+l exec ~/.config/fuzzel/sitios/anime.sh
 
 # anime local
 bindsym alt+Shift+ntilde exec kitty -e bash -c 'cd "$HOME/Desktop/anime" && ranger'
 
 # UdeA local
 bindsym alt+o exec kitty -e bash -c 'cd "$HOME/Documents/UdeA/materias" && ranger'
-
-## UDEA CLASES 
 
 ## SCRIPTS SHORTCUTS
 bindsym $mod+x exec ~/.config/obsidian-script/start.sh 
@@ -136,9 +134,7 @@ bindsym alt+Shift+m exec ~/apagar.sh
 bindsym  alt+Shift+t exec ~/.config/waybar/switch-theme.sh
 # INTERRUPTOR DE WAYBAR
 bindsym alt+Shift+j exec ~/.config/sway/scripts/toggle.sh
-# INTERRUPTOR DE WIFI 1 solor reiniciar
-bindsym alt+Shift+l exec ~/.config/sway/scripts/mejorar.wifi.sh
-# INTERRUPTOR DE WIFI 2 conectar al la red de mi casa directamente 
+# INTERRUPTOR DE WIFI conectar al la red de mi casa directamente 
 bindsym alt+Shift+k exec ~/.config/sway/scripts/wifi.sh
 
 ### Focus
