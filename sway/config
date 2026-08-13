@@ -51,6 +51,8 @@ bindsym Mod1+Shift+r exec wf-recorder -a -g "$(slurp)" -f ~/Videos/$(date +'%Y-%
 # Detener grabacion 
 bindsym Mod1+Shift+x exec pkill wf-recorder
 
+# open second brain in neovim
+bindsym Mod1+Shift+y exec kitty -e cd ~/Documents/Second_Brain && nvim
 
 ## Gestor de pantallas
 bindsym $mod+p exec wdisplays
