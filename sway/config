@@ -64,9 +64,6 @@ bindsym alt+i exec kitty -e cmus
 ## editor fuzzel sites
 bindsym Ctrl+Shift+p exec kitty -e nvim ~/.config/fuzzel/sitios
 
-## update
-bindsym Ctrl+Shift+ntilde exec kitty -e sudo dnf update 
-
 ## Modos de energia
 bindsym Mod1+F9  exec powerprofilesctl set power-saver
 bindsym Mod1+F10 exec powerprofilesctl set balanced
@@ -121,6 +118,7 @@ bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
 bindsym alt+m exec ~/.config/fuzzel/sitios/webs.sh
 bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
 bindsym Ctrl+Shift+k exec ~/.config/fuzzel/sitios/udea.sh
+bindsym Ctrl+Shift+ntilde exec ~/.config/fuzzel/sitios/anime.sh
 
 # anime local
 bindsym alt+Shift+ntilde exec kitty -e bash -c 'cd "$HOME/Desktop/anime" && ranger'
