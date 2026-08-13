@@ -204,16 +204,27 @@ bindsym Mod5+e workspace e
 bindsym Mod5+r workspace r
 bindsym Mod5+z workspace z
 
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+shift+1 move container to workspace number 1
+bindsym $mod+shift+2 move container to workspace number 2
+bindsym $mod+shift+3 move container to workspace number 3
+bindsym $mod+shift+4 move container to workspace number 4
+bindsym $mod+shift+5 move container to workspace number 5
+bindsym $mod+shift+6 move container to workspace number 6
+bindsym $mod+shift+7 move container to workspace number 7
+bindsym $mod+shift+8 move container to workspace number 8
+bindsym $mod+shift+9 move container to workspace number 9
+bindsym $mod+shift+0 move container to workspace number 10
+
+bindsym Mod5+Mod1+a move container to workspace number 1
+bindsym Mod5+Mod1+s move container to workspace number 2
+bindsym Mod5+Mod1+d move container to workspace number 3
+bindsym Mod5+Mod1+f move container to workspace number 4
+bindsym Mod5+Mod1+g move container to workspace number 5
+bindsym Mod5+Mod1+h move container to workspace number 6
+bindsym Mod5+Mod1+j move container to workspace number 7
+bindsym Mod5+Mod1+k move container to workspace number 8
+bindsym Mod5+Mod1+l move container to workspace number 9
+bindsym Mod5+Mod1+i move container to workspace number 10
 
 bindsym Mod5+Shift+w move container to workspace w 
 bindsym Mod5+Shift+e move container to workspace e 
@@ -274,8 +285,8 @@ exec_always gammastep -O 3500
 #exec_always = sh -c "sleep 5 && WAYLAND_DISPLAY=$WAYLAND_DISPLAY /usr/bin/gammastep -O 3500"
 
 ### LOCK / LOGOUT
-#bindsym Ctrl+Shift+l exec swaylock -i ~/wallpaper/Anime-City-Night.png
-bindsym Ctrl+Shift+l exec hyprlock 
+#bindsym Ctrl+Shift+l exec swaylock 
+#bindsym Ctrl+Shift+l exec hyprlock 
 
 bindsym Ctrl+Shift+e exec wlogout
 
