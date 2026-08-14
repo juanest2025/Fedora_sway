@@ -121,6 +121,7 @@ bindsym alt+m exec ~/.config/fuzzel/sitios/webs.sh
 bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
 bindsym Ctrl+Shift+k exec ~/.config/fuzzel/sitios/udea.sh
 bindsym alt+Shift+l exec ~/.config/fuzzel/sitios/anime.sh
+bindsym Ctrl+Shift+ntilde exec ~/.config/fuzzel/sitios/grabaciones.sh
 
 # anime local
 bindsym alt+Shift+ntilde exec kitty -e bash -c 'cd "$HOME/Desktop/anime" && ranger'
