@@ -2,6 +2,7 @@
 
 google-chrome-stable \
     "https://mail.google.com/mail/u/0/#inbox" \
+    "https://udearroba.udea.edu.co/internos/my/" \
     "https://udearroba.udea.edu.co/internos/course/view.php?id=27000&section=0#tabs-tree-start" \
     "https://udearroba.udea.edu.co/internos/course/view.php?id=26948&section=0#tabs-tree-start" \
     "https://udearroba.udea.edu.co/internos/course/view.php?id=26186&section=0#menu-tree-start" \
