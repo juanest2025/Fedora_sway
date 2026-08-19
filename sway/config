@@ -33,7 +33,7 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/eight.jpg fill
+output * bg /home/juanes/wallpaper/Fantasy-Snow-Valley.png fill
 #exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
@@ -107,6 +107,10 @@ bindsym Mod1+space exec fuzzel
 bindsym $mod+t exec flatpak run org.telegram.desktop
 bindsym alt+u exec gnome-calendar
 bindsym alt+q exec gnome-clocks
+
+# kitty en modo flotante
+bindsym Mod1+l exec ~/.config/sway/scripts/floating-terminal-kitty.sh
+for_window [app_id="floating"] floating enable
 
 ## SITES
 bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f845239198f43c5400861d
