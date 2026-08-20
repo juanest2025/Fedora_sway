@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -A sites=(
+    ["Ude@"]="https://udearroba.udea.edu.co/internos/my/"
     ["Calculo integral"]="https://udearroba.udea.edu.co/internos/course/view.php?id=26948"
     ["Fisica Mecanica"]="https://udearroba.udea.edu.co/internos/course/view.php?id=26186"
     ["Ingles V"]="https://virtualingenieriaudea.co/course/view.php?id=4969"
