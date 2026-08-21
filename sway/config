@@ -112,8 +112,8 @@ bindsym alt+u exec gnome-calendar
 bindsym alt+q exec gnome-clocks
 
 # kitty en modo flotante
-bindsym Mod1+l exec ~/.config/sway/scripts/floating-terminal-kitty.sh
-for_window [app_id="floating"] floating enable
+#bindsym Mod1+l exec ~/.config/sway/scripts/floating-terminal-kitty.sh
+#for_window [app_id="floating"] floating enable
 
 ## SITES
 bindsym $mod+n exec brave-browser --app=https://www.notion.so/7072782b14f845239198f43c5400861d
