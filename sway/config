@@ -54,6 +54,9 @@ bindsym Mod1+Shift+x exec pkill wf-recorder
 ## open second brain in neovim
 bindsym Mod5+e exec kitty -e nvim $HOME/Documents/Second_Brain
 
+# open vim in home directory
+bindsym Mod5+w exec kitty -e nvim $HOME
+
 ## Gestor de pantallas
 bindsym $mod+p exec wdisplays
 
@@ -200,7 +203,7 @@ bindsym Mod5+k workspace number 8
 bindsym Mod5+l workspace number 9
 bindsym Mod5+i workspace number 10
 
-bindsym Mod5+w workspace w
+#bindsym Mod5+w workspace w
 #bindsym Mod5+e workspace e
 bindsym Mod5+r workspace r
 bindsym Mod5+z workspace z
@@ -227,7 +230,7 @@ bindsym Mod5+Mod1+k move container to workspace number 8
 bindsym Mod5+Mod1+l move container to workspace number 9
 bindsym Mod5+Mod1+i move container to workspace number 10
 
-bindsym Mod5+Shift+w move container to workspace w 
+#bindsym Mod5+Shift+w move container to workspace w 
 #bindsym Mod5+Shift+e move container to workspace e 
 bindsym Mod5+Shift+r move container to workspace r 
 bindsym Mod5+Shift+z move container to workspace z 
