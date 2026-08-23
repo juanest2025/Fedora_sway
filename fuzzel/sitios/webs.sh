@@ -10,6 +10,7 @@ declare -A sites=(
   ["TikTok"]="https://www.tiktok.com/es-419/"
   ["GitHub"]="https://github.com/juanest2025"
   ["La.movie"]="https://lamovie.org/"
+  ["hell mode"]="https://animeav1.com/media/hell-mode-yarikomizuki-no-gamer-wa-hai-settei-no-isekai-de-musou-suru"
   ["Tioplus.app"]="https://tioplus.app/"
   ["Cuevana"]="https://cue-vana3.org/"
   ["Cuevana main"]="https://cuevana.ca/"
