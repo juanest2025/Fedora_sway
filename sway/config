@@ -111,6 +111,11 @@ bindsym $mod+t exec flatpak run org.telegram.desktop
 bindsym alt+u exec gnome-calendar
 bindsym alt+q exec gnome-clocks
 
+## ATAJOS LEFT HOMEROW + ENTER
+bindsym a+Shift+Return exec brave-browser --app=https://web.whatsapp.com
+bindsym s+Shift+Return exec brave-browser 
+bindsym d+Shift+Return exec google-chrome-stable 
+
 # kitty en modo flotante
 #bindsym Mod1+l exec ~/.config/sway/scripts/floating-terminal-kitty.sh
 #for_window [app_id="floating"] floating enable
