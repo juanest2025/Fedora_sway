@@ -52,7 +52,7 @@ PAQUETES=(
     zip unrar p7zip-full file-roller nemo-fileroller
 
     # Otras utilidades / apps
-    cheese gnome-clocks gnome-chess eom
+    cheese gnome-clocks gnome-chess eom foliate
 )
 
 for pkg in "${PAQUETES[@]}"; do
