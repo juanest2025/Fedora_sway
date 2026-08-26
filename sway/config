@@ -163,8 +163,8 @@ bindsym $mod+Shift+l move right
 
 ### Resize con Super + Shift + Flechas
 
-bindsym Ctrl+alt+l resize shrink width  20 px
-bindsym Ctrl+alt+h resize grow   width  20 px
+bindsym Ctrl+alt+h resize shrink width  20 px
+bindsym Ctrl+alt+l resize grow   width  20 px
 bindsym Ctrl+alt+j resize shrink height 20 px
 bindsym Ctrl+alt+k resize grow   height 20 px
 
