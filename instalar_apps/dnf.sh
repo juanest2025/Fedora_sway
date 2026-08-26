@@ -40,7 +40,7 @@ PAQUETES=(
     ranger vim neovim fzf htop bat ripgrep fd zsh btop wget curl git
 
     # Audio y video
-    pavucontrol vlc celluloid ffmpeg cmus cava
+    pavucontrol vlc celluloid ffmpeg cmus cava showtime mpv
 
     # Batería / energía
     tlp powertop
