@@ -228,8 +228,9 @@ bindsym Mod5+Shift+z move container to workspace z
 bindsym Mod1+Shift+h splith
 bindsym Mod1+Shift+v splitv
 bindsym $mod+f fullscreen
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
+#bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 ### Scratchpad
