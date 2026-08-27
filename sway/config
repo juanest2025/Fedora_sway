@@ -280,8 +280,8 @@ exec_always gammastep -O 3500
 
 ### LOCK / LOGOUT
 #bindsym Ctrl+Shift+l exec swaylock 
+bindsym  Ctrl+Shift+l exec brave-browser --app=https://www.google.com/
 #bindsym Ctrl+Shift+l exec hyprlock 
-
 bindsym Ctrl+Shift+e exec wlogout
 
 ### SCREENSHOTS
