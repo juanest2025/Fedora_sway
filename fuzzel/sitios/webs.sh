@@ -50,6 +50,7 @@ declare -A sites=(
   ["Ingeni@"]="https://virtualingenieriaudea.co/"
   ["UdeA Drive"]="https://drive.google.com/drive/my-drive"
   ["Drive"]="https://drive.google.com/drive/my-drive"
+  ["Scrips backup"]="https://drive.google.com/drive/folders/1ZQNW6ZgKXnub-Us-pOPACplnM5SbDhPB"
   ["Entrega Podcst ingles"]="https://drive.google.com/drive/folders/1wi8Oqb3U8LpAK0N6dOxB-Dgk7kkpoTJ3?usp=sharing"
   ["Calendar"]="https://calendar.google.com/calendar/u/0/r"
   ["Meet.google"]="https://meet.google.com/landing"
