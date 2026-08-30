@@ -57,6 +57,7 @@ declare -A sites=(
   ["Monkeytype"]="https://monkeytype.com/"
   ["Google Maps"]="https://maps.google.com/"
   ["cinecalidad.mx"]="https://cine-calidad.mx/"
+  ["Registo clases Universidad"]="https://docs.google.com/spreadsheets/d/1FC7W_-hErSNBsY0piSoW-PuWROAZ5RvRkxc0qjY10fc/edit?usp=sharing"
   ["History of Engineering"]="https://docs.google.com/document/d/1w2sU__RWZxfhUSgmX_0MkIvpuQ_umPmc1IF8DyURcHo/edit?tab=t.0"
   ["Love Next Door 1"]="https://www.doramasyt.com/dorama/amor-en-la-puerta-de-al-lado-latino-sub-espanol"
   ["Love Next Door 2"]="https://doramasflix.in/doramas-online/love-next-door"
