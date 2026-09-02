@@ -10,3 +10,4 @@ sudo bash update.zoom.sh
 sudo bash opencode.sh
 sudo bash zellij.sh
 sudo bash balena-etcher.sh 
+sudo bash FreeOffice.sh 
