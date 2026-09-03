@@ -30,7 +30,7 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/Fantasy-Snow-Valley.png fill
+output * bg /home/juanes/wallpaper/acheron-de-juego-honkai-star-rail_3840x2160_xtrafondos.com.jpg fill
 #exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
@@ -89,6 +89,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 
 ## APLICACIONES
 bindsym $mod+Return exec kitty 
+bindsym alt+g exec kitty 
 bindsym $mod+b exec brave-browser
 bindsym alt+Shift+o exec flatpak run md.obsidian.Obsidian 
 bindsym $mod+e exec nemo 
