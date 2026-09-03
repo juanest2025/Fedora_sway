@@ -23,6 +23,7 @@ declare -A sites=(
   ["Flathub"]="https://flathub.org/es"
   ["kimcartoon"]="https://kimcartoon.com.co/"
   ["Spider man brand new day"]="https://cuevana3l.biz/pelicula/spider-man-un-nuevo-dia"
+  ["Rice quickshell in wayland"]="https://www.youtube.com/watch?v=MRQxAxJ_APw&t=10s"
   ["Miraculos.to"]="https://miraculous.to/en/"
   ["Ladyblognews"]="https://ladyblognews.com/"
   ["Claude AI"]="https://claude.ai/new"
