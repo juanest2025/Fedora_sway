@@ -10,6 +10,7 @@ declare -A sites=(
     ["Classroom Fisica"]="https://classroom.google.com/c/ODc0MzgwMTMwMTMy"
     ["Entrega podcast"]="https://virtualingenieriaudea.co/mod/assign/view.php?id=874268"
     ["Parcial Calculo.int"]="https://virtualingenieriaudea.co/course/view.php?id=5103"
+    ["Grabaciones ingles"]="https://ingenia.udea.edu.co/zoom/meeting/97057341996"
     ["Podcast ingles"]="https://docs.google.com/document/d/1SabO7v-g6kPV2kS-aSma3Y0SgAYu1qn5-Lh5WOsYnR8/edit?usp=sharing"
     ["Drive Ingles"]="https://udeaeduco-my.sharepoint.com/shared?listurl=https%3A%2F%2Fudeaeduco%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Faracelly%5Fospina%5Fudea%5Fedu%5Fco%2FDocuments&e=5%3Abb3aac9a086840b9859382a8c185882f&sharingv2=true&fromShare=true&at=9&id=%2Fpersonal%2Faracelly%5Fospina%5Fudea%5Fedu%5Fco%2FDocuments%2F2026%2D2%20EforE%20students%2FEnglish%20V%2FGroup%2018%20%2D%202026%2D2&FolderCTID=0x012000A5F08FC96EEC3B468C71B876883C6992"
 
