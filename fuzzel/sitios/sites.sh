@@ -74,6 +74,7 @@ declare -A sites=(
   ["Queen of Divorce"]="https://www.doramasyt.com/dorama/queen-of-divorce-sub-espanol"
   ["Nos vemos en la oficina"]="https://www.doramasyt.com/dorama/nos-vemos-en-la-oficina-latino-sub-espanol"
   ["Cashman"]="https://tioplus.app/serie/cashman"
+  ["Muertos de amor"]="https://doramasflix.in/doramas-online/spooky-in-love"
   ["Amor en el laboratorio"]="https://www.doramasyt.com/dorama/amor-en-el-laboratorio-latino-sub-espanol"
   ["Tastefully Yours/el sabor de lo nuesto"]="https://doramasflix.in/doramas-online/tastefully-yours"
   ["Acaramelados/our stiky love fav"]="https://doramasflix.in/doramas-online/our-sticky-love"
