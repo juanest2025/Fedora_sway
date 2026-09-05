@@ -1714,6 +1714,10 @@ Stow creará los enlaces simbólicos correspondientes.
 Comprobar:
 
 ls -la ~/.config/
+============================================================
+38. ZATHURA PARA LEER PDFS ESTILO VIM
+===========================================================
+sudo dnf install zathura zathura-pdf-poppler
 
 ====================================================
 37. FILOSOFÍA FINAL DEL SETUP

@@ -37,7 +37,7 @@ PAQUETES=(
     mako-notifier cliphist udiskie
 
     # Terminal / línea de comandos
-    ranger vim neovim fzf htop bat ripgrep fd zsh btop wget curl git
+    ranger vim neovim fzf htop bat ripgrep fd zsh btop wget curl git zathura zathura-pdf-poppler
 
     # Audio y video
     pavucontrol vlc celluloid ffmpeg cmus cava showtime mpv
