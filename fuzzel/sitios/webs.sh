@@ -31,6 +31,7 @@ declare -A sites=(
 	["DeepSeek"]="https://chat.deepseek.com/"
 	["Kimi K3"]="https://www.kimi.com/"
 	["Gemini"]="https://gemini.google.com/app"
+	["Dola AI"]="https://www.dola.com/chat"
 	["Sesame"]="https://app.sesame.com"
 	["Tioanime"]="https://tioanime.com/"
 	["Tiohentai"]="https://tiohentai.com/"
