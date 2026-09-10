@@ -43,6 +43,7 @@ declare -A sites=(
 	["Hentaila"]="https://hentaila.com/hub"
 	["hentai-jl"]="https://hentaijl.com/"
 	["uncensoredhentai"]="https://uncensoredhentai.xxx/"
+	["Latinohentai.vip"]="https://latinohentai.vip/"
 	["JKanimes"]="https://jkanime.net/"
 	["hentaiJK"]="https://hentaijk.com/"
 	["Search Pirate"]="https://search.brave.com/"
