@@ -42,6 +42,8 @@ declare -A sites=(
 	["latanime"]="https://latanime.org/"
 	["Hentaila"]="https://hentaila.com/hub"
 	["hentai-jl"]="https://hentaijl.com/"
+	["Neurociencias reunion GNA"]="https://meet.google.com/xxn-taqn-yxa?pli=1"
+	["Escuadron letal - Jackie Chan"]="https://lacuevana.org/pelicula/escuadron-letal-pOO4aN"
 	["uncensoredhentai"]="https://uncensoredhentai.xxx/"
 	["Latinohentai.vip"]="https://latinohentai.vip/"
 	["JKanimes"]="https://jkanime.net/"

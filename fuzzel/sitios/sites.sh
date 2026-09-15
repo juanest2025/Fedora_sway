@@ -46,6 +46,8 @@ declare -A sites=(
 	["Latinohentai.vip"]="https://latinohentai.vip/"
 	["JKanimes"]="https://jkanime.net/"
 	["hentaiJK"]="https://hentaijk.com/"
+	["Neurociencias reunion GNA"]="https://meet.google.com/xxn-taqn-yxa?pli=1"
+	["Escuadron letal - Jackie Chan"]="https://lacuevana.org/pelicula/escuadron-letal-pOO4aN"
 	["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
 	["Search Pirate"]="https://search.brave.com/"
 	["Google"]="https://www.google.com/"
