@@ -57,7 +57,6 @@ alias notas="bash $HOME/.config/obsidian-script/notas.sh"
 alias music="cmus"
 alias vlc="vlc"
 alias tsk="btop"
-alias fzf="$HOME/.config/fzf/script.sh"
 alias upzellij="bash ~/.config/zellij/update.zellij.sh"
 alias gi="git init"
 alias ga="git add ."
@@ -66,6 +65,8 @@ alias gc="git commit -m "up" "
 alias gp="git push origin main"
 alias salir="pkill -kill -u juanes"
 alias update="bash $HOME/.config/sway/scripts/update.sh"
+alias fzfv='nvim $(fzf --preview="bat --theme=gruvbox-dark --color=always {}")'
+
 # Editor
 #
 alias vim="nvim"

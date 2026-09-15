@@ -48,6 +48,9 @@ bindsym Mod1+Shift+r exec wf-recorder -a -g "$(slurp)" -f ~/Videos/$(date +'%Y-%
 # Detener grabacion 
 bindsym Mod1+Shift+x exec pkill wf-recorder
 
+## open fzf with vim  a file
+bindsym Mod5+x exec kitty -e sh -c 'file=$(fzf --preview="bat --theme=gruvbox-dark --color=always {}"); [ -n "$file" ] && nvim "$file"'
+
 ## open second brain in neovim
 bindsym Mod5+e exec kitty -e nvim $HOME/Documents/Second_Brain
 
