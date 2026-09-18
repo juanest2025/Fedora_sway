@@ -17,6 +17,7 @@ declare -A sites=(
 	["Dilema ingles"]="https://docs.google.com/document/d/1tIoOwobtLm7cDmI8BQcuXtXNz9OrGW4SZzvTZsTHuoc/edit?usp=sharing"
 	["hell mode"]="https://animeav1.com/media/hell-mode-yarikomizuki-no-gamer-wa-hai-settei-no-isekai-de-musou-suru-2nd-season/7"
 	["Tioplus.app"]="https://tioplus.app/"
+	["Jurassic World Chaos Theory english"]="https://myflixerz.day/series/jurassic-world-chaos-theory-28pgm/"
 	["Cuevana 1"]="https://cuevana8.net/"
 	["Cuevana 2"]="https://lacuevana.org/"
 	["Cuevana 3"]="https://cuevanapro.org/"
