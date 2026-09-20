@@ -67,6 +67,7 @@ declare -A sites=(
 	["Meet.google"]="https://meet.google.com/landing"
 	["Monkeytype"]="https://monkeytype.com/"
 	["Google Maps"]="https://maps.google.com/"
+	["Google earth"]="https://earth.google.com/web/@0,0,0a,22251752.77375655d,35y,0h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA"
 	["cinecalidad.mx"]="https://cine-calidad.mx/"
 	["Registo clases Universidad"]="https://docs.google.com/spreadsheets/d/1FC7W_-hErSNBsY0piSoW-PuWROAZ5RvRkxc0qjY10fc/edit?usp=sharing"
 	["History of Engineering"]="https://docs.google.com/document/d/1w2sU__RWZxfhUSgmX_0MkIvpuQ_umPmc1IF8DyURcHo/edit?tab=t.0"

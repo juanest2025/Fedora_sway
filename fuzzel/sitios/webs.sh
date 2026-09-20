@@ -70,6 +70,7 @@ declare -A sites=(
 	["Registo clases Universidad"]="https://docs.google.com/spreadsheets/d/1FC7W_-hErSNBsY0piSoW-PuWROAZ5RvRkxc0qjY10fc/edit?usp=sharing"
 	["History of Engineering"]="https://docs.google.com/document/d/1w2sU__RWZxfhUSgmX_0MkIvpuQ_umPmc1IF8DyURcHo/edit?tab=t.0"
 	["Google Maps"]="https://maps.google.com/"
+	["Google earth"]="https://earth.google.com/web/@0,0,0a,22251752.77375655d,35y,0h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA"
 	["Love Next Door 1"]="https://www.doramasyt.com/dorama/amor-en-la-puerta-de-al-lado-latino-sub-espanol"
 	["Love Next Door 2"]="https://doramasflix.in/doramas-online/love-next-door"
 	["My lovely liar"]="https://www.doramasyt.com/dorama/my-lovely-liar-sub-espanol"
