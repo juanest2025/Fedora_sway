@@ -92,6 +92,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 
 ## APLICACIONES
 bindsym $mod+Return exec kitty 
+bindsym alt+Shift+g exec kitty 
 bindsym Alt+braceleft exec kitty
 bindsym $mod+b exec brave-browser
 bindsym $mod+s exec brave-browser
