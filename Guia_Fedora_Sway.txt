@@ -805,7 +805,7 @@ bindsym $mod+p exec wdisplays
 
 Wdisplays permite configurar monitores y salidas desde una
 interfaz gráfica compatible con Wayland.
-
+esto es para las presentaciones en salon de clases
 ====================================================
 27. AHORRO DE BATERÍA / PERFILES DE ENERGÍA
 ====================================================
