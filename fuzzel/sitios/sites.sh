@@ -102,7 +102,7 @@ declare -A sites=(
 	["My with superman S3"]="https://myflixerz.day/series/my-adventures-with-superman-eurbg/"
 	["Google Docs"]="https://docs.new"
 	["Google slides"]="https://slides.new"
-	["subjav nop"]="https://supjav.com/category/maker/switch?sort=views"
+	["japanese subjav nop"]="https://supjav.com/category/maker/switch?sort=views"
 	["Love scenery"]="https://www.doramasyt.com/dorama/love-scenery-sub-espanol"
 	["Los 4 fantasticos 2025"]="https://lamovie.org/peliculas/los-4-fantasticos-primeros-pasos-2025/"
 	["My mini mart"]="https://www.youtube.com/playables/Ugkxto-OwJZo4rm8Xl2Nj3K403nHlYThf-sr"
