@@ -11,6 +11,7 @@ declare -A sites=(
 	["Twitch"]="https://www.twitch.tv/"
 	["Kick"]="https://kick.com/"
 	["TikTok"]="https://www.tiktok.com/es-419/"
+	["Duolingo"]="https://es.duolingo.com/learn"
 	["Gato"]="https://www.tiktok.com/@ghoshtv?_r=1&_t=ZS-99Pgkvj68rB"
 	["GitHub"]="https://github.com/juanest2025"
 	["La.movie"]="https://lamovie.org/"
