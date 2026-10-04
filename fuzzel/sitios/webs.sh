@@ -23,6 +23,7 @@ declare -A sites=(
 	["Cuevana 3"]="https://cuevanapro.org/"
 	["Goojara"]="https://ww1.goojara.to/ejdWP7"
 	["Flathub"]="https://flathub.org/es"
+	["stealth master"]="https://www.youtube.com/playables/UgkxAa2Gygx3bQRx4kOraVwUFW_3mO1tH0h5"
 	["Weak hero class kdrama"]="https://doramasflix.in/doramas-online/weak-hero-class-1"
 	["kimcartoon"]="https://kimcartoon.com.co/"
 	["Global chinese learning platform"]="https://global.chinese-learning.cn/#/web"
