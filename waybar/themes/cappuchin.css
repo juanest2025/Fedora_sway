@@ -1,0 +1,222 @@
+/* =========================================================
+ * CATPPUCCIN MOCHA — WAYBAR
+ * ========================================================= */
+
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* ---------------------------------------------------------
+ * Main Waybar
+ * --------------------------------------------------------- */
+
+window#waybar {
+    background: transparent;
+    color: #cdd6f4;
+    margin: 6px 10px;
+}
+
+/* ---------------------------------------------------------
+ * Containers
+ * --------------------------------------------------------- */
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(24, 24, 37, 0.82);
+    border: 1px solid rgba(205, 214, 244, 0.08);
+    border-radius: 14px;
+
+    padding: 4px 7px;
+    margin: 4px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------------------------------------------------------
+ * Workspaces
+ * --------------------------------------------------------- */
+
+#workspaces {
+    padding: 0 2px;
+}
+
+#workspaces button {
+    padding: 2px 8px;
+    margin: 0 2px;
+
+    border-radius: 9px;
+
+    color: #6c7086;
+    background: transparent;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(137, 180, 250, 0.12);
+    color: #cdd6f4;
+}
+
+#workspaces button.focused {
+    background: #89b4fa;
+    color: #1e1e2e;
+
+    box-shadow:
+        0 2px 8px rgba(137, 180, 250, 0.25);
+}
+
+#workspaces button.urgent {
+    background: #f38ba8;
+    color: #1e1e2e;
+}
+
+/* ---------------------------------------------------------
+ * Generic modules
+ * --------------------------------------------------------- */
+
+#pulseaudio,
+#backlight,
+#network,
+#bluetooth,
+#battery,
+#clock,
+#tray,
+#custom-wlogout,
+#custom-notifications {
+
+    padding: 4px 11px;
+    margin: 0 2px;
+
+    border-radius: 10px;
+
+    background: rgba(49, 50, 68, 0.65);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+/* ---------------------------------------------------------
+ * Individual colors
+ * --------------------------------------------------------- */
+
+/* Volume */
+
+#pulseaudio {
+    color: #89b4fa;
+}
+
+#pulseaudio:hover {
+    background: rgba(137, 180, 250, 0.16);
+}
+
+/* Brightness */
+
+#backlight {
+    color: #f9e2af;
+}
+
+#backlight:hover {
+    background: rgba(249, 226, 175, 0.16);
+}
+
+/* Network */
+
+#network {
+    color: #a6e3a1;
+}
+
+#network:hover {
+    background: rgba(166, 227, 161, 0.16);
+}
+
+/* Bluetooth */
+
+#bluetooth {
+    color: #89dceb;
+}
+
+#bluetooth:hover {
+    background: rgba(137, 220, 235, 0.16);
+}
+
+/* Battery */
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery:hover {
+    background: rgba(166, 227, 161, 0.16);
+}
+
+/* Clock */
+
+#clock {
+    color: #cba6f7;
+}
+
+#clock:hover {
+    background: rgba(203, 166, 247, 0.16);
+}
+
+/* Tray */
+
+#tray {
+    color: #cdd6f4;
+}
+
+/* Notifications */
+
+#custom-notifications {
+    color: #a6e3a1;
+    font-size: 16px;
+}
+
+#custom-notifications:hover {
+    background: rgba(166, 227, 161, 0.18);
+}
+
+/* Logout */
+
+#custom-wlogout {
+    color: #f38ba8;
+}
+
+#custom-wlogout:hover {
+    background: rgba(243, 139, 168, 0.18);
+}
+
+/* ---------------------------------------------------------
+ * Battery states
+ * --------------------------------------------------------- */
+
+#battery.warning {
+    color: #f9e2af;
+    background: rgba(249, 226, 175, 0.12);
+}
+
+#battery.critical {
+    color: #f38ba8;
+    background: rgba(243, 139, 168, 0.15);
+}
+
+/* ---------------------------------------------------------
+ * Tooltips
+ * --------------------------------------------------------- */
+
+tooltip {
+    background: #1e1e2e;
+    color: #cdd6f4;
+
+    border: 1px solid #45475a;
+    border-radius: 10px;
+
+    padding: 6px 10px;
+}

@@ -1,0 +1,206 @@
+/* ==========================================================
+ *  WAYBAR · "Liquid Glass"
+ *  Cristal esmerilado estilo macOS. Requiere blur del compositor.
+ * ========================================================== */
+
+@define-color glass     rgba(28, 28, 32, 0.40);
+@define-color glass-hi  rgba(255, 255, 255, 0.12);
+@define-color text      rgba(255, 255, 255, 0.92);
+@define-color dim       rgba(255, 255, 255, 0.45);
+
+@define-color blue      #0a84ff;
+@define-color cyan      #64d2ff;
+@define-color green     #30d158;
+@define-color orange    #ff9f0a;
+@define-color red       #ff453a;
+@define-color purple    #bf5af2;
+@define-color pink      #ff6482;
+
+* {
+    font-family: "SF Pro Display", "Inter", "JetBrainsMono Nerd Font", "FontAwesome";
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+window#waybar {
+    background: transparent;
+    color: @text;
+}
+
+tooltip {
+    background: rgba(30, 30, 34, 0.85);
+    border: 1px solid @glass-hi;
+    border-radius: 14px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 4px 8px;
+}
+
+/* ---------- Cápsulas de cristal ---------- */
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: @glass;
+    border: 1px solid @glass-hi;
+    border-radius: 16px;
+    margin: 8px 12px 0 12px;
+    padding: 0 6px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+/* ---------- Workspaces ---------- */
+
+#workspaces button {
+    color: @dim;
+    background: transparent;
+    padding: 0 10px;
+    margin: 5px 2px;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    color: @text;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.20);
+    padding: 0 16px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        0 0 14px rgba(10, 132, 255, 0.35);
+}
+
+#workspaces button.urgent {
+    color: #ffffff;
+    background: alpha(@red, 0.55);
+    box-shadow: 0 0 14px alpha(@red, 0.6);
+}
+
+/* ---------- Módulos ---------- */
+
+#pulseaudio,
+#backlight,
+#network,
+#bluetooth,
+#battery,
+#tray,
+#custom-notifications,
+#custom-wlogout {
+    padding: 0 12px;
+    margin: 5px 2px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+#pulseaudio:hover,
+#backlight:hover,
+#network:hover,
+#bluetooth:hover,
+#battery:hover,
+#custom-notifications:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+#pulseaudio { color: @cyan; }
+#backlight  { color: @orange; }
+#network    { color: @blue; }
+#bluetooth  { color: @purple; }
+
+#pulseaudio.muted,
+#network.disconnected,
+#bluetooth.off,
+#bluetooth.disabled {
+    color: @dim;
+}
+
+#custom-notifications {
+    color: @pink;
+    font-size: 15px;
+}
+
+/* ---------- Reloj: limpio, centrado, sin fondo ---------- */
+
+#clock {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0 16px;
+    margin: 5px 0;
+    border-radius: 10px;
+    background: transparent;
+}
+
+#clock:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+/* ---------- Batería ---------- */
+
+#battery {
+    color: @green;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @green;
+    background: alpha(@green, 0.15);
+}
+
+#battery.warning:not(.charging) {
+    color: @orange;
+    background: alpha(@orange, 0.15);
+}
+
+#battery.critical:not(.charging) {
+    color: #ffffff;
+    background: alpha(@red, 0.7);
+    animation: latido 1s ease-in-out infinite alternate;
+}
+
+@keyframes latido {
+    to {
+        background-color: alpha(@orange, 0.7);
+    }
+}
+
+/* ---------- Tray ---------- */
+
+#tray {
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    background: alpha(@red, 0.3);
+}
+
+/* ---------- Power ---------- */
+
+#custom-wlogout {
+    color: @red;
+    font-size: 15px;
+    padding: 0 14px;
+}
+
+#custom-wlogout:hover {
+    color: #ffffff;
+    background: alpha(@red, 0.75);
+    box-shadow: 0 0 14px alpha(@red, 0.55);
+}

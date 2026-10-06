@@ -30,7 +30,7 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/chica-anime-en-paisaje-de-nubes_5120x2880_xtrafondos.com.jpg fill
+output * bg /home/juanes/wallpaper/Anime-City-Night.png fill
 #exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
@@ -123,6 +123,7 @@ bindsym alt+Shift+i exec ~/.config/fuzzel/sitios/sites.sh
 bindsym Ctrl+Shift+k exec ~/.config/fuzzel/sitios/udea.sh
 bindsym alt+Shift+l exec ~/.config/fuzzel/sitios/anime.sh
 bindsym Ctrl+Shift+ntilde exec ~/.config/fuzzel/sitios/grabaciones.sh
+bindsym Mod5+r exec ~/.config/fuzzel/sitios/lista.wifi.conectar.fuzzel.sh
 
 # anime local
 bindsym alt+Shift+ntilde exec kitty -e bash -c 'cd "$HOME/Desktop/anime" && ranger'
@@ -199,7 +200,7 @@ bindsym Mod5+i workspace number 10
 
 #bindsym Mod5+w workspace w
 #bindsym Mod5+e workspace e
-bindsym Mod5+r workspace r
+#bindsym Mod5+r workspace r
 bindsym Mod5+z workspace z
 
 bindsym $mod+shift+1 move container to workspace number 1

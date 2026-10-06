@@ -58,7 +58,8 @@
     "format-wifi": "󰤨",
     "format-ethernet": "󰈀",
     "format-disconnected": "󰤭",
-    "on-click": "kitty -e nmtui"
+    "on-click": "~/.config/fuzzel/sitios/lista.wifi.conectar.fuzzel.sh"
+//  "on-click": "kitty -e nmtui"
   },
 
   "bluetooth": {

@@ -1,0 +1,205 @@
+/* =========================================================
+ * TOKYO NIGHT — WAYBAR
+ * ========================================================= */
+
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* =========================
+ * WAYBAR
+ * ========================= */
+
+window#waybar {
+    background: transparent;
+    color: #c0caf5;
+}
+
+/* =========================
+ * CONTAINERS
+ * ========================= */
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(26, 27, 38, 0.90);
+
+    border: 1px solid rgba(122, 162, 247, 0.10);
+    border-radius: 12px;
+
+    padding: 3px 6px;
+    margin: 3px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+ * WORKSPACES
+ * ========================= */
+
+#workspaces button {
+    padding: 2px 7px;
+    margin: 0 2px;
+
+    border-radius: 8px;
+
+    color: #565f89;
+    background: transparent;
+
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(122, 162, 247, 0.12);
+    color: #c0caf5;
+}
+
+#workspaces button.focused {
+    background: #7aa2f7;
+    color: #1a1b26;
+}
+
+#workspaces button.urgent {
+    background: #f7768e;
+    color: #1a1b26;
+}
+
+/* =========================
+ * WINDOW
+ * ========================= */
+
+#window {
+    color: #a9b1d6;
+    padding: 0 10px;
+}
+
+/* =========================
+ * MODULES
+ * ========================= */
+
+#custom-wlogout,
+#pulseaudio,
+#backlight,
+#network,
+#bluetooth,
+#battery,
+#clock,
+#custom-notifications,
+#tray {
+    padding: 3px 9px;
+    margin: 0 2px;
+
+    border-radius: 9px;
+
+    background: rgba(42, 45, 62, 0.70);
+
+    transition: all 0.2s ease;
+}
+
+/* =========================
+ * COLORS
+ * ========================= */
+
+#custom-wlogout {
+    color: #f7768e;
+}
+
+#pulseaudio {
+    color: #7aa2f7;
+}
+
+#backlight {
+    color: #e0af68;
+}
+
+#network {
+    color: #9ece6a;
+}
+
+#bluetooth {
+    color: #7dcfff;
+}
+
+#battery {
+    color: #9ece6a;
+}
+
+#clock {
+    color: #bb9af7;
+}
+
+#custom-notifications {
+    color: #7dcfff;
+    font-size: 15px;
+}
+
+#tray {
+    color: #c0caf5;
+}
+
+/* =========================
+ * HOVER
+ * ========================= */
+
+#custom-wlogout:hover {
+    background: rgba(247, 118, 142, 0.18);
+}
+
+#pulseaudio:hover {
+    background: rgba(122, 162, 247, 0.18);
+}
+
+#backlight:hover {
+    background: rgba(224, 175, 104, 0.18);
+}
+
+#network:hover {
+    background: rgba(158, 206, 106, 0.18);
+}
+
+#bluetooth:hover {
+    background: rgba(125, 207, 255, 0.18);
+}
+
+#battery:hover {
+    background: rgba(158, 206, 106, 0.18);
+}
+
+#clock:hover {
+    background: rgba(187, 154, 247, 0.18);
+}
+
+#custom-notifications:hover {
+    background: rgba(125, 207, 255, 0.18);
+}
+
+/* =========================
+ * BATTERY STATES
+ * ========================= */
+
+#battery.warning {
+    color: #e0af68;
+    background: rgba(224, 175, 104, 0.15);
+}
+
+#battery.critical {
+    color: #f7768e;
+    background: rgba(247, 118, 142, 0.18);
+}
+
+/* =========================
+ * TOOLTIP
+ * ========================= */
+
+tooltip {
+    background: #1a1b26;
+    color: #c0caf5;
+
+    border: 1px solid #3b4261;
+    border-radius: 9px;
+
+    padding: 5px 9px;
+}
+

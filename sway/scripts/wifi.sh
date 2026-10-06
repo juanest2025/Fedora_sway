@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SSID="" 
-PASSWORD=""
+SSID="INTERYA_OMERO" 
+PASSWORD="velez_984688"
 
 # Apagar el Wi-Fi
 echo "Apagando Wi-Fi..."

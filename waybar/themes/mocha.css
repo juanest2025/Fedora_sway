@@ -1,0 +1,187 @@
+/* =========================================================
+ * CATPPUCCIN MOCHA — WAYBAR
+ * ========================================================= */
+
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* WAYBAR */
+
+window#waybar {
+    background: transparent;
+    color: #cdd6f4;
+}
+
+/* CONTAINERS */
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(24, 24, 37, 0.90);
+
+    border: 1px solid rgba(205, 214, 244, 0.08);
+    border-radius: 12px;
+
+    padding: 3px 6px;
+    margin: 3px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* WORKSPACES */
+
+#workspaces button {
+    padding: 2px 7px;
+    margin: 0 2px;
+
+    border-radius: 8px;
+
+    color: #6c7086;
+    background: transparent;
+
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(137, 180, 250, 0.12);
+    color: #cdd6f4;
+}
+
+#workspaces button.focused {
+    background: #89b4fa;
+    color: #1e1e2e;
+}
+
+#workspaces button.urgent {
+    background: #f38ba8;
+    color: #1e1e2e;
+}
+
+/* WINDOW */
+
+#window {
+    color: #bac2de;
+    padding: 0 10px;
+}
+
+/* MODULES */
+
+#custom-wlogout,
+#pulseaudio,
+#backlight,
+#network,
+#bluetooth,
+#battery,
+#clock,
+#custom-notifications,
+#tray {
+    padding: 3px 9px;
+    margin: 0 2px;
+
+    border-radius: 9px;
+
+    background: rgba(49, 50, 68, 0.68);
+
+    transition: all 0.2s ease;
+}
+
+/* COLORS */
+
+#custom-wlogout {
+    color: #f38ba8;
+}
+
+#pulseaudio {
+    color: #89b4fa;
+}
+
+#backlight {
+    color: #f9e2af;
+}
+
+#network {
+    color: #a6e3a1;
+}
+
+#bluetooth {
+    color: #89dceb;
+}
+
+#battery {
+    color: #a6e3a1;
+}
+
+#clock {
+    color: #cba6f7;
+}
+
+#custom-notifications {
+    color: #89dceb;
+    font-size: 15px;
+}
+
+#tray {
+    color: #cdd6f4;
+}
+
+/* HOVER */
+
+#custom-wlogout:hover {
+    background: rgba(243, 139, 168, 0.18);
+}
+
+#pulseaudio:hover {
+    background: rgba(137, 180, 250, 0.18);
+}
+
+#backlight:hover {
+    background: rgba(249, 226, 175, 0.18);
+}
+
+#network:hover {
+    background: rgba(166, 227, 161, 0.18);
+}
+
+#bluetooth:hover {
+    background: rgba(137, 220, 235, 0.18);
+}
+
+#battery:hover {
+    background: rgba(166, 227, 161, 0.18);
+}
+
+#clock:hover {
+    background: rgba(203, 166, 247, 0.18);
+}
+
+#custom-notifications:hover {
+    background: rgba(137, 220, 235, 0.18);
+}
+
+/* BATTERY */
+
+#battery.warning {
+    color: #f9e2af;
+    background: rgba(249, 226, 175, 0.15);
+}
+
+#battery.critical {
+    color: #f38ba8;
+    background: rgba(243, 139, 168, 0.18);
+}
+
+/* TOOLTIP */
+
+tooltip {
+    background: #1e1e2e;
+    color: #cdd6f4;
+
+    border: 1px solid #45475a;
+    border-radius: 9px;
+
+    padding: 5px 9px;
+}
+

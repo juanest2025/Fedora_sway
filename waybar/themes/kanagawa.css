@@ -1,0 +1,187 @@
+/* =========================================================
+ * KANAGAWA — WAYBAR
+ * ========================================================= */
+
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* WAYBAR */
+
+window#waybar {
+    background: transparent;
+    color: #dcd7ba;
+}
+
+/* CONTAINERS */
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(31, 31, 40, 0.92);
+
+    border: 1px solid rgba(220, 215, 186, 0.08);
+    border-radius: 12px;
+
+    padding: 3px 6px;
+    margin: 3px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.30);
+}
+
+/* WORKSPACES */
+
+#workspaces button {
+    padding: 2px 7px;
+    margin: 0 2px;
+
+    border-radius: 8px;
+
+    color: #727169;
+    background: transparent;
+
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(126, 156, 216, 0.12);
+    color: #dcd7ba;
+}
+
+#workspaces button.focused {
+    background: #7e9cd8;
+    color: #1f1f28;
+}
+
+#workspaces button.urgent {
+    background: #e46876;
+    color: #1f1f28;
+}
+
+/* WINDOW */
+
+#window {
+    color: #c8c093;
+    padding: 0 10px;
+}
+
+/* MODULES */
+
+#custom-wlogout,
+#pulseaudio,
+#backlight,
+#network,
+#bluetooth,
+#battery,
+#clock,
+#custom-notifications,
+#tray {
+    padding: 3px 9px;
+    margin: 0 2px;
+
+    border-radius: 9px;
+
+    background: rgba(54, 54, 70, 0.72);
+
+    transition: all 0.2s ease;
+}
+
+/* COLORS */
+
+#custom-wlogout {
+    color: #e46876;
+}
+
+#pulseaudio {
+    color: #7e9cd8;
+}
+
+#backlight {
+    color: #e6c384;
+}
+
+#network {
+    color: #98bb6c;
+}
+
+#bluetooth {
+    color: #7fb4ca;
+}
+
+#battery {
+    color: #98bb6c;
+}
+
+#clock {
+    color: #d27e99;
+}
+
+#custom-notifications {
+    color: #7fb4ca;
+    font-size: 15px;
+}
+
+#tray {
+    color: #dcd7ba;
+}
+
+/* HOVER */
+
+#custom-wlogout:hover {
+    background: rgba(228, 104, 118, 0.18);
+}
+
+#pulseaudio:hover {
+    background: rgba(126, 156, 216, 0.18);
+}
+
+#backlight:hover {
+    background: rgba(230, 195, 132, 0.18);
+}
+
+#network:hover {
+    background: rgba(152, 187, 108, 0.18);
+}
+
+#bluetooth:hover {
+    background: rgba(127, 180, 202, 0.18);
+}
+
+#battery:hover {
+    background: rgba(152, 187, 108, 0.18);
+}
+
+#clock:hover {
+    background: rgba(210, 126, 153, 0.18);
+}
+
+#custom-notifications:hover {
+    background: rgba(127, 180, 202, 0.18);
+}
+
+/* BATTERY */
+
+#battery.warning {
+    color: #e6c384;
+    background: rgba(230, 195, 132, 0.15);
+}
+
+#battery.critical {
+    color: #e46876;
+    background: rgba(228, 104, 118, 0.18);
+}
+
+/* TOOLTIP */
+
+tooltip {
+    background: #1f1f28;
+    color: #dcd7ba;
+
+    border: 1px solid #54546d;
+    border-radius: 9px;
+
+    padding: 5px 9px;
+}
+
