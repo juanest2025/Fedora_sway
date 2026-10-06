@@ -263,22 +263,22 @@ input * {
 }
 
 ### VOLUMEN
-bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+#bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+#bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ### BRILLO
-bindsym Ctrl+Shift+Up   exec brightnessctl set +2%
-bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
+#bindsym Ctrl+Shift+Up   exec brightnessctl set +2%
+#bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
 
-### VOLUMEN (con wob)
-#bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%' | wob
-#bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%' | wob
-#bindsym Ctrl+Shift+m     exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+### VOLUMEN
+bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+(?=%)' | head -1) "Volumen"
+bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+(?=%)' | head -1) "Volumen"
+bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd "Volumen: mute/unmute"
 
-### BRILLO (con wob)
-#bindsym Ctrl+Shift+Up exec brightnessctl set +2% && brightnessctl g | awk -v max=$(brightnessctl m) '{print int($1/max*100)}' | wob
-#bindsym Ctrl+Shift+Down exec brightnessctl set 2%- && brightnessctl g | awk -v max=$(brightnessctl m) '{print int($1/max*100)}' | wob
+### BRILLO
+bindsym Ctrl+Shift+Up   exec sh -c 'brightnessctl set +2% && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(brightnessctl -m | cut -d, -f4 | tr -d %) "Brillo"'
+bindsym Ctrl+Shift+Down exec sh -c 'brightnessctl set 2%- && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(brightnessctl -m | cut -d, -f4 | tr -d %) "Brillo"'
 
 ### LUZ NOCTURNA
 exec_always gammastep -O 3500

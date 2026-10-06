@@ -24,7 +24,7 @@ sudo dnf upgrade -y
 PAQUETES=(
 	# Entorno Sway (compositor, barra, lanzador, bloqueo)
 	sway waybar kitty wofi wlogout swaylock swayidle swaybg
-	fuzzel wob swaync hyprlock
+	fuzzel swaync hyprlock
 
 	# Utilidades del sistema (brillo, audio, red, energía)
 	brightnessctl pipewire pipewire-pulse playerctl upower
