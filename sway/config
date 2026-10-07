@@ -262,24 +262,37 @@ input * {
     xkb_layout latam
 }
 
-### VOLUMEN
-#bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-#bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-#bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#-------------------------------------------------
+## CON LAS TECLAS NORMALES DEL PC + animacion swaync
+#VOLUMEN
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}') "Volumen"
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}') "Volumen"
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd "Volumen: mute/unmute"
 
-### BRILLO
-#bindsym Ctrl+Shift+Up   exec brightnessctl set +2%
-#bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
+#BRILLO
+bindsym XF86MonBrightnessUp exec sh -c 'brightnessctl set +2% && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(brightnessctl -m | cut -d, -f4 | tr -d %) "Brillo"'
+bindsym XF86MonBrightnessDown exec sh -c 'brightnessctl set 2%- && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(brightnessctl -m | cut -d, -f4 | tr -d %) "Brillo"'
 
-### VOLUMEN
+## CON LOS ATAJOS DE CTRL+SHIFT+ARROWS + animacion swaync
+#VOLUMEN
 bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+(?=%)' | head -1) "Volumen"
 bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+(?=%)' | head -1) "Volumen"
 bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd "Volumen: mute/unmute"
 
-### BRILLO
+#BRILLO
 bindsym Ctrl+Shift+Up   exec sh -c 'brightnessctl set +2% && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(brightnessctl -m | cut -d, -f4 | tr -d %) "Brillo"'
 bindsym Ctrl+Shift+Down exec sh -c 'brightnessctl set 2%- && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(brightnessctl -m | cut -d, -f4 | tr -d %) "Brillo"'
 
+## ATAJO CON CTRL+SHIFT+ARROWS normal
+#VOLUMEN
+#bindsym Ctrl+Shift+Right exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+#bindsym Ctrl+Shift+Left  exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+#bindsym Ctrl+Shift+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+#BRILLO
+#bindsym Ctrl+Shift+Up   exec brightnessctl set +2%
+#bindsym Ctrl+Shift+Down exec brightnessctl set 2%-
+#----------------------------------------------------------------------
 ### LUZ NOCTURNA
 exec_always gammastep -O 3500
 #exec_always = sh -c "sleep 5 && WAYLAND_DISPLAY=$WAYLAND_DISPLAY /usr/bin/gammastep -O 3500"
