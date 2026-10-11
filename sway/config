@@ -116,6 +116,7 @@ bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive
 bindsym $mod+i exec brave-browser --app=https://www.instagram.com/
 bindsym alt+Shift+f exec brave-browser --app=https://www.facebook.com/
 bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
+bindsym  Ctrl+Shift+l exec brave-browser --app=https://www.google.com/
 
 # Utilidades fuzzel
 bindsym alt+m exec ~/.config/fuzzel/sitios/webs.sh
@@ -201,7 +202,7 @@ bindsym Mod5+i workspace number 10
 #bindsym Mod5+w workspace w
 #bindsym Mod5+e workspace e
 #bindsym Mod5+r workspace r
-bindsym Mod5+z workspace z
+#bindsym Mod5+z workspace z
 
 bindsym $mod+shift+1 move container to workspace number 1
 bindsym $mod+shift+2 move container to workspace number 2
@@ -227,8 +228,8 @@ bindsym Mod5+Mod1+i move container to workspace number 10
 
 #bindsym Mod5+Shift+w move container to workspace w 
 #bindsym Mod5+Shift+e move container to workspace e 
-bindsym Mod5+Shift+r move container to workspace r 
-bindsym Mod5+Shift+z move container to workspace z 
+#bindsym Mod5+Shift+r move container to workspace r 
+#bindsym Mod5+Shift+z move container to workspace z 
 
 ### Layout
 bindsym Mod1+Shift+h splith
@@ -298,9 +299,7 @@ exec_always gammastep -O 3500
 #exec_always = sh -c "sleep 5 && WAYLAND_DISPLAY=$WAYLAND_DISPLAY /usr/bin/gammastep -O 3500"
 
 ### LOCK / LOGOUT
-#bindsym Ctrl+Shift+l exec swaylock 
-bindsym  Ctrl+Shift+l exec brave-browser --app=https://www.google.com/
-#bindsym Ctrl+Shift+l exec hyprlock 
+#bindsym $mod+l exec swaylock 
 bindsym Ctrl+Shift+e exec wlogout
 
 ### SCREENSHOTS
