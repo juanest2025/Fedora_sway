@@ -49,6 +49,7 @@ declare -A sites=(
 	["hentai-jl"]="https://hentaijl.com/"
 	["Pro bono kdrama sordos"]="https://doramasflix.in/doramas-online/pro-bono"
 	["Escuadron letal - Jackie Chan"]="https://lacuevana.org/pelicula/escuadron-letal-pOO4aN"
+	["Comando kill"]="https://lamovie.org/peliculas/comando-kill-2016/"
 	["uncensoredhentai"]="https://uncensoredhentai.xxx/"
 	["Latinohentai.vip"]="https://latinohentai.vip/"
 	["JKanimes"]="https://jkanime.net/"

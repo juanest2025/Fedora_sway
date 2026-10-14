@@ -53,6 +53,7 @@ declare -A sites=(
 	["hentaiJK"]="https://hentaijk.com/"
 	["Pro bono kdrama sordos"]="https://doramasflix.in/doramas-online/pro-bono"
 	["Escuadron letal - Jackie Chan"]="https://lacuevana.org/pelicula/escuadron-letal-pOO4aN"
+	["Comando kill"]="https://lamovie.org/peliculas/comando-kill-2016/"
 	["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
 	["Search Pirate"]="https://search.brave.com/"
 	["Google"]="https://www.google.com/"
