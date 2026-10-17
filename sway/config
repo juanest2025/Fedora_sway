@@ -324,3 +324,8 @@ input type:touchpad {
     accel_profile adaptive
     pointer_accel 0.2
 }
+
+# Gestos del trackpad
+#bindgesture swipe:left workspace prev 
+#bindgesture swipe:right workspace next
+
