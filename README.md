@@ -8,7 +8,7 @@ This repository contains my personal dotfiles, scripts, keybindings, and desktop
 
 <!-- Add your desktop screenshots here -->
 
-![Fedora Sway Desktop](screenshots/desktop.png)
+![Fedora Sway Desktop](Preview/screenshot.png)
 
 ## Features
 
