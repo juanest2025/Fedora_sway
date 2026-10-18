@@ -108,7 +108,7 @@ declare -A sites=(
 	["My with superman S3"]="https://myflixerz.day/series/my-adventures-with-superman-eurbg/"
 	["Google Docs"]="https://docs.new"
 	["Google slides"]="https://slides.new"
-	["Dotfiles"]="https://github.com/juanest2025/Fedora_sway"
+	["Sway Dotfiles"]="https://github.com/juanest2025/Fedora_sway"
 	["japanese subjav nop"]="https://supjav.com/category/maker/switch?sort=views"
 	["Modelgalore nop"]="https://www.modelgalore.com/?t=1000&utm_source=code.21wiz.com"
 	["Love scenery"]="https://www.doramasyt.com/dorama/love-scenery-sub-espanol"
