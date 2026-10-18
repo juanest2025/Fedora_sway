@@ -102,7 +102,7 @@ bindsym $mod+c exec google-chrome-stable
 #bindsym Mod1+space exec wofi --show drun
 bindsym Mod1+space exec fuzzel 
 bindsym $mod+t exec flatpak run org.telegram.desktop
-bindsym alt+u exec gnome-calendar
+#bindsym alt+u exec gnome-calendar
 bindsym alt+q exec gnome-clocks
 
 # kitty en modo flotante
@@ -115,7 +115,7 @@ bindsym $mod+w exec brave-browser --app=https://web.whatsapp.com
 bindsym $mod+d exec brave-browser --app=https://drive.google.com/drive/my-drive 
 bindsym $mod+i exec brave-browser --app=https://www.instagram.com/
 bindsym alt+Shift+f exec brave-browser --app=https://www.facebook.com/
-bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
+#bindsym alt+Shift+d exec brave-browser --app=https://discord.com/channels/@me
 bindsym  Ctrl+Shift+l exec brave-browser --app=https://www.google.com/
 
 # Utilidades fuzzel
@@ -142,6 +142,8 @@ bindsym  alt+Shift+t exec ~/.config/waybar/switch-theme.sh
 bindsym alt+Shift+j exec ~/.config/sway/scripts/toggle.sh
 # INTERRUPTOR DE WIFI conectar al la red de mi casa directamente 
 bindsym alt+Shift+k exec ~/.config/sway/scripts/wifi.sh
+# ATAJO DEL REPO DE LAS DOTFILES FEDORA SWAY EN GENERAL
+bindsym alt+Shift+d exec kitty -e bash -c 'cd "$HOME/Desktop/Fedora_sway" && ranger'
 
 ### Focus
 bindsym $mod+$left focus left
