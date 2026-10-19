@@ -16,7 +16,6 @@ declare -A sites=(
 	["GitHub"]="https://github.com/juanest2025"
 	["La.movie"]="https://lamovie.org/"
 	["Dilema ingles"]="https://docs.google.com/document/d/1tIoOwobtLm7cDmI8BQcuXtXNz9OrGW4SZzvTZsTHuoc/edit?usp=sharing"
-	["hell mode"]="https://animeav1.com/media/hell-mode-yarikomizuki-no-gamer-wa-hai-settei-no-isekai-de-musou-suru-2nd-season/7"
 	["Tioplus.app"]="https://tioplus.app/"
 	["soap2day"]="https://ww25.soap2day.day/"
 	["Cuevana 1"]="https://cuevana8.net/"
