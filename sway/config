@@ -144,6 +144,8 @@ bindsym alt+Shift+j exec ~/.config/sway/scripts/toggle.sh
 bindsym alt+Shift+k exec ~/.config/sway/scripts/wifi.sh
 # ATAJO DEL REPO DE LAS DOTFILES FEDORA SWAY EN GENERAL
 bindsym alt+Shift+d exec kitty -e bash -c 'cd "$HOME/Desktop/Fedora_sway" && ranger'
+# ATAJO DE .CONFIG 
+bindsym alt+Shift+s exec kitty -e bash -c 'cd "$HOME/.config" && ranger'
 
 ### Focus
 bindsym $mod+$left focus left
