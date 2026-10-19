@@ -112,6 +112,7 @@ declare -A sites=(
 	["japanese subjav nop"]="https://supjav.com/category/maker/switch?sort=views"
 	["Modelgalore nop"]="https://www.modelgalore.com/?t=1000&utm_source=code.21wiz.com"
 	["Love scenery"]="https://www.doramasyt.com/dorama/love-scenery-sub-espanol"
+	["Fireworks of my heart"]="https://www.doramasyt.com/dorama/fireworks-of-my-heart-sub-espanol"
 	["Los 4 fantasticos 2025"]="https://lamovie.org/peliculas/los-4-fantasticos-primeros-pasos-2025/"
 	["My mini mart"]="https://www.youtube.com/playables/Ugkxto-OwJZo4rm8Xl2Nj3K403nHlYThf-sr"
 	["Aquarium Land"]="https://www.youtube.com/playables/UgkxwgDLkWx1arqo3OTf3msG3XHtU9JTIf1k"
