@@ -48,6 +48,7 @@ declare -A sites=(
 	["Hentaila"]="https://hentaila.com/hub"
 	["hentai-jl"]="https://hentaijl.com/"
 	["hentaidbs"]="https://hentaidbs.com/"
+	["Second brain bakcup nube"]="https://drive.google.com/drive/folders/16F0-RuzyvwSxC-80KTyN0l26viPgR3W"
 	["Pro bono kdrama sordos"]="https://doramasflix.in/doramas-online/pro-bono"
 	["Escuadron letal - Jackie Chan"]="https://lacuevana.org/pelicula/escuadron-letal-pOO4aN"
 	["Comando kill"]="https://lamovie.org/peliculas/comando-kill-2016/"

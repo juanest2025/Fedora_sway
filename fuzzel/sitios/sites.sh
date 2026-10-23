@@ -48,6 +48,7 @@ declare -A sites=(
 	["Hentaila"]="https://hentaila.com/hub"
 	["hentai-jl"]="https://hentaijl.com/"
 	["hentaidbs"]="https://hentaidbs.com/"
+	["Second brain bakcup nube"]="https://drive.google.com/drive/folders/16F0-RuzyvwSxC-80KTyN0l26viPgR3W"
 	["uncensoredhentai"]="https://uncensoredhentai.xxx/"
 	["Latinohentai.vip"]="https://latinohentai.vip/"
 	["JKanimes"]="https://jkanime.net/"
