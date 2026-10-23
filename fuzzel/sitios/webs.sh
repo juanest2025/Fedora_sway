@@ -18,6 +18,7 @@ declare -A sites=(
 	["Dilema ingles"]="https://docs.google.com/document/d/1tIoOwobtLm7cDmI8BQcuXtXNz9OrGW4SZzvTZsTHuoc/edit?usp=sharing"
 	["Tioplus.app"]="https://tioplus.app/"
 	["soap2day"]="https://ww25.soap2day.day/"
+	["How to use vim 2027"]="https://www.youtube.com/watch?v=Td3lvTs7d7k"
 	["Cuevana 1"]="https://cuevana8.net/"
 	["Cuevana 2"]="https://lacuevana.org/"
 	["Cuevana 3"]="https://cuevanapro.org/"
