@@ -47,6 +47,7 @@ declare -A sites=(
 	["latanime"]="https://latanime.org/"
 	["Hentaila"]="https://hentaila.com/hub"
 	["hentai-jl"]="https://hentaijl.com/"
+	["hentaidbs"]="https://hentaidbs.com/"
 	["uncensoredhentai"]="https://uncensoredhentai.xxx/"
 	["Latinohentai.vip"]="https://latinohentai.vip/"
 	["JKanimes"]="https://jkanime.net/"
