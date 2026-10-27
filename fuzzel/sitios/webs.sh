@@ -85,6 +85,8 @@ declare -A sites=(
 	["Google earth"]="https://earth.google.com/web/@0,0,0a,22251752.77375655d,35y,0h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA"
 	["Love Next Door 1"]="https://www.doramasyt.com/dorama/amor-en-la-puerta-de-al-lado-latino-sub-espanol"
 	["Love Next Door 2"]="https://doramasflix.in/doramas-online/love-next-door"
+	["Love in disguise"]="https://doramasflix.in/doramas-online/love-in-disguise"
+	["Extraordinary Attorney Woo"]="https://doramasflix.in/doramas-online/extraordinary-attorney-woo"
 	["My lovely liar"]="https://www.doramasyt.com/dorama/my-lovely-liar-sub-espanol"
 	["It's ok not to be ok"]="https://www.doramasyt.com/dorama/its-okay-to-not-be-okay-sub-espanol"
 	["King the land"]="https://www.doramasyt.com/dorama/king-the-land-latino-sub-espanol"
