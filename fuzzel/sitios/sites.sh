@@ -37,6 +37,7 @@ declare -A sites=(
 	["DeepSeek"]="https://chat.deepseek.com/"
 	["Kimi K3"]="https://www.kimi.ai/"
 	["Qwen AI"]="https://chat.qwen.ai/"
+	["Grok AI"]="https://grok.com/"
 	["Gemini"]="https://gemini.google.com/app"
 	["NotebookLM"]="https://notebook.google.com/?icid=home_maincta&pli=1"
 	["Dola AI"]="https://www.dola.com/chat"
