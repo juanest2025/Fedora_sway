@@ -116,6 +116,7 @@ declare -A sites=(
 	["Lovely runner"]="https://www.doramasyt.com/dorama/corredora-encantadora-latino-sub-espanol"
 	["Ski into love"]="https://www.doramasyt.com/dorama/ski-into-love-sub-espanol"
 	["Love Reset fav"]="https://www.doramasyt.com/dorama/love-reset-sub-espanol"
+	["save from"]="https://es.savefrom.net/267hP/"
 	["XVideos"]="https://www.xvideos.com/"
 	["Pornhub"]="https://es.pornhub.com/"
 	["My with superman S3"]="https://myflixerz.day/series/my-adventures-with-superman-eurbg/"
