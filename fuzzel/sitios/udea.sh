@@ -10,7 +10,7 @@ declare -A sites=(
 	["Classroom Fisica"]="https://classroom.google.com/c/ODc0MzgwMTMwMTMy"
 	["Quiz Fisica 12:30 noche"]="https://classroom.google.com/c/ODc0MzgwMTMwMTMy/a/ODc0MzgwMTMwMTQ2/details"
 	["Entrega podcast"]="https://virtualingenieriaudea.co/mod/assign/view.php?id=874268"
-	["Parcial Algebra lineal"]="https://virtualingenieriaudea.co/mod/quiz/view.php?id=876464"
+	["Parcial Calculo Integral"]="https://virtualingenieriaudea.co/mod/quiz/view.php?id=876676"
 	["Grabaciones ingles"]="https://ingenia.udea.edu.co/zoom/meeting/97057341996"
 	["Texto Writting ingles"]="https://docs.google.com/document/d/1GQouVjBL0N5SmQNNAHZpdU8JYdqaxU5iMB57ftnFP7o/edit?usp=sharing"
 	["Entregea Essay ingles"]="https://virtualingenieriaudea.co/mod/assign/view.php?id=875054"
