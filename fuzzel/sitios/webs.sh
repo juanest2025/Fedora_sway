@@ -29,6 +29,7 @@ declare -A sites=(
 	["kimcartoon"]="https://kimcartoon.com.co/"
 	["Global chinese learning platform"]="https://global.chinese-learning.cn/#/web"
 	["Rice quickshell in wayland"]="https://www.youtube.com/watch?v=MRQxAxJ_APw&t=10s"
+	["Aprende quickshell tony"]="https://tonybtw.com/tutorial/quickshell/"
 	["Miraculos.to"]="https://miraculous.to/en/"
 	["Ladyblognews"]="https://ladyblognews.com/"
 	["Claude AI"]="https://claude.ai/new"
