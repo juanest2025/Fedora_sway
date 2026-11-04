@@ -19,6 +19,7 @@ declare -A sites=(
 	["Entrega Essay comparacion universidades ingles"]="https://virtualingenieriaudea.co/mod/assign/view.php?id=876378"
 	["Drive Ingles"]="https://udeaeduco-my.sharepoint.com/shared?listurl=https%3A%2F%2Fudeaeduco%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Faracelly%5Fospina%5Fudea%5Fedu%5Fco%2FDocuments&e=5%3Abb3aac9a086840b9859382a8c185882f&sharingv2=true&fromShare=true&at=9&id=%2Fpersonal%2Faracelly%5Fospina%5Fudea%5Fedu%5Fco%2FDocuments%2F2026%2D2%20EforE%20students%2FEnglish%20V%2FGroup%2018%20%2D%202026%2D2&FolderCTID=0x012000A5F08FC96EEC3B468C71B876883C6992"
 	["Dilema ingles"]="https://docs.google.com/document/d/1tIoOwobtLm7cDmI8BQcuXtXNz9OrGW4SZzvTZsTHuoc/edit?usp=sharing"
+	["Cambiar autentificacion udea email"]="https://www.udea.edu.co/wps/portal/udea/web/generales/interna/asSomosUdeA/empleados/asContenidos/asListado/Doble-Autenticacion?utm_source=brevo&utm_medium=email&utm_campaign=Ser%20Estudiante%20UdeA%20-%20Pregrado%20%20Ed%20144&utm_id=1853"
 
 	["All subjets UdeA"]="all.sh"
 )
