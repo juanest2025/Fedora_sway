@@ -267,7 +267,7 @@ input * {
     xkb_layout latam
 }
 
-#-------------------------------------------------
+#--------------------------------------------------
 ## CON LAS TECLAS NORMALES DEL PC + animacion swaync
 #VOLUMEN
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}') "Volumen" "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}')%"
