@@ -153,6 +153,7 @@ declare -A sites=(
 	["Matricula"]="https://matricula.udea.edu.co/index.php"
 	["Cambiar autentificacion udea email"]="https://www.udea.edu.co/wps/portal/udea/web/generales/interna/asSomosUdeA/empleados/asContenidos/asListado/Doble-Autenticacion?utm_source=brevo&utm_medium=email&utm_campaign=Ser%20Estudiante%20UdeA%20-%20Pregrado%20%20Ed%20144&utm_id=1853"
 	["Jurassic World Chaos Theory english"]="https://myflixerz.day/series/jurassic-world-chaos-theory-28pgm/"
+	["Ilovepdf"]="https://www.ilovepdf.com/es"
 	["Zoom - Algebra lineal"]="https://udearroba.zoom.us/j/94451769492?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
 	["Zoom - Calculo integral"]="https://udearroba.zoom.us/j/95441635988?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
 	["Zoom - Fisica Mecanica"]="https://udearroba.zoom.us/j/99982358988?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
