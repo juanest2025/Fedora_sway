@@ -160,6 +160,7 @@ declare -A sites=(
 	["Zoom - Calculo integral"]="https://udearroba.zoom.us/j/95441635988?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
 	["Zoom - Fisica Mecanica"]="https://udearroba.zoom.us/j/99982358988?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
 	["Zoom - Ingles V"]="https://udea.zoom.us/j/97057341996#success"
+	["full"]=""
 )
 
 selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitios: ")
