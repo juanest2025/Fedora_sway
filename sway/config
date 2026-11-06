@@ -30,7 +30,7 @@ for_window [app_id=".*"] title_format ""
 #exec_always swayidle -w before-sleep 'swaylock -f -i /home/juanes/wallpaper/Arch-chan_to.png --indicator-radius 100 --indicator-thickness 7'
 
 # wallpaper
-output * bg /home/juanes/wallpaper/Anime-City-Night.png fill
+output * bg /home/juanes/wallpaper/sixteen.jpg fill
 #exec_always ~/.config/sway/scripts/random_wallpaper.sh
 
 # wallpaper selector
@@ -267,7 +267,7 @@ input * {
     xkb_layout latam
 }
 
-#--------------------------------------------------
+#-------------------------------------------------
 ## CON LAS TECLAS NORMALES DEL PC + animacion swaync
 #VOLUMEN
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && notify-send -t 1000 -h string:x-canonical-private-synchronous:osd -h int:value:$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}') "Volumen" "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}')%"
