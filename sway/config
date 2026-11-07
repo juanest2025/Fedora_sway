@@ -9,6 +9,9 @@ include /etc/sway/config-vars.d/*
 ## SHORCUT EDIT SWAY DOTFILE 
 bindsym Mod1+Shift+u exec kitty -e nvim ~/.config/sway/config
 
+## SHORCUT TO BACKUP SWAY DOTFILES TO GITHUB
+bindsym alt+shift+o exec ~/.config/sway/scripts/backup.dotfiles.sh
+
 ### Output configuration screen borders
 default_border pixel 2
 default_floating_border pixel 2
@@ -104,7 +107,7 @@ for_window [app_id="kitty_dynamic_popup"] {
 }
 bindsym $mod+b exec brave-browser
 bindsym $mod+s exec brave-browser
-bindsym alt+Shift+o exec flatpak run md.obsidian.Obsidian 
+bindsym $mod+o exec flatpak run md.obsidian.Obsidian 
 bindsym $mod+e exec nemo 
 bindsym $mod+c exec google-chrome-stable  
 #bindsym Mod1+space exec wofi --show drun
