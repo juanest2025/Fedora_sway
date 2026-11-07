@@ -91,9 +91,17 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 ## APLICACIONES
-bindsym $mod+Return exec kitty 
+# kitty modo normal 
+bindsym $mod+Return exec kitty
 bindsym alt+Shift+g exec kitty 
-#bindsym Alt+n exec kitty
+# kitty modo Pop-up
+bindsym $mod+Shift+Return exec kitty --class=kitty_dynamic_popup
+# reglas automáticas en Sway para que esa clase específica sea un Pop-up flotante
+for_window [app_id="kitty_dynamic_popup"] {
+    floating enable
+    resize set width 80 ppt height 50 ppt
+    move position center
+}
 bindsym $mod+b exec brave-browser
 bindsym $mod+s exec brave-browser
 bindsym alt+Shift+o exec flatpak run md.obsidian.Obsidian 
