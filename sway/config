@@ -98,7 +98,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 bindsym $mod+Return exec kitty
 bindsym alt+Shift+g exec kitty 
 # kitty modo Pop-up
-bindsym $mod+Shift+Return exec kitty --class=kitty_dynamic_popup
+bindsym alt+Shift+Return exec kitty --class=kitty_dynamic_popup
 # reglas automáticas en Sway para que esa clase específica sea un Pop-up flotante
 for_window [app_id="kitty_dynamic_popup"] {
     floating enable
@@ -136,6 +136,10 @@ bindsym Ctrl+Shift+k exec ~/.config/fuzzel/sitios/udea.sh
 bindsym alt+Shift+l exec ~/.config/fuzzel/sitios/anime.sh
 bindsym Ctrl+Shift+ntilde exec ~/.config/fuzzel/sitios/grabaciones.sh
 bindsym Mod5+r exec ~/.config/fuzzel/sitios/lista.wifi.conectar.fuzzel.sh
+
+# FUZZEL FILE MANAGER
+bindsym alt+shift+space exec ~/.config/fuzzel/sitios/filemanager.fuzzel.sh
+bindsym Mod5+c exec ~/.config/fuzzel/sitios/filemanager.fuzzel.sh
 
 # anime local
 bindsym alt+Shift+ntilde exec kitty -e bash -c 'cd "$HOME/Desktop/anime" && ranger'
