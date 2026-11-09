@@ -1,9 +1,11 @@
+
 #!/usr/bin/env bash
 
 # ==========================================
 # FUZZEL FILE MANAGER
 # Navegación + Abrir con
 # ==========================================
+# juan
 
 START_DIR="$HOME"
 
@@ -94,6 +96,16 @@ get_apps() {
 		has_app vlc && {
 			APPS+=("VLC")
 			COMMANDS+=("vlc")
+		}
+
+		has_app brave-browser && {
+			APPS+=("Brave")
+			COMMANDS+=("brave-browser")
+		}
+
+		has_app google-chrome && {
+			APPS+=("Google Chrome")
+			COMMANDS+=("google-chrome")
 		}
 		;;
 
@@ -334,3 +346,4 @@ navigate() {
 }
 
 navigate "$START_DIR"
+

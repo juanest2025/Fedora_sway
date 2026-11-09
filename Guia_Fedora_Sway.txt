@@ -352,6 +352,9 @@ Ejemplo en sway/config:
 
 bindsym Mod1+space exec fuzzel
 
+para darle los permisos necesarios al usuario juanes, lo que tienes q hacer es ejecutar los comando de 
+"permisos .config fuzzel" en la carpeta del .config y en el desktop
+
 NOTA:
 Fuzzel reemplaza a Wofi como launcher principal para mantener
 el setup simple y sin duplicar herramientas.
