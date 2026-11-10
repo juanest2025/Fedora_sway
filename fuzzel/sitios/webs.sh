@@ -110,6 +110,7 @@ declare -A sites=(
 	["Tastefully Yours/el sabor de lo nuesto"]="https://doramasflix.in/doramas-online/tastefully-yours"
 	["Acaramelados/our stiky love fav 1"]="https://www.doramasyt.com/dorama/acaramelados-latino-sub-espanol"
 	["Acaramelados/our stiky love fav 2"]="https://doramasflix.in/doramas-online/our-sticky-love"
+	["El encuantro fav"]="https://www.doramasyt.com/dorama/encounter-latino-sub-espanol"
 	["Steven Universe"]="https://myflixerz.day/episodes/steven-universe-season-1-episode-1/"
 	["Dragon striker"]="https://lamovie.org/series/dragon-striker-2026/"
 	["Seven heveans a-vatar"]="https://lamovie.org/series/avatar-los-siete-refugios-2026/"
@@ -160,6 +161,7 @@ declare -A sites=(
 	["Zoom - Calculo integral"]="https://udearroba.zoom.us/j/95441635988?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
 	["Zoom - Fisica Mecanica"]="https://udearroba.zoom.us/j/99982358988?uname=JUAN%20ESTEBAN%20VELEZ%20HINCAPIE#success"
 	["Zoom - Ingles V"]="https://udea.zoom.us/j/97057341996#success"
+	["Sirens la serie fav"]="https://lamovie.org/series/siren-2018/"
 	["full"]=""
 )
 
