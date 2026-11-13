@@ -77,8 +77,6 @@ declare -A sites=(
 	["UdeA Drive"]="https://drive.google.com/drive/my-drive"
 	["Drive"]="https://drive.google.com/drive/my-drive"
 	["Scrips backup"]="https://drive.google.com/drive/folders/1ZQNW6ZgKXnub-Us-pOPACplnM5SbDhPB"
-	["Carpeta Presentacion Profesional profile"]="https://drive.google.com/drive/folders/1udqOb8UD6zzgAKWqZV-OOza8nkxCr39B?usp=sharing"
-	["Presentacion Profesional profile"]="https://drive.google.com/file/d/1mQsNVn0c3d04YML9xMvHisWvMjEqgGh3/view?usp=sharing"
 	["Carpeta Motivational letter"]="https://drive.google.com/drive/folders/1rpgzlln3ltxtsXz3OfXqvy-9sHPrl46A?usp=sharing"
 	["Motivational letter"]="https://docs.google.com/document/d/1_MNQVCIHd5s1tKJvONOyUB1UQkkzL_RaIPIouIBShGI/edit?usp=sharing"
 	["Calendar"]="https://calendar.google.com/calendar/u/0/r"
