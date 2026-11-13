@@ -39,6 +39,7 @@ declare -A sites=(
 	["DeepSeek"]="https://chat.deepseek.com/"
 	["Kimi K3"]="https://www.kimi.ai/"
 	["Qwen AI"]="https://chat.qwen.ai/"
+	["Yunbao AI"]="https://yuanbao.tencent.com/chat"
 	["Grok AI"]="https://grok.com/"
 	["Gemini"]="https://gemini.google.com/app"
 	["NotebookLM"]="https://notebook.google.com/?icid=home_maincta&pli=1"
