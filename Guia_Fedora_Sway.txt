@@ -585,6 +585,7 @@ Atajos útiles:
 -        = bajar volumen
 1 / 2    = cambiar vista
 c        = pasar la canción
+shift+c  = activar la opcion pasar la canción
 v        = detener reproducción
 x        = reiniciar canción
 b        = siguiente canción
