@@ -15,6 +15,8 @@ declare -A sites=(
 	["Carpeta Motivational letter"]="https://drive.google.com/drive/folders/1rpgzlln3ltxtsXz3OfXqvy-9sHPrl46A?usp=sharing"
 	["Motivational letter"]="https://docs.google.com/document/d/1_MNQVCIHd5s1tKJvONOyUB1UQkkzL_RaIPIouIBShGI/edit?usp=sharing"
 	["Quiz4bono alg-lineal"]="https://udearroba.udea.edu.co/internos/mod/quiz/view.php?id=2815290"
+	["Quiz4 fisica"]="https://classroom.google.com/c/ODc0MzgwMTMwMTMy"
+	["Quiz4 calc-integral"]="https://udearroba.udea.edu.co/internos/course/view.php?id=26948&section=21#tabs-tree-start"
 	["notas academicas"]="https://www.udea.edu.co/wps/myportal/udea/web/inicio/somos-udea/estudiantes/vida-academica/Contenido/asMenuLateral/notas-academicas#Z7_NQ5E12C0LORV00AMM9F770HFC1"
 	["Cambiar autentificacion udea email"]="https://www.udea.edu.co/wps/portal/udea/web/generales/interna/asSomosUdeA/empleados/asContenidos/asListado/Doble-Autenticacion?utm_source=brevo&utm_medium=email&utm_campaign=Ser%20Estudiante%20UdeA%20-%20Pregrado%20%20Ed%20144&utm_id=1853"
 
