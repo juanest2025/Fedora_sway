@@ -422,6 +422,7 @@ Atajos habituales de Ranger:
 
 a = renombrar
 s = shell
+s mayuscula = shell en pantalla completa
 d = eliminar
 
 Si utilizas una configuración personalizada de Ranger, mantenla
